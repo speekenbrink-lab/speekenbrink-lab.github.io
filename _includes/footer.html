@@ -1,0 +1,71 @@
+<footer class="site-footer">
+
+  <div class="container">
+
+    <h2 class="footer-heading">{{ site.title }}</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li>{{ site.title }}</li>
+          <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-2">
+        <ul class="social-media-list">
+          {% if site.github_username %}
+          <li>
+            <a href="https://github.com/{{ site.github_username }}"><i class="fa fa-github fa-1x"></i>&nbsp;{{ site.github_username }}</a>
+          </li>
+          {% endif %}
+
+          {% if site.twitter_username %}
+          <li>
+            <a href="https://twitter.com/{{ site.twitter_username }}"><i class="fa fa-twitter fa-1x"></i>&nbsp;{{ site.twitter_username }}</a>
+          </li>
+          {% endif %}
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-3">
+        <p>{{ site.description }}</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-62922070-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-62922070-1');
+</script>
+
+
+<script type="text/javascript">
+$(document).ready(function() {
+
+    var stickyNavTop = $('.navbar').offset().top;
+    var stickyNav = function(){
+        var scrollTop = $(window).scrollTop();
+        if (scrollTop > stickyNavTop) {
+            $('.navbar').addClass('navbar-fixed-top');
+        } else {
+            $('.navbar').removeClass('navbar-fixed-top');
+        }
+    };
+
+    stickyNav();
+
+    $(window).scroll(function() {
+        stickyNav();
+    });
+
+});
+</script>

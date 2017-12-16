@@ -1,0 +1,103 @@
+- name: Decisions in an uncertain and changing world
+  tag: general_theme
+  current: 1
+  people:
+    - maarten
+  blurb: How do people learn to make better decisions from experience?
+  description: >
+     Traditional research on decision-making is often focussed on
+     how people make "decisions under risk" in well-described
+     situations (e.g., gambles). For instance, someone might be asked
+     whether they prefer to play Gamble A, in which there is an 20%
+     chance of winning 8 pounds, or Gamble B, in which there is a
+     30% chance of winning 6 pounds. In every-day life, decision
+     problems are rarely encountered in such a neatly packaged
+     format. Instead, people need to experience the outcomes of their
+     actions and learn which actions are usually better than others.
+     This leads to the so-called exploration/exploitation dilemma:
+     people can either make a decision to obtain the best
+     outcome, or make a decision in order to obtain more information
+     about which alternative course of action is best. We investigate
+     how people resolve this dilemma.
+  image: reinforcement_learning.png
+
+- name: Perceptual decision making
+  tag: perceptual_dm
+  current: 1
+  people:
+    - maarten
+    - hannah_tickle
+  blurb: How do people use sensory information to decide which action to take?
+  description: >
+   Many decisions can be supported by evidence. We are interested
+   in how people evaluate and integrate different sources of
+   information and how this relates to characteristics of the
+   evidence sources such as their reliability. Perceptual decision
+   making is an area in which these characteristics can be
+   precisely controlled. While it is known that the perceptual
+   system integrates information (close to) optimally, the
+   precise mechanisms which allow this performance are not
+   fully understood yet.
+  image: perceptual_decision_making.png
+
+- name: Learning pro-environmental behaviours from traces
+  tag: PEB
+  current: 1
+  people:
+    - maarten
+    - sabine_topf
+  blurb: How do people learn by observing traces of other peoples actions?
+  description: >
+    Given the dire news about global warming, we often ask why people don't do
+    more to protect the environment. But let's look at it from a different
+    angle: Why would you engage in behaviour to mitigate climate change?
+
+    Almost all energy-saving behaviours have two things in common:
+
+    <ol>
+    <li>A certain cost (from going the extra mile to recycle glass bottles
+    at a designated container to installing extra insulation on you house)</li>
+    <li>The fact that a single individual's contribution is minimal and cannot,
+    in itself, determine the desirable outcome (however much you do, one person
+    drastically reducing energy use will not reverse the impacts of climate
+    change).</li>
+    </ol>
+
+    Given the cost and the insignificance of the individual behaviour, it would
+    seem rational to free-ride, i.e., not contribute to the generation of
+    this "Public Good" and instead take advantage of other people's
+    contributions. However, as the number of free-riders increases, the system
+    breaks and everyone is in a worse position than had they contributed in the
+    first instance. This is known in Game Theory as the "Tragedy of the
+    Commons". Different ways to avoid the Tragedy of the Commons have
+    previously been discussed, e.g. privatisation of the commons or punishment
+    for free-riders. With regards to climate change, these options are limited:
+    Privatisation only works for certain goods (for instance, air and water
+    cannot be privatised); punishment requires agreement on policies and is
+    difficult to implement on a global scale.
+
+    In this project, we are thus looking at a third option, namely how
+    cooperation can evolve in the creation of Public Goods. We focus on how
+    behaviours and their traces (i.e., signs of the behaviour that remain in
+    the physical environment) can foster cooperation without direct
+    communication and, crucially, without coercion.
+
+- name: Adaptive design
+  tag: adaptive_design
+  current: 1
+  people:
+    - maarten
+  blurb: Optimize experiments whilst you run them
+  description: >
+    Experiments are usually designed "statically", before they
+    are conducted. While this allows a large
+    degree of experimenter control, in order to design an experiment
+    optimally, we usually need to know
+    quite a bit about the expected behaviour of participants in an
+    experiment. Moreover, even if we
+    succeed in designing an experiment optimally for an average participant, when there are large
+    individual differences, the design will be suboptimal for a large proportion of participants. In
+    adaptive design, an experiment is designed "on the fly", while it is running. Using computational
+    models, we can determine relevant characteristics of a participant from their earlier behaviour, and
+    tailor the design to the participant. This can have substantial benefits when conducting studies to
+    e.g. compare different theories.

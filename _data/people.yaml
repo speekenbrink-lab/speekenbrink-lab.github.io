@@ -1,0 +1,415 @@
+maarten:
+  name: Maarten Speekenbrink
+  position: Senior Lecturer in Mathematical Psychology
+  current: 1
+  photo: maarten_speekenbrink.jpg
+  blurb: My research focusses on learning and decision making. I approach these
+         topics with a combination of behavioural experiments and computational
+         modelling. I am also interested in optimal experimental design, in
+         particular to distinguish between formal models of cognition.
+  long_info:
+  url: www.ucl.ac.uk/speekenbrink-lab/
+  email: m.speekenbrink@ucl.ac.uk
+  github: mspeekenbrink
+  twitter: maartenspeek
+  linkedin: maarten-speekenbrink-a0016311b
+  researchgate: "Maarten_Speekenbrink"
+  orcid: 0000-0003-3221-1091
+  googlescholar: I37Yg2kAAAAJ
+  researcherID: C-1904-2008
+  impactstory: 0000-0003-3221-1091
+
+hannah_tickle:
+  name: Hannah Tickle
+  position: PhD student
+  current: 1
+  start_year: 2013
+  photo: hannah_tickle.jpg
+  email: h.tickle@ucl.ac.uk
+  twitter: hTickle88
+  blurb: My research mainly focusses on perceptual decision making. I'm
+         currently investigating how people use information about reliability. For
+         example, 2 samples could give you the same information about the ratio of
+         coloured balls in an urn - sample 1 could contain 5 pink and 3 blue balls,
+         and sample 2 could contain 25 pink and 15 blue balls. Thus the ratio
+         information is the same, but an ideal observer should give greater weight
+         to the larger sample as it is more reliable. This seems to be what people do.
+         I'm also comparing various models that can account for this decision process,
+         as well as starting to collect EEG data as people perform the task.
+
+sabine_topf:
+  name: Sabine Topf
+  position: PhD student
+  current: 1
+  start_year: 2017
+  photo: sabine_topf.jpg
+  email: sabine.topf.14@ucl.ac.uk
+  url: www.topf.com
+  twitter: NeneTopf
+  researchgate: Sabine_Topf
+  blurb: In my research, I focus on how learning from others informs individual
+          behaviour and decision making. That is, if we have evidence of other people’s
+          behaviour without being able to query the reasoning behind the behaviour
+          (e.g., observing recycling bins ready for collection outside someone’s
+          house), how does that influence our own behaviour? - Do we recycle more,
+          maybe because it appears to be a social norm? Recycle less because someone
+          else is taking care of environmental problems, giving us the chance to
+          free-ride? Infer the goal and apply it to a different area (reduce water
+          consumption, for instance)? I am going to mainly use behavioural experiments
+          and agent based modelling  to answer these questions.
+
+eric_schulz:
+  name: Eric Schulz
+  position: PhD student
+  current: 0
+  start_year: 2014
+  end_year: 2017
+  photo: eric_schulz.jpg
+  blurb: My research mainly focusses on active learning. I use machine
+         learning techniques to probe how humans and other agents can and
+         should actively learn about mostly continuous relations. I believe
+         that when we gather information about our environment, it is not the
+         case that we passively perceive our surroundings. Rather, we engage
+         actively with our learning environment by asking useful questions.
+         From a statistical perspective, these problems can be tackled by
+         taking a (Bayesian) optimal design perspective, where the goal is
+         to sequentially minimize uncertainty through efficient queries. At
+         the moment I am investigating Gaussian processes (sometimes called
+         Kriging methods) as non-parametric methods to efficiently learn and/or
+         maximize functions over time. In the long run, I want to find out why
+         humans learn as well as they do by mathematically describing them as
+         information seeking agents and taking the passivity out of cognitive
+         models. Other interests are modern applied statistics in general as
+         well as the history of psychology.
+  movingon_blurb: Eric first joined the lab as an MSc student in 2010, then
+                  as an MRes student in 2013, and finally as a PhD student
+                  (2014 - 2017). Eric worked on various projects, foscusing in
+                  particular on functional generalization in reinforcement
+                  learning with,Gaussian Processes.
+                  After leaving the lab, he became a Harvard
+                  Data Science fellow, working with Sam Gershman and Josh
+                  Tenenbaum.
+  email: hanshalbe@googlemail.com
+  twitter: hanshalbe
+  github: ericschulz
+  url: https://ericschulz.github.io/
+
+hrvoje_stojic:
+  name: Hrvoje Stojic
+  position: Visiting PhD student
+  current: 0
+  start_year: 2015
+  end_year: 2017
+  photo: hrvoje_stojic.jpg
+  blurb: I am a graduate student at the Department of Economics & Business,
+         Universitat Pompeu Fabra in Barcelona, currently on a research visit
+         the Speekenbrink lab. My main research interest is to understand
+         cognitive processes that underlie human learning and decision making.
+         I am focusing my efforts on two projects related to multi-attribute
+         decision situations. The first is concerned with how individuals
+         select which decision strategy to use in choosing between
+         alternatives. This is popularly called a "deciding how to decide"
+         problem and I am trying to determine whether reinforcement learning
+         is a good description of how individuals solve the problem. The second
+         is related to the cognitive mechanisms that individuals employ to
+         learn how to utilize attributes in order to infer utilities of
+         alternatives. This knowledge of relationships between attributes
+         and utilities is an important input to decision strategies that I
+         study in the first project. In my research I use formal modeling and
+         develop behavioural experiments to evaluate model predictions.
+  movingon_blurb: Hrvoje first visited the lab in 2014 whilst a PhD student
+                  with Robin Hogarth at the Universitat Pompeu Fabra in
+                  Barcelona. He later returned for other visits in 2016 and
+                  2017. We worked on various projects related to reinforcement
+                  learning, contextual bandits, and strategy selection.
+                  After receiving his PhD, he became a postdoc at UCL, working
+                  with Ray Dolan.
+  email: hrvoje.stojic@protonmail.com
+  twitter: HrvojeStojic
+  github: hstojic
+  url: http://hstojic.re/
+
+akhat_rakishev:
+  name: Akhat Rakishev
+  position: BSc student
+  current: 1
+  start_year: 2017
+  blurb: My research project focusses on how people learn about the volatility
+         in the environment, and how this
+  github: akhatre
+  email: akhat.rakishev.14@ucl.ac.uk
+
+moritz_krusche:
+  name: Moritz Krusche
+  position: MSc student
+  start_year: 2016
+  end_year: 2017
+  current: 0
+  movingon_blurb: Moritz worked on a project investigating planning in
+                  complex reinforcement learning task. After leaving the lab,
+                  he took on a PhD position at Warwick Business School, working
+                  with Nick Chater and Adam Sanborn.
+  github: moritzkrusche
+
+neo_poon:
+  name: Neo Poon
+  position: MSc student
+  start_year: 2016
+  end_year: 2017
+  current: 0
+  movingon_blurb: Neo worked on a project investigating how Query Theory can
+                  explain the "pioneer effect". After leaving the lab, he took
+                  on a PhD position at Warwick Business School.
+
+thomas_verbeek:
+  name: Thomas Verbeek
+  position: MSc student
+  start_year: 2016
+  end_year: 2017
+  current: 0
+  movingon_blurb: Thomas worked on a project investigating the distinction between model-based and model-free reinforcement learning.
+
+ys_chng:
+  name: Yee Siang Chng
+  position: MSc student
+  start_year: 2016
+  end_year: 2017
+  current: 0
+  movingon_blurb: YS worked on a project investigating the distinction between state and reward functions in reinforcement learning.
+
+m_wieworski:
+  name: Michael Wiewiorski
+  position: MSc student
+  start_year: 2016
+  end_year: 2017
+  current: 0
+  movingon_blurb: Michael worked on a project assessing how an opponent's
+                  strategy affects people's own strategy in a simple two-player
+                  game.
+
+r_becanne:
+  name: Raphael Becanne
+  position: MSc student
+  start_year: 2015
+  end_year: 2016
+  current: 0
+  movingon_blurb: Raphael worked on a project investigating reliance on
+                  model-free vs model-based reinforcement learning in a
+                  simplified two-player version of poker.
+
+j_baumeister:
+  name: Jochen Baumeister
+  position: MSc student
+  start_year: 2014
+  end_year: 2015
+  current: 0
+  movingon_blurb: Jochen worked on a project investigating preference
+                  stabilization.
+
+a_singh:
+  name: Anisha Singh
+  position: MSc student
+  start_year: 2014
+  end_year: 2015
+  current: 0
+  movingon_blurb: Anisha worked on a project investigating the relation between
+                  strategies and the evaluations of other players in a
+                  simplified two-player version of poker.
+
+t_tawse:
+  name: Thomas Tawse
+  position: MSc student
+  start_year: 2014
+  end_year: 2015
+  current: 0
+  movingon_blurb: Thomas worked on a project related to the
+                  exploration/exploitation dilemma.
+
+g_webb:
+  name: Gareth Webb
+  position: MSc student
+  current: 0
+
+a_karina:
+  name: Audrey Karina
+  position: MSc student
+  current: 0
+  start_year: 2012
+  end_year: 2013
+
+cf_liang:
+  name: Chiung-Fang Liang
+  position: MSc student
+  current: 0
+
+a_hadjianastasiou:
+  name: Anastasios Hadjianastasiou
+  position: MSc student
+  current: 0
+  start_year: 2012
+  end_year: 2013
+
+a_krajciova:
+  name: Andrea Krajciova
+  position: MSc student
+  current: 0
+
+r_tan:
+  name: Ryan Tan
+  position: BSc student
+  current: 0
+
+n_alam:
+  name: Nadia Alam
+  position: BSc student
+  current: 0
+
+j_chu:
+  name: James Chu
+  position: BSc student
+  current: 0
+
+a_leung:
+  name: Anthony Leung
+  position: BSc student
+  current: 0
+
+f_ho:
+  name: Florence Ho
+  position: BSc student
+  current: 0
+
+b_chang:
+  name: Benjamin Chang
+  position: BSc student
+  current: 0
+
+n_li:
+  name: Nora Li
+  position: BSc student
+  current: 0
+
+sofia_melnikaite:
+  name: Sofia Melnikaite
+  position: BSc student
+  current: 0
+
+shouhoa_goh:
+  name: Shouhao Goh
+  position: BSc student
+  current: 0
+
+hochuan_calwin:
+  name: Ho Chuan Calwin
+  position: BSc student
+  current: 0
+
+stephanie_lee:
+  name: Stephanie Lee
+  position: BSc student
+  current: 0
+
+james_carragher:
+  name: James Carragher
+  position: BSc student
+  current: 0
+
+niroshan_dayalan:
+  name: Niroshan Dayalan
+  position: BSc student
+  current: 0
+
+folasade_adu:
+  name: Folasade Adu
+  position: BSc student
+  current: 0
+
+ed_humhreys:
+  name: Ed Humphreys
+  position: BSc student
+  current: 0
+
+adam_lipman:
+  name: Adam Lipman
+  position: BSc student
+  current: 0
+
+zehra_moinuddin:
+  name: Zehra Moinuddin
+  position: BSc student
+  current: 0
+
+luke_prince:
+  name: Luke Prince
+  position: BSc student
+  current: 0
+
+sarah_blakemore:
+  name: Sarah-Jayne Blakemore
+  position: collaborator
+  organization: UCL
+  url: "https://sites.google.com/site/blakemorelab/"
+  current: 1
+
+adam_harris:
+  name: Adam Harris
+  position: collaborator
+  organization: UCL
+  url: "http://www.ucl.ac.uk/lagnado-lab/adamharris.html"
+  current: 1
+
+nigel_harvey:
+  name: Nigel Harvey
+  position: collaborator
+  organization: UCL
+  url: "http://www.ucl.ac.uk/slms/people/show.php?UPI=NJWHA27"
+  current: 1
+
+marjan_jahanshahi:
+  name: Marjan Jahanshahi
+  position: collaborator
+  organization: UCL
+  url: "http://www.ucl.ac.uk/ion/departments/sobell/Research/MJahanshahi"
+  current: 0
+
+dave_lagnado:
+  name: David Lagnado
+  position: collaborator
+  organization: UCL
+  url: "http://www.ucl.ac.uk/lagnado-lab/david_lagnado.html"
+  current: 0
+
+magda_osman:
+  name: Magda Osman
+  position: collaborator
+  organization: Queen Mary, University of London
+  url: "http://www.magdaosman.co.uk/"
+  current: 0
+
+david_shanks:
+  name: David Shanks
+  position: collaborator
+  organization: UCL
+  current: 0
+  url: "https://sites.google.com/site/davidshanksucl/"
+
+chris_summerfield:
+  name: Christopher Summerfield
+  position: collaborator
+  organization: Univerity of Oxford
+  current: 1
+  url: "http://decisions.psy.ox.ac.uk"
+
+ingmar:
+  name: Ingmar Visser
+  position: collaborator
+  organization: University of Amsterdam
+  url: "http://www.uva.nl/profiel/v/i/i.visser/i.visser.html"
+  current: 1
+
+garry_cai:
+    name: Zhenguang (Garry) Cai
+    position: collaborator
+    organization: University of East Anglia
+    url: "https://www.uea.ac.uk/psychology/people/profile/zhenguang-cai"
+    current: 1

@@ -1,0 +1,266 @@
+- tag: schulz2017putting
+  type: journal
+  year: 2017
+  apa_reference: "Schulz, E., Konstantinidis, E., & Speekenbrink, M. (in press). Putting bandits into context: How function learning supports decision making. _Journal of Experimental Psychology: Learning, Memory, and Cognition_."
+  lab_authors:
+    - maarten
+      eric_schulz
+  arxiv: "https://www.biorxiv.org/content/early/2017/06/15/081091"
+  doi: "10.1037/xlm0000463"
+
+- tag: knoll2017
+  type: journal
+  year: 2016
+  apa_reference: "Knoll, L. J., Fuhrmann, D., Sakhardande, A., Stamp, F., Speekenbrink, M., & Blakemore, S.-J. (2016). A window of opportunity for cognitive training in adolescence. _Psychological Science,_ _27_, 1620-1631."
+  lab_authors:
+    - maarten
+
+- tag: wu2017mapping
+  type: conference
+  year: 2017
+  apa_reference: "Wu, C. M., Schulz, E., Speekenbrink, M., Nelson, J. D., & Meder, B. (2017) Mapping the unknown: The spatially correlated multi-armed bandit. In: Gunzelmann, G.; Howes, A.; Tenbrink, T. & Davelaar, E. J. (Eds.) _Proceedings of the 38th Annual Meeting of the Cognitive Science Society._ Cognitive Science Society. pp. 1357-1362"
+  lab_authors:
+    - maarten
+      eric_schulz
+  doi: "10.1101/106286"
+  arxiv: "https://www.biorxiv.org/content/early/2017/04/28/106286"
+
+- tag: cai2017task
+  type: conference
+  year: 2017
+  apa_reference: "Cai, Z., Wang, R., Liu, H., & Speekenbrink, M. (2017) Task oriented Bayesian inference in interval timing: People use their prior reproduction experience to calibrate time reproduction. In: Gunzelmann, G., Howes, A., Tenbrink, T. & Davelaar, E. J. (Eds.). _Proceedings of the 38th Annual Meeting of the Cognitive Science Society_. Cognitive Science Society. pp. 192-197"
+  lab_authors:
+    - maarten
+
+- tag: speekenbrink2016tutorial
+  type: journal
+  year: 2016
+  apa_reference: "Speekenbrink, M. (2016). A tutorial on particle filters. _Journal of Mathematical Psychology_, _73_, 140-152."
+  lab_authors:
+    - maarten
+  doi: "10.1016/j.jmp.2016.05.006"
+  osf: b6gsk
+
+- tag: harris2016
+  type: journal
+  year: 2016
+  apa_reference: "Harris, A. J. L., & Speekenbrink, M. (2016). Semantic cross-scale numerical anchoring. _Judgment and Decision Making_, _11_, 572–581."
+  lab_authors:
+    - maarten
+
+- tag: berry2012modelsframework
+  type: journal
+  apa_reference: "Berry, C. J., Shanks, D. R., Speekenbrink, M., & Henson, R. N. (2012). Models of recognition, repetition priming, and fluency: Exploring a new framework. _Psychological Review_, _119_, 40-79."
+  lab_authors:
+    - maarten
+  year: 2012
+  abstract: 'We present a new modeling framework for recognition memory and repetition priming based on signal detection theory. We use this framework to specify and test the predictions of 4 models: (a) a single-system (SS) model, in which one continuous memory signal drives recognition and priming; (b) a multiple-systems-1 (MS1) model, in which completely independent memory signals (such as explicit and implicit memory) drive recognition and priming; (c) a multiple-systems-2 (MS2) model, in which there are also 2 memory signals, but some degree of dependence is allowed between these 2 signals (and this model subsumes the SS and MS1 models as special cases); and (d) a dual-process signal detection (DPSD1) model, 1 possible extension of a dual-process theory of recognition (Yonelinas, 1994) to priming, in which a signal detection model is augmented by an independent recollection process. The predictions of the models are tested in a continuous-identification-with-recognition paradigm in both normal adults (Experiments 1-3) and amnesic individuals (using data from Conroy, Hopkins, & Squire, 2005). The SS model predicted numerous results in advance. These were not predicted by the MS1 model, though could be accommodated by the more flexible MS2 model. Importantly, measures of overall model fit favored the SS model over the others. These results illustrate a new, formal approach to testing theories of explicit and implicit memory.'
+  doi: "10.1037/a0025464"
+  pubmed: "http://www.ncbi.nlm.nih.gov/pubmed/22022831"
+  ucl_discovery: 1329742
+
+- tag: bramley2015conservativeinterventions
+  type: journal
+  year: 2015
+  apa_reference: "Bramley, N., Lagnado, D. A., & Speekenbrink, M. (2015). Conservative forgetful scholars: How people learn causal structure through sequences of interventions. _Journal of Experimental Psychology: Learning, Memory, and Cognition_, _41_, 708-731."
+  lab_authors:
+    - maarten
+  abstract: "Interacting with a system is key to uncovering its causal structure. A computational framework for interventional causal learning has been developed over the last decade, but how real causal learners might achieve or approximate the computations entailed by this framework is still poorly understood. Here we describe an interactive computer task in which participants were incentivized to learn the structure of probabilistic causal systems through free selection of multiple interventions. We develop models of participants' intervention choices and online structure judgments, using expected utility gain, probability gain, and information gain and introducing plausible memory and processing constraints. We find that successful participants are best described by a model that acts to maximize information (rather than expected score or probability of being correct); that forgets much of the evidence received in earlier trials; but that mitigates this by being conservative, preferring structures consistent with earlier stated beliefs. We explore 2 heuristics that partly explain how participants might be approximating these models without explicitly representing or updating a hypothesis space."
+  doi: "10.1037/xlm0000061"
+  pubmed: 25329086
+  ucl_discovery: 1454456
+
+- tag: cappelletti2015learningage
+  type: journal
+  apa_reference: "Cappelletti, M., Pikkat, H., Upstill, E., Speekenbrink, M., & Walsh, V. (2015). Learning to integrate versus inhibiting information is modulated by age. _Journal of Neuroscience_, _35_, 2213-2225"
+  year: 2015
+  lab_authors:
+    - maarten
+
+- tag: fuhrmann2016perception
+  type: journal
+  year: 2016
+  apa_reference: "Fuhrmann, D., Knoll, L. J., Sakhardande, A. L., Speekenbrink, M., Kadosh, K. C., & Blakemore, S.-J. (2016). Perception and recognition of faces in adolescence. _Scientific Reports_, _6_"
+  lab_authors:
+    - maarten
+
+- tag: harvey2017asymmetric
+  type: conference
+  year: 2017
+  apa_reference: "Harvey, N., Twyman, M., & Speekenbrink, M. (2017) Asymmetric detection of changes in volatility: Implications for risk perception. In: Gunzelmann, G., Howes, A., Tenbrink, T. & Davelaar, E. J. (ed.). _Proceedings of the 38th Annual Meeting of the Cognitive Science Society_. Cognitive Science Society. pp. 2162-2167."
+  lab_authors:
+    - maarten
+
+- tag: huang2015differentinstructions
+  year: 2015
+  apa_reference: "Huang, Y.-T., Georgiev, D., Foltynie, T., Limousin, P., Speekenbrink, M., & Jahanshahi, M. (2015) Different effects of dopaminergic medication on perceptual decision-making in Parkinson's disease as a function of task difficulty and speed-accuracy instructions. _Neuropsychologia_, _75_, 577-587."
+  lab_authors:
+    - maarten
+
+- tag: knoll2016window
+  year: 2016
+  apa_reference: "Knoll, L. J., Fuhrmann, D., Sakhardande, A., Stamp, F., Speekenbrink, M., & Blakemore, S.-J. (2016) A window of opportunity for cognitive training in adolescence. _Psychological Science_, _27_, 1620-1631."
+  lab_authors:
+    - maarten
+
+- tag: knoll2015socialadolescence
+  year: 2015
+  apa_reference: "Knoll, L. J., Magis-Weinberg, L., Speekenbrink, M., & Blakemore, S.-J. (2015) Social influence on risk perception during adolescence. _Psychological Science_, _26_, 583-592."
+  lab_authors:
+   - maarten
+
+- tag: kohl2015ininhibition
+  year: 2015
+  apa_reference: "Kohl, S., Aggeli, K., Obeso, I., Speekenbrink, M., Limousin, P., Kuhn, J., & Jahanshahi, M. (2015). In Parkinson's disease pallidal deep brain stimulation speeds up response initiation but has no effect on reactive inhibition. _Journal of Neurology_, _262_, 1741-1750."
+  lab_authors:
+    - maarten
+
+- tag: konstantinidis2014to2014
+  year: 2014
+  apa_reference: "Konstantinidis, E., Speekenbrink, M., Stout, J. C., Ahn, W.-Y., & Shanks, D. R. (2014) To simulate or not? Comment on Steingroever, Wetzels, and Wagenmakers (2014). _Decision_, _1_, 184-191."
+  lab_authors:
+    - maarten
+
+- tag: lagnado2010thelearning
+  year: 2010
+  apa_reference: "Lagnado, D. A., & Speekenbrink, M. (2010) The influence of delays in real-time causal learning. _The Open Psychology Journal_, _3_, 184-195"
+
+- tag: mills2015multitaskingadulthood
+  year: 2015
+  apa_reference: "Mills, K. L., Dumontheil, I., Speekenbrink, M., & Blakemore, S. J. (2015) Multitasking during social interactions in adolescence and early adulthood. _Royal Society Open Science_, _2_"
+
+- tag: obeso2014thedisease
+  year: 2014
+  apa_reference: "Obeso, I., Wilkinson, L., Casabona, E., Speekenbrink, M., Luisa Bringas, M., Álvarez, M., Álvarez, L., Pavón, N., RodrÃ­guez-Oroz, M. C., MacÃ­as, R., Obeso, J., & Jahanshahi, M. (2014) The subthalamic nucleus and inhibitory control: Impact of subthalamotomy in Parkinson's disease. _Brain_, _137_, 1470-1480"
+
+- tag: osman2014thedisease
+  year: 2014
+  apa_reference: "Osman, M., Ryterska, A., Karimi, K., Tu, L., Obeso, I., Speekenbrink, M., & Jahanshahi, M. (2014) The effects of dopaminergic medication on dynamic decision making in Parkinson's disease. _Neuropsychologia_, _53_, 157-164."
+
+- tag: osman2011cueenvironments
+  year: 2011
+  apa_reference: "Osman, M., & Speekenbrink, M. (2011) Cue utilization and strategy application in stable and unstable dynamic environments. _Cognitive Systems Research_, _12_, 355-364."
+
+- tag: osman2012predictionenvironment
+  year: 2012
+  apa_reference: "Osman, M., & Speekenbrink, M. (2012) Prediction and control in a dynamic environment. _Frontiers in Psychology_, _3_: 68"
+
+- tag: parpart2015activestrategies
+  year: 2015
+  apa_reference: "Parpart, P., Schulz, E., Speekenbrink, M., & Love, B. C. (2015) Active learning as a means to distinguish among prominent decision strategies. In: Noelle, D. C., Dale, R., Warlaumont, A. S., Yoshimi, J., Matlock, T., Jennings, C. D., & Maglio, P. P. (Eds.) _Proceedings of the 37th Annual Meeting of the Cognitive Science Society_. Austin, TX: Cognitive Science Society. pp. 1829-1834."
+
+- tag: pote2016subthalamicpressure
+  year: 2016
+  apa_reference: "Potê, I., Torkamani, M., Kefalopoulou, Z., Zrinzo, L., Limousin-Dowsey, P., Foltynie, T., Speekenbrink, M., & Jahanshahi, M. (2016) Subthalamic nucleus deep brain stimulation induces impulsive action when patients with Parkinson's disease act under speed pressure. _Experimental Brain Research_, _234_, 1837-1848."
+
+- tag: Schulz2016better
+  year: 2016
+  apa_reference: "Schulz, E., Huys, Q., Bach, D., Speekenbrink, M., & Krause, A. (2016) Better safe than sorry: Risky function exploitation through safe optimization. In: Papafragou, A., Grodner, D., Mirman, D., & Trueswell, J. C. (Eds.) _Proceedings of the 38th Annual Meeting of the Cognitive Science Society_. Austin, TX: Cognitive Science Society. pp. 1140-1145."
+
+- tag: schulz2017strategic
+  year: 2017
+  apa_reference: "Schulz, E., Klenske, E. D., Bramley, N. R., & Speekenbrink, M. (2017) Strategic exploration in human adaptive control. In: Gunzelmann, G., Howes, A., Tenbrink, T., & Davelaar, E. J. (Eds.). _Proceedings of the 38th Annual Meeting of the Cognitive Science Society_. Austiin, TX: Cognitive Science Society. pp. 1140-1145."
+
+- tag: schulz2015learningtasks
+  year: 2015
+  apa_reference: "Schulz, E., Konstantinidis, E., & Speekenbrink, M. (2015) Learning and decisions in contextual multi-armed bandit tasks. In: Noelle, D. C., Dale, R., Warlaumont, A. S., Yoshimi, J., Matlock, T., Jennings, C.D., & Maglio, P. P. (Eds.) _Proceedings of the 37th Annual Meeting of the Cognitive Science Society_. Austin, TX: Cognitive Science Society. pp. 2122-2127."
+
+- tag: Schulz2016simple
+  year: 2016
+  apa_referemce: "Schulz, E., Speekenbrink, M., & Meder, B. (2016) Simple trees in complex forests: Growing Take The Best by Approximate Bayesian Computation. In: Papafragou, A., Grodner, D., Mirman, D., & Trueswell, J.C. (Eds.) _Proceedings of the 38th Annual Meeting of the Cognitive Science Society_, Austin, TX: Cognitive Science Society. pp. 1140-1145."
+
+- tag: schulz2014predictmodels
+  year: 2014
+  apa_reference: "Schulz, E., Speekenbrink, M., & Shanks, D.R. (2014) Predict choice: A comparison of 21 mathematical models. In: Bello, P., Gaurini, M., McShane, M., & Scassellati, B. (Eds.) _Proceedings of the 36th Annual Meeting of the Cognitive Science Society_. Austin, TX: Cognitive Science Society. pp. 2889-2894."
+
+- tag: schulz2016probing
+  year: 2016
+  apa_reference: "Schulz, E., Tenenbaum, J., Duvenaud, D. K., Speekenbrink, M., & Gershman, S. J. (2016) Probing the compositionality of intuitive functions. In: Lee, D. D., Sugiyama, M., Luxburg, U. V., Guyon, I. & Garnett, R. (Eds.). _Advances in Neural Information Processing Systems_, _29_. Curran Associates, Inc.. pp. 3729-3737."
+
+- tag: schulz2015assessingfunctions
+  year: 2015
+  apa_reference: "Schulz, E., Tenenbaum, J. B., Reshef, D. N., Speekenbrink, M., & Gershman, S. J. (2015) Assessing the perceived predictability of functions. In: Noelle, D. C., Dale, R., Warlaumont, A. S., Yoshimi, J., Matlock, T., Jennings, C. D., & Maglio, P. P. (Eds.). _Proceedings of the 37th Annual Meeting of the Cognitive Science Society_. Austin, TX: Cognitive Science Society. pp. 2116-2121."
+
+- tag: Speekenbrink2012amnesia
+  year: 2012
+  apa_reference: "Speekenbrink, M. (2012) Amnesia and Learning. In: Seel, N. M. (Ed.) _Encyclopedia of the Sciences of Learning_. Springer. pp. 210-212"
+
+- tag: speekenbrink2003theselection
+  year: 2003
+  apa_reference: "Speekenbrink, M. (2003) The hierarchical theory of justification and statistical model selection. In: Yanai, H., Okada, A., Shigemasu, K., Kano, Y. & Meulman, J. J. (Eds.) _New Developments in Psychometrics_, Springer-Verlag. pp. 331-338."
+
+- tag: speekenbrink2004demethodologie
+  year: 2004
+  apa_reference: "Speekenbrink, M. (2004) De ongegronde eis tot consensus in de methodologie. _Nederlands Tijdschrift voor de Psychologie_, _59_, 1-10."
+
+- tag: speekenbrink2008learningamnesia
+  year: 2008
+  apa_reference: "Speekenbrink, M., Channon, S., & Shanks, D. R. (2008) Learning strategies in amnesia. _Neuroscience and Biobehavioral Reviews_, _32_, 292-310."
+
+- tag: speekenbrink2014uncertaintytask
+  year: 2014
+  apa_reference: "Speekenbrink, M., & Konstantinidis, E. (2014) Uncertainty and exploration in a restless bandit task. In: Bello, P., Gaurini, M., McShane, M., & Scassellati, B. (Eds.) _Proceedings of the 36th Annual Meeting of the Cognitive Science Society_. Austin, TX: Cognitive Science Society. pp. 1491-1496."
+
+- tag: speekenbrink2015uncertaintyproblem
+  year: 2015
+  apa_reference: "Speekenbrink, M., & Konstantinidis, E. Uncertainty and exploration in a restless bandit problem. _Topics in Cognitive Science_, _7_, 351-367."
+
+- tag: speekenbrink2010modelsl-dopa
+  year: 2010
+  apa_reference: "Speekenbrink, M., Lagnado, D. A., Wilkinson, L., Jahanshahi, M., & Shanks, D. R. (2010) Models of probabilistic category learning in Parkinson's disease: Strategy use and the effects of L-dopa. _Journal of Mathematical Psychology_, _54_, 123-136."
+
+- tag: speekenbrink2008throughlearning
+  year: 2008
+  apa_reference: "Speekenbrink, M., & Shanks, D. R. (2008) Through the looking glass: A dynamic lens model approach to multiple cue learning. In: Chater, N., & Oaksford, M. (Eds.) _The probabilistic mind_, Oxford University Press. pp. 409-429."
+
+- tag: speekenbrink2013decisionmaking
+  year: 2013
+  apa_reference: "Speekenbrink, M. & Shanks, D. R. (2013) Decision making. In: Reisberg, D. (Ed.) _Oxford handbook of cognitive psychology_. New York, NY: Oxford University Press. pp. 682-703"
+
+- tag: speekenbrink2010learningenvironment
+  year: 2010
+  apa_reference: "Speekenbrink, M. & Shanks, D. R. (2010) Learning in a changing environment. _Journal of Experimental Psychology: General_, _139_, 266-298."
+
+- tag: speekenbrink2011iserratum
+  year: 2011
+  apa_reference: "Speekenbrink, M. & Shanks, D. R. (2011) Is everyone Bayes? On the testable implications of Bayesian Fundamentalism - Erratum. _Behavioral and Brain Sciences_, _34_, 291."
+
+- tag: speekenbrink2011isfundamentalism
+  year: 2011
+  apa_reference: "Speekenbrink, M. & Shanks, D. R. (2011) Is everyone Bayes? On the testable implications of Bayesian Fundamentalism. _Behavioral and Brain Sciences_, _34_, 213-214."
+
+- tag: speekenbrink2012changeautocorrelation
+  year: 2012
+  apa_reference: "Speekenbrink, M., Twyman, M., & Harvey, N. (2012) Change detection under autocorrelation. In: Myake, N., Peebles, D., & Cooper, R. P. (Eds.) _Proceedings of the 34th Annual Meeting of the Cognitive Science Society_. Austin, TX: Cognitive Science Society. pp. 1001-1006."
+
+- tag: stojic2015humanproblems
+  year: 2015
+  apa_reference: "Stojic, H., Analytis, P. P., & Speekenbrink, M. (2015) Human behavior in contextual multi-armed bandit problems. In: Noelle, D. C., Dale, R., Warlaumont, A. S., Yoshimi, J., Matlock, T., Jennings, C. D., & Maglio, P. P. (Eds.). _Proceedings of the 37th Annual Meeting of the Cognitive Science Society_. Austin, TX: Cognitive Science Society. pp. 2290-2295."
+
+- tag: tickle2016near
+  year: 2016
+  apa_reference: "Tickle, H., Speekenbrink, M., Tsetsos, K., Michael, E., & Summerfield, C. (2016) Near-optimal integration of magnitude in the human parietal cortex. _Journal of Cognitive Neuroscience_, _28_, 589-603."
+
+- tag: visser2010achange
+  year: 2010
+  apa_reference: "Visser, I., Jansen, B. R. J., & Speekenbrink, M. (2010) A framework for discrete change. In: Molenaar, P.C.M. & Newell, K. M. (Eds.) _Individual Pathways of Change_. Washington: American Psychological Association."
+
+- tag: visser2014itsmodels
+  year: 2014
+  apa_reference: "Visser, I. & Speekenbrink, M. (2014) It's a catastrophe! Testing dynamics between competing cognitive states using mixture and hidden Markov models. In: Bello, P., Gaurini, M., McShane, M. & Scassellati, B. (Eds.) _Proceedings of the 36th Annual Meeting of the Cognitive Science Society_. Austin, TX: Cognitive Science Society. pp. 1688-1693."
+
+- tag: visser2010depmixs4:models
+  year: 2010
+  apa_reference: "Visser, I. & Speekenbrink, M. (2010) depmixS4: An R-package for hidden Markov models. _Journal of Statistical Software_, _36_, 1-21."
+
+- tag: visser2014commentscovariates
+  year: 2014
+  apa_reference: "Visser, I. & Speekenbrink, M. (2014) Comments on: Latent Markov models: a review of a general framework for the analysis of longitudinal data with covariates. _Test_, _23_, 478-483."
+
+- tag: Cohen2016incorporating
+  year: 2016
+  apa_reference: "Weiss-Cohen, L., Konstantinidis, E., Speekenbrink, M., & Harvey, N. (2016) Incorporating conflicting descriptions into decisions from experience. _Organizational Behavior and Human Decision Processes_, _135_, 55-69."
+
+- tag: wu2017mapping
+  year: 2017
+  apa_reference: "Wu, C. M., Schulz, E., Speekenbrink, M., Nelson, J. D., & Meder, B. (2017) Mapping the unknown: The spatially correlated multi-armed bandit. In: Gunzelmann, G., Howes, A., Tenbrink, T., & Davelaar, E. J. (Eds.). _Proceedings of the 38th Annual Meeting of the Cognitive Science Society_. Austin, TX: Cognitive Science Society. pp. 1357-1362."
