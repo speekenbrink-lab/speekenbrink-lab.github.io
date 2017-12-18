@@ -1,13 +1,11 @@
 ---
 title: "Speekenbrink lab"
-layout: default
+layout: homelayout
 excerpt: "Speekenbrink lab"
 sitemap: false
 permalink: /
 ---
 
-<div class="jumbotron">
-<h2>Computational learning and decision making</h2>
-<p class="lead">We study human learning, inference and decision making with behavioural experiments, neuroscience, and computational modelling.</p>
-<!-- <p><a class="btn btn-lg btn-info" href="#">Learn more &raquo;</a></p> -->
-</div>     
+The goal of our research is to understand the learning and decision processes which allow humans to function effectively in an uncertain and dynamic world.
+By developing computational models and assessing how they compare to human behaviour in experimental tasks, we hope to gain deeper insight into how
+information is processed and represented during learning and decision making.   
