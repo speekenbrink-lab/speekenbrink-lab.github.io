@@ -3,7 +3,7 @@ maarten:
   position: Senior Lecturer in Mathematical Psychology
   current: 1
   photo: maarten_speekenbrink.jpg
-  blurb: My research focusses on learning and decision making. I approach these
+  blurb: My research focuses on learning and decision making. I approach these
          topics with a combination of behavioural experiments and computational
          modelling. I am also interested in optimal experimental design, in
          particular to distinguish between formal models of cognition.
@@ -45,6 +45,7 @@ sabine_topf:
   photo: sabine_topf.jpg
   email: sabine.topf.14@ucl.ac.uk
   url: www.topf.com
+  github: stopf
   twitter: NeneTopf
   researchgate: Sabine_Topf
   blurb: In my research, I focus on how learning from others informs individual
@@ -56,7 +57,7 @@ sabine_topf:
           else is taking care of environmental problems, giving us the chance to
           free-ride? Infer the goal and apply it to a different area (reduce water
           consumption, for instance)? I am going to mainly use behavioural experiments
-          and agent based modelling  to answer these questions.
+          and agent based modelling to answer these questions.
 
 eric_schulz:
   name: Eric Schulz
@@ -65,7 +66,7 @@ eric_schulz:
   start_year: 2014
   end_year: 2017
   photo: eric_schulz.jpg
-  blurb: My research mainly focusses on active learning. I use machine
+  blurb: My research mainly focuses on active learning. I use machine
          learning techniques to probe how humans and other agents can and
          should actively learn about mostly continuous relations. I believe
          that when we gather information about our environment, it is not the
@@ -83,9 +84,9 @@ eric_schulz:
          well as the history of psychology.
   movingon_blurb: Eric first joined the lab as an MSc student in 2010, then
                   as an MRes student in 2013, and finally as a PhD student
-                  (2014 - 2017). Eric worked on various projects, foscusing in
+                  (2014 - 2017). Eric worked on various projects, focusing in
                   particular on functional generalization in reinforcement
-                  learning with,Gaussian Processes.
+                  learning with Gaussian Processes.
                   After leaving the lab, he became a Harvard
                   Data Science fellow, working with Sam Gershman and Josh
                   Tenenbaum.
@@ -134,8 +135,8 @@ akhat_rakishev:
   position: BSc student
   current: 1
   start_year: 2017
-  blurb: My research project focusses on how people learn about the volatility
-         in the environment, and how this
+  blurb: My research project focuses on how people learn about the volatility
+         in the environment, and how this ...
   github: akhatre
   email: akhat.rakishev.14@ucl.ac.uk
 
@@ -146,7 +147,7 @@ moritz_krusche:
   end_year: 2017
   current: 0
   movingon_blurb: Moritz worked on a project investigating planning in
-                  complex reinforcement learning task. After leaving the lab,
+                  complex reinforcement learning tasks. After leaving the lab,
                   he took on a PhD position at Warwick Business School, working
                   with Nick Chater and Adam Sanborn.
   github: moritzkrusche
