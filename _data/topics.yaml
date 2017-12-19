@@ -5,10 +5,10 @@
     - maarten
   blurb: How do people learn to make better decisions from experience?
   description: >
-     Traditional research on decision-making is often focussed on
+     Traditional research on decision-making is often focused on
      how people make "decisions under risk" in well-described
      situations (e.g., gambles). For instance, someone might be asked
-     whether they prefer to play Gamble A, in which there is an 20%
+     whether they prefer to play Gamble A, in which there is a 20%
      chance of winning 8 pounds, or Gamble B, in which there is a
      30% chance of winning 6 pounds. In every-day life, decision
      problems are rarely encountered in such a neatly packaged
@@ -56,7 +56,7 @@
 
     <ol>
     <li>A certain cost (from going the extra mile to recycle glass bottles
-    at a designated container to installing extra insulation on you house)</li>
+    at a designated container to installing insulation on your house)</li>
     <li>The fact that a single individual's contribution is minimal and cannot,
     in itself, determine the desirable outcome (however much you do, one person
     drastically reducing energy use will not reverse the impacts of climate
@@ -68,7 +68,7 @@
     this "Public Good" and instead take advantage of other people's
     contributions. However, as the number of free-riders increases, the system
     breaks and everyone is in a worse position than had they contributed in the
-    first instance. This is known in Game Theory as the "Tragedy of the
+    first instance. In Game Theory this is known as the "Tragedy of the
     Commons". Different ways to avoid the Tragedy of the Commons have
     previously been discussed, e.g. privatisation of the commons or punishment
     for free-riders. With regards to climate change, these options are limited:
@@ -79,7 +79,7 @@
     In this project, we are thus looking at a third option, namely how
     cooperation can evolve in the creation of Public Goods. We focus on how
     behaviours and their traces (i.e., signs of the behaviour that remain in
-    the physical environment) can foster cooperation without direct
+    the shared, physical environment) can foster cooperation without direct
     communication and, crucially, without coercion.
 
 - name: Adaptive design
