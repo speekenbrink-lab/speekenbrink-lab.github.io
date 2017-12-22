@@ -135,8 +135,14 @@ akhat_rakishev:
   position: BSc student
   current: 1
   start_year: 2017
-  blurb: My research project focuses on how people learn about the volatility
-         in the environment, and how this ...
+  blurb: My research project focuses on whether people can track how changeable
+         the environment is (the level of volatility), and how this influences
+         their rate of learning. To test this, I have developed an online game
+         in which players need to predict the location of a school of fish.
+         Tracking changes in volatility is a difficult computational problem,
+         and we have developed particle filter algorithms which solve this
+         task in order to have a benchmark against which to compare human
+         behavior.
   github: akhatre
   email: akhat.rakishev.14@ucl.ac.uk
 

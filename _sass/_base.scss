@@ -14,8 +14,9 @@ h1, h2 {
 
 
 .navbar {
-    background-color: #97BFDF;
+    background-color: $brand-color;
 }
+
 .navbar-static-top {
   top: 110px;
 }
@@ -34,7 +35,7 @@ h1, h2 {
     padding-top: 240px;
     padding-bottom: 10px;
     background-position: 10% 10%;
-    background-color: #D6D2C4;
+    background-color: $ucl-stone;
     background-image: url(../images/site/SpeekLabLogoStone.jpg);
     background-size: 80%;
     background-repeat: no-repeat;
@@ -70,6 +71,112 @@ h1, h2 {
   background-position: right;
   background-repeat: no-repeat;
 }
+
+// Default navbar
+.navbar-custom {
+  background-color: $brand-color;
+  border-color: $brand-color;
+  .navbar-brand {
+    color: $brand-color-dark;
+    &:hover,
+    &:focus {
+      color: black; //$brand-color-light;
+      background-color: $ucl-stone; //$navbar-default-brand-hover-bg;
+    }
+  }
+
+  .navbar-text {
+    color: $navbar-default-color;
+  }
+
+  .navbar-nav {
+    > li > a {
+      color: $text-color;
+
+      &:hover,
+      &:focus {
+        color: black; //$navbar-default-link-hover-color;
+        background-color: $ucl-stone; //$navbar-default-link-hover-bg;
+      }
+    }
+    > .active > a {
+      &,
+      &:hover,
+      &:focus {
+        color: $navbar-default-link-active-color;
+        background-color: $navbar-default-link-active-bg;
+      }
+    }
+    > .disabled > a {
+      &,
+      &:hover,
+      &:focus {
+        color: $navbar-default-link-disabled-color;
+        background-color: $navbar-default-link-disabled-bg;
+      }
+    }
+  }
+
+  .navbar-toggle {
+    border-color: $navbar-default-toggle-border-color;
+    &:hover,
+    &:focus {
+      background-color: $navbar-default-toggle-hover-bg;
+    }
+    .icon-bar {
+      background-color: $navbar-default-toggle-icon-bar-bg;
+    }
+  }
+
+  .navbar-collapse,
+  .navbar-form {
+    border-color: $navbar-default-border;
+  }
+
+  // Dropdown menu items
+  .navbar-nav {
+    // Remove background color from open dropdown
+    > .open > a {
+      &,
+      &:hover,
+      &:focus {
+        background-color: $navbar-default-link-active-bg;
+        color: $navbar-default-link-active-color;
+      }
+    }
+
+    @media (max-width: $grid-float-breakpoint-max) {
+      // Dropdowns get custom display when collapsed
+      .open .dropdown-menu {
+        > li > a {
+          color: $navbar-default-link-color;
+          &:hover,
+          &:focus {
+            color: $navbar-default-link-hover-color;
+            background-color: $navbar-default-link-hover-bg;
+          }
+        }
+        > .active > a {
+          &,
+          &:hover,
+          &:focus {
+            color: $navbar-default-link-active-color;
+            background-color: $navbar-default-link-active-bg;
+          }
+        }
+        > .disabled > a {
+          &,
+          &:hover,
+          &:focus {
+            color: $navbar-default-link-disabled-color;
+            background-color: $navbar-default-link-disabled-bg;
+          }
+        }
+      }
+    }
+  }
+}
+
 
 /**
  * Basic styling
@@ -156,7 +263,7 @@ a {
     text-decoration: none;
 
     &:visited {
-        color: darken($brand-color, 15%);
+        color: darken($brand-color, 5%);
     }
 
     &:hover {

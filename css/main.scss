@@ -25,7 +25,16 @@ $spacing-unit:     30px;
 
 $text-color:       #111;
 $background-color: #fdfdfd;
-$brand-color:      #2a7ae2;
+// $brand-color:      #2a7ae2;
+
+
+$ucl-blue:         #97BFDF;
+$ucl-stone:        #D6D2C4;
+$uclLogo-color:    $ucl-blue;
+
+$brand-color:      $uclLogo-color;
+$brand-color-light: lighten($brand-color, 25%);
+$brand-color-dark:  darken($brand-color, 40%);
 
 $grey-color:       #828282;
 $grey-color-light: lighten($grey-color, 40%);
@@ -62,4 +71,4 @@ $on-laptop:        960px;
 ;
 
 
-@import "svg-icons";
+// @import "svg-icons";
