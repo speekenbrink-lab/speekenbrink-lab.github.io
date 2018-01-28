@@ -1,12 +1,13 @@
 <p>
-{% if member[1].url %}<a href="{{ member[1].url }}"><i class="fa fa-home fa-2x"></i></a>{% endif %}
-{% if member[1].email %}<a href="mailto:{{ member[1].email }}"><i class="fa fa-envelope fa-2x"></i></a>{% endif %}
-{% if member[1].googlescholar %}<a href="https://scholar.google.co.uk/citations?user={{ member[1].googlescholar}}"><i class="ai ai-google-scholar ai-2x"></i></a>{% endif %}
-{% if member[1].github %}<a href="https://github.com/{{ member[1].github }}"><i class="fa fa-github fa-2x"></i></a>{% endif %}
-{% if member[1].twitter %}<a href="https://twitter.com/{{ member[1].twitter }}"><i class="fa fa-twitter fa-2x"></i></a>{% endif %}
-{% if member[1].orcid %}<a href="https://orcid.org/{{ member[1].orcid }}"><i class="ai ai-orcid ai-2x"></i></a>{% endif %}
-{% if member[1].impactstory %}<a href="https://profiles.impactstory.org/u/{{ member[1].impactstory }}"><i class="ai ai-impactstory ai-2x"></i></a>{% endif %}
-{% if member[1].researcherid %}<a href="http://www.researcherid.com/rid/{{ member[1].researcherid }}"><i class="ai ai-orcid ai-2x"></i></a>{% endif %}
-{% if member[1].linkedin %}<a href="https://www.linkedin.com/in/{{ member[1].linkedin }}"><i class="fa fa-linkedin fa-2x"></i></a>{% endif %}
-{% if member[1].researchgate %}<a href="https://www.researchgate.net/profile/{{ member[1].researchgate }}"><i class="ai ai-researchgate ai-2x"></i></a>{% endif %}
+{% if member.url %}<a href="{{ member.url }}"><i class="fa fa-home fa-2x"></i></a>{% endif %}
+{% if member.email %}<a href="mailto:{{ member.email }}"><i class="fa fa-envelope fa-2x"></i></a>{% endif %}
+{% if member.googlescholar %}<a href="https://scholar.google.co.uk/citations?user={{ member.googlescholar}}"><i class="ai ai-google-scholar ai-2x"></i></a>{% endif %}
+{% if member.github %}<a href="https://github.com/{{ member.github }}"><i class="fa fa-github fa-2x"></i></a>{% endif %}
+{% if member.twitter %}<a href="https://twitter.com/{{ member.twitter }}"><i class="fa fa-twitter fa-2x"></i></a>{% endif %}
+{% if member.orcid %}<a href="https://orcid.org/{{ member.orcid }}"><i class="ai ai-orcid ai-2x"></i></a>{% endif %}
+{% if member.impactstory %}<a href="https://profiles.impactstory.org/u/{{ member.impactstory }}"><i class="ai ai-impactstory ai-2x"></i></a>{% endif %}
+{% if member.researcherid %}<a href="http://www.researcherid.com/rid/{{ member.researcherid }}"><i class="ai ai-orcid ai-2x"></i></a>{% endif %}
+{% if member.linkedin %}<a href="https://www.linkedin.com/in/{{ member.linkedin }}"><i class="fa fa-linkedin fa-2x"></i></a>{% endif %}
+{% if member.researchgate %}<a href="https://www.researchgate.net/profile/{{ member.researchgate }}"><i class="ai ai-researchgate ai-2x"></i></a>{% endif %}
+{% if member.osf %}<a href="https://www.osf.io/{{ member.osf }}/"><i class="ai ai-osf ai-2x"></i></a>{% endif %}
 </p>

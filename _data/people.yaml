@@ -1,4 +1,4 @@
-maarten:
+- tag: maarten
   name: Maarten Speekenbrink
   position: Senior Lecturer in Mathematical Psychology
   current: 1
@@ -18,8 +18,9 @@ maarten:
   googlescholar: I37Yg2kAAAAJ
   researcherID: C-1904-2008
   impactstory: 0000-0003-3221-1091
+  osf: utm5y
 
-hannah_tickle:
+- tag: hannah_tickle
   name: Hannah Tickle
   position: PhD student
   current: 1
@@ -37,7 +38,7 @@ hannah_tickle:
          I'm also comparing various models that can account for this decision process,
          as well as starting to collect EEG data as people perform the task.
 
-sabine_topf:
+- tag: sabine_topf
   name: Sabine Topf
   position: PhD student
   current: 1
@@ -59,7 +60,7 @@ sabine_topf:
           consumption, for instance)? I am going to mainly use behavioural experiments
           and agent based modelling to answer these questions.
 
-eric_schulz:
+- tag: eric_schulz
   name: Eric Schulz
   position: PhD student
   current: 0
@@ -95,7 +96,7 @@ eric_schulz:
   github: ericschulz
   url: https://ericschulz.github.io/
 
-hrvoje_stojic:
+- tag: hrvoje_stojic
   name: Hrvoje Stojic
   position: Visiting PhD student
   current: 0
@@ -130,7 +131,35 @@ hrvoje_stojic:
   github: hstojic
   url: http://hstojic.re/
 
-akhat_rakishev:
+- tag: alzbeta_gabalova
+  name: Alzbeta Gabalova
+  position: MSc student
+  current: 1
+  start_year: 2017
+  blurb: My MSc research project will focus on learning in interpersonal games.
+  email: alzbeta.gabalova.17@ucl.ac.uk
+
+- tag: ismail_guennouni
+  name: Ismail Guennouni
+  position: MSc student
+  current: 1
+  start_year: 2017
+  blurb: My MSc research project will focus on learning in interpersonal games.
+  email: i.gennouni.17@ucl.ac.uk
+
+- tag: lucija_vihar
+  name: Lucija Vihar
+  position: MSc student
+  current: 1
+  start_year: 2017
+  blurb: My MSc research project will focus on the use of stigmergy theory to
+         promote pro-environmental behaviour.
+  email: l.vihar.17@ucl.ac.uk
+
+- tag: felix_schmirler
+  name: Felix Schmil
+
+- tag: akhat_rakishev
   name: Akhat Rakishev
   position: BSc student
   current: 1
@@ -146,7 +175,17 @@ akhat_rakishev:
   github: akhatre
   email: akhat.rakishev.14@ucl.ac.uk
 
-moritz_krusche:
+- tag: minho_shin
+  name: Minho Shin
+  position: Visiting BSc student
+  current: 1
+  start_year: 2018
+  blurb: I'm an undergraduate student from South Korea, visiting the
+         Speekenbrink lab as an intern to learn more about decision making
+         and computational modeling.
+  email: mhshin@dgist.ac.kr
+
+- tag: moritz_krusche
   name: Moritz Krusche
   position: MSc student
   start_year: 2016
@@ -158,7 +197,7 @@ moritz_krusche:
                   with Nick Chater and Adam Sanborn.
   github: moritzkrusche
 
-neo_poon:
+- tag: neo_poon
   name: Neo Poon
   position: MSc student
   start_year: 2016
@@ -168,7 +207,7 @@ neo_poon:
                   explain the "pioneer effect". After leaving the lab, he took
                   on a PhD position at Warwick Business School.
 
-thomas_verbeek:
+- tag: thomas_verbeek
   name: Thomas Verbeek
   position: MSc student
   start_year: 2016
@@ -176,7 +215,7 @@ thomas_verbeek:
   current: 0
   movingon_blurb: Thomas worked on a project investigating the distinction between model-based and model-free reinforcement learning.
 
-ys_chng:
+- tag: ys_chng
   name: Yee Siang Chng
   position: MSc student
   start_year: 2016
@@ -184,7 +223,7 @@ ys_chng:
   current: 0
   movingon_blurb: YS worked on a project investigating the distinction between state and reward functions in reinforcement learning.
 
-m_wieworski:
+- tag: m_wieworski
   name: Michael Wiewiorski
   position: MSc student
   start_year: 2016
@@ -194,7 +233,7 @@ m_wieworski:
                   strategy affects people's own strategy in a simple two-player
                   game.
 
-r_becanne:
+- tag: r_becanne
   name: Raphael Becanne
   position: MSc student
   start_year: 2015
@@ -204,7 +243,7 @@ r_becanne:
                   model-free vs model-based reinforcement learning in a
                   simplified two-player version of poker.
 
-j_baumeister:
+- tag: j_baumeister
   name: Jochen Baumeister
   position: MSc student
   start_year: 2014
@@ -213,7 +252,7 @@ j_baumeister:
   movingon_blurb: Jochen worked on a project investigating preference
                   stabilization.
 
-a_singh:
+- tag: a_singh
   name: Anisha Singh
   position: MSc student
   start_year: 2014
@@ -223,7 +262,7 @@ a_singh:
                   strategies and the evaluations of other players in a
                   simplified two-player version of poker.
 
-t_tawse:
+- tag: t_tawse
   name: Thomas Tawse
   position: MSc student
   start_year: 2014
@@ -232,191 +271,262 @@ t_tawse:
   movingon_blurb: Thomas worked on a project related to the
                   exploration/exploitation dilemma.
 
-g_webb:
+- tag: g_webb
   name: Gareth Webb
   position: MSc student
   current: 0
 
-a_karina:
+- tag: a_karina
   name: Audrey Karina
   position: MSc student
   current: 0
   start_year: 2012
   end_year: 2013
+  movingon_blurb: Audry worked on a project investigating model-based and
+                  model-free reinforcement learning.
 
-cf_liang:
+
+- tag: cf_liang
   name: Chiung-Fang Liang
   position: MSc student
   current: 0
 
-a_hadjianastasiou:
+- tag: a_hadjianastasiou
   name: Anastasios Hadjianastasiou
   position: MSc student
   current: 0
   start_year: 2012
   end_year: 2013
+  movingon_blurb: Anastasios worked on a project to investigate stabilization
+                  of preference with experience.
 
-a_krajciova:
+- tag: a_krajciova
   name: Andrea Krajciova
   position: MSc student
+  start_year: 2007
+  end_year: 2008
   current: 0
+  movingon_blurb: Andrea worked on a project to investigate cue learning
+                  in a changing environment.
 
-r_tan:
+- tag: r_tan
   name: Ryan Tan
   position: BSc student
+  start_year: 2016
+  end_year: 2017
+  movingon_blurb: Ryan worked on a project investigating framing effects in
+                  a multi-armed bandit task.
   current: 0
 
-n_alam:
+- tag: n_alam
   name: Nadia Alam
   position: BSc student
   current: 0
+  start_year: 2015
+  end_year: 2016
+  movingon_blurb: Nadia worked on a project investigating the effect of
+                  information frequency on evidence weighting in perceptual
+                  decisions.
 
-j_chu:
+- tag: j_chu
   name: James Chu
   position: BSc student
   current: 0
+  start_year: 2015
+  end_year: 2016
+  movingon_blurb: James worked on a project investigating safe exploration
+                  in a reinforcemtn learning task.
 
-a_leung:
+- tag: a_leung
   name: Anthony Leung
   position: BSc student
   current: 0
+  start_year: 2015
+  end_year: 2016
+  movingon_blurb: Anthony worked on a project investigating people's ability
+                  to produce random sequences in games.
 
-f_ho:
+- tag: f_ho
   name: Florence Ho
   position: BSc student
   current: 0
+  start_year: 2015
+  end_year: 2016
+  movingon_blurb: Florence worked on a project investigaing the influence
+                  of volatility, stakes, and personality on exploration-
+                  exploitation behaviour.
 
-b_chang:
+- tag: b_chang
   name: Benjamin Chang
   position: BSc student
   current: 0
+  start_year: 2015
+  end_year: 2016
+  movingon_blurb: Benjamin worked on a project investigating preference
+                  stabilization.
 
-n_li:
+- tag: n_li
   name: Nora Li
   position: BSc student
   current: 0
+  movingon_blurb: Nora worked on a project investigating the effects of
+                  foregone payoffs on exploration-exploitation behaviour.
+  start_year: 2015
+  end_year: 2016
 
-sofia_melnikaite:
+- tag: sofia_melnikaite
   name: Sofia Melnikaite
   position: BSc student
   current: 0
+  start_year: 2014
+  end_year: 2015
+  movingon_blurb: Sofija worked on a project investigating how people learn
+                  to cooperate in multi-player games from their opponents'
+                  strategies.
 
-shouhoa_goh:
+
+- tag: shouhoa_goh
   name: Shouhao Goh
   position: BSc student
   current: 0
+  start_year: 2012
+  end_year: 2013
+  movingon_blurb: Shouhao worked on a project investigating model-based and
+                  model-free learning.
 
-hochuan_calwin:
+- tag: hochuan_calwin
   name: Ho Chuan Calwin
   position: BSc student
   current: 0
 
-stephanie_lee:
+- tag: stephanie_lee
   name: Stephanie Lee
   position: BSc student
   current: 0
+  start_year: 2008
+  end_year: 2009
 
-james_carragher:
+- tag: james_carragher
   name: James Carragher
   position: BSc student
   current: 0
+  start_year: 2013
+  end_year: 2014
+  movingon_blurb: James worked on a project investigating the influence of
+                  information about foregone payoffs on exploration-
+                  exploitation behaviour.
 
-niroshan_dayalan:
+- tag: niroshan_dayalan
   name: Niroshan Dayalan
   position: BSc student
   current: 0
+  movingon_blurb: Niroshan worked on a project investigating evidence
+                  integration in perceptual decisions.
 
-folasade_adu:
+- tag: folasade_adu
   name: Folasade Adu
   position: BSc student
   current: 0
 
-ed_humhreys:
+- tag: ed_humphreys
   name: Ed Humphreys
   position: BSc student
   current: 0
 
-adam_lipman:
+- tag: adam_lipman
   name: Adam Lipman
   position: BSc student
   current: 0
+  start_year: 2011
+  end_year: 2012
+  movingon_blurb: Adam worked on a project investigating framing effects in
+                  decisions from experience.
 
-zehra_moinuddin:
+- tag: zehra_moinuddin
   name: Zehra Moinuddin
   position: BSc student
   current: 0
+  start_year: 2010
+  end_year: 2011
+  movingon_blurb: Zehra worked on a project to investigate whether there is a
+                  difference between learning when focussed on predicting vs.
+                  controlling outcomes.
 
-luke_prince:
+- tag: luke_prince
   name: Luke Prince
   position: BSc student
   current: 0
+  start_year: 2011
+  end_year: 2012
+  movingon_blurb: Luke worked on a project related to model-based vs model-free
+                  reinforcement learning.
 
-sarah_blakemore:
+- tag: sarah_blakemore
   name: Sarah-Jayne Blakemore
   position: collaborator
   organization: UCL
   url: "https://sites.google.com/site/blakemorelab/"
   current: 1
 
-adam_harris:
+- tag: adam_harris
   name: Adam Harris
   position: collaborator
   organization: UCL
   url: "http://www.ucl.ac.uk/lagnado-lab/adamharris.html"
   current: 1
 
-nigel_harvey:
+- tag: nigel_harvey
   name: Nigel Harvey
   position: collaborator
   organization: UCL
   url: "http://www.ucl.ac.uk/slms/people/show.php?UPI=NJWHA27"
   current: 1
 
-marjan_jahanshahi:
+- tag: marjan_jahanshahi
   name: Marjan Jahanshahi
   position: collaborator
   organization: UCL
   url: "http://www.ucl.ac.uk/ion/departments/sobell/Research/MJahanshahi"
   current: 0
 
-dave_lagnado:
+- tag: dave_lagnado
   name: David Lagnado
   position: collaborator
   organization: UCL
   url: "http://www.ucl.ac.uk/lagnado-lab/david_lagnado.html"
   current: 0
 
-magda_osman:
+- tag: magda_osman
   name: Magda Osman
   position: collaborator
   organization: Queen Mary, University of London
   url: "http://www.magdaosman.co.uk/"
   current: 0
 
-david_shanks:
+- tag: david_shanks
   name: David Shanks
   position: collaborator
   organization: UCL
   current: 0
   url: "https://sites.google.com/site/davidshanksucl/"
 
-chris_summerfield:
+- tag: chris_summerfield
   name: Christopher Summerfield
   position: collaborator
   organization: Univerity of Oxford
   current: 1
   url: "http://decisions.psy.ox.ac.uk"
 
-ingmar:
+- tag: ingmar
   name: Ingmar Visser
   position: collaborator
   organization: University of Amsterdam
   url: "http://www.uva.nl/profiel/v/i/i.visser/i.visser.html"
   current: 1
 
-garry_cai:
-    name: Zhenguang (Garry) Cai
-    position: collaborator
-    organization: University of East Anglia
-    url: "https://www.uea.ac.uk/psychology/people/profile/zhenguang-cai"
-    current: 1
+- tag: garry_cai
+  name: Zhenguang (Garry) Cai
+  position: collaborator
+  organization: University of East Anglia
+  url: "https://www.uea.ac.uk/psychology/people/profile/zhenguang-cai"
+  current: 1

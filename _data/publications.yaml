@@ -1,3 +1,13 @@
+- tag: schulz2017compositional
+  type: journal
+  year: 2017
+  apa_reference: "Schulz, E., Tenenbaum, J. B., Duvenaud, D., Speekenbrink, M., & Gershman, S. J. (2017). Compositional inductive biases in function learning. _Cognitive Psychology_, _99_, 44-79."
+  lab_authors:
+    - maarten
+      eric_schulz
+  ucl_discovery: 10038584
+  doi: "10.1016/j.cogpsych.2017.11.002"
+
 - tag: schulz2017putting
   type: journal
   year: 2017
@@ -7,6 +17,17 @@
       eric_schulz
   arxiv: "https://www.biorxiv.org/content/early/2017/06/15/081091"
   doi: "10.1037/xlm0000463"
+  ucl_discovery: 10038583
+
+- tag: weiss2017task
+  type: journal
+  year: 2018
+  apa_reference: "Weiss-Cohen, L., Konstantinidis, E., Speekenbrink, M., & Harvey, N. (2018). Task complexity moderates the influence of descriptions in decisions from experience. _Cognition_, _170_, 209-227."
+  lab_authors:
+    - maarten
+  osf: rzadn
+  doi: "10.1016/j.cognition.2017.10.005"
+  ucl_discovery: 10039062
 
 - tag: knoll2017
   type: journal
@@ -14,6 +35,8 @@
   apa_reference: "Knoll, L. J., Fuhrmann, D., Sakhardande, A., Stamp, F., Speekenbrink, M., & Blakemore, S.-J. (2016). A window of opportunity for cognitive training in adolescence. _Psychological Science,_ _27_, 1620-1631."
   lab_authors:
     - maarten
+  doi: "10.1177/0956797616671327"
+  ucl_discovery: 1528655
 
 - tag: wu2017mapping
   type: conference
@@ -31,6 +54,7 @@
   apa_reference: "Cai, Z., Wang, R., Liu, H., & Speekenbrink, M. (2017) Task oriented Bayesian inference in interval timing: People use their prior reproduction experience to calibrate time reproduction. In: Gunzelmann, G., Howes, A., Tenbrink, T. & Davelaar, E. J. (Eds.). _Proceedings of the 38th Annual Meeting of the Cognitive Science Society_. Cognitive Science Society. pp. 192-197"
   lab_authors:
     - maarten
+  url: "https://mindmodeling.org/cogsci2017/papers/0048/index.html"
 
 - tag: speekenbrink2016tutorial
   type: journal
@@ -40,6 +64,7 @@
     - maarten
   doi: "10.1016/j.jmp.2016.05.006"
   osf: b6gsk
+  ucl_discovery: 1508064
 
 - tag: harris2016
   type: journal
@@ -47,6 +72,7 @@
   apa_reference: "Harris, A. J. L., & Speekenbrink, M. (2016). Semantic cross-scale numerical anchoring. _Judgment and Decision Making_, _11_, 572–581."
   lab_authors:
     - maarten
+  url: "http://journal.sjdm.org/16/16609/jdm16609.pdf"
 
 - tag: berry2012modelsframework
   type: journal
@@ -184,6 +210,7 @@
 - tag: Speekenbrink2012amnesia
   year: 2012
   apa_reference: "Speekenbrink, M. (2012) Amnesia and Learning. In: Seel, N. M. (Ed.) _Encyclopedia of the Sciences of Learning_. Springer. pp. 210-212"
+  ucl_discovery: 1481458
 
 - tag: speekenbrink2003theselection
   year: 2003
@@ -216,10 +243,13 @@
 - tag: speekenbrink2013decisionmaking
   year: 2013
   apa_reference: "Speekenbrink, M. & Shanks, D. R. (2013) Decision making. In: Reisberg, D. (Ed.) _Oxford handbook of cognitive psychology_. New York, NY: Oxford University Press. pp. 682-703"
+  ucl_discovery: 1402570
 
 - tag: speekenbrink2010learningenvironment
   year: 2010
   apa_reference: "Speekenbrink, M. & Shanks, D. R. (2010) Learning in a changing environment. _Journal of Experimental Psychology: General_, _139_, 266-298."
+  ucl_discovery: 82395
+  url: "http://discovery.ucl.ac.uk/18896/"
 
 - tag: speekenbrink2011iserratum
   year: 2011
@@ -257,7 +287,7 @@
   year: 2014
   apa_reference: "Visser, I. & Speekenbrink, M. (2014) Comments on: Latent Markov models: a review of a general framework for the analysis of longitudinal data with covariates. _Test_, _23_, 478-483."
 
-- tag: Cohen2016incorporating
+- tag: weiss2016incorporating
   year: 2016
   apa_reference: "Weiss-Cohen, L., Konstantinidis, E., Speekenbrink, M., & Harvey, N. (2016) Incorporating conflicting descriptions into decisions from experience. _Organizational Behavior and Human Decision Processes_, _135_, 55-69."
 

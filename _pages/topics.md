@@ -6,36 +6,53 @@ sitemap: false
 permalink: /topics/
 ---
 
-{% for topic in site.data.topics %}
-{% if topic.current == 1 %}
+# Our research
 
-## {{topic.name}}
+The goal of our research is to understand the learning and decision processes which allow humans to function effectively in an uncertain and dynamic world. By developing computational models and assessing how they compare to human behaviour in experimental tasks, we hope to gain deeper insight into how information is processed and represented during learning and decision making.
 
-_{{topic.blurb}}_
+<hr>
 
+<p></p>
+
+{% for topic in site.researchtopics %}
+{% assign mod = forloop.index | modulo: 3 %}
+{% if mod == 0 %}
+<!-- last column -->
+<div class="col4 col-sm-4 col-lg-4">
+<h2>{{ topic.title }}</h2>
+<p>{{ topic.blurb }}</p>
+{% if topic.image %}
+<img src="{{site.url}}{{site.baseurl}}/images/research/{{ topic.image }}" class="img-responsive" width="100%">
+{% endif %}
+<a href="{{ topic.url }}" class="btn btn-default">Read more</a>
+</div>
+</div>
+{% elsif mod == 2 %}
+<!-- middle column -->
+<div class="col4 col-sm-4 col-lg-4">
+<h2>{{ topic.title }}</h2>
+<p>{{ topic.blurb }}</p>
+{% if topic.image %}
+<img src="{{site.url}}{{site.baseurl}}/images/research/{{ topic.image }}" class="img-responsive" width="100%">
+{% endif %}
+<a href="{{ topic.url }}" class="btn btn-default">Read more</a>
+</div>
+{% if forloop.last %}
+</div>
+{% endif %}
+{% else %}
+<!-- first column -->
 <div class="row">
-{% capture thecycle %}{% cycle 'odd', 'even' %}{% endcapture %}
-{% if thecycle == 'odd' %}
 <div class="col4 col-sm-4 col-lg-4">
-{% if topic.image %}<img src="{{ site.url }}{{ site.baseurl }}/images/research/{{ topic.image }}" width="80%" align="left" />{% endif %}
+<h2>{{ topic.title }}</h2>
+<p>{{ topic.blurb }}</p>
+{% if topic.image %}
+<img src="{{site.url}}{{site.baseurl}}/images/research/{{ topic.image }}" class="img-responsive" width="100%">
+{% endif %}
+<a href="{{ topic.url }}" class="btn btn-default">Read more</a>
+{% if forloop.last %}
 </div>
 {% endif %}
-
-<div class="col8 col-sm-8 col-lg-8">
-
-
-
-
-{{topic.description}}
-
-</div>
-
-{% if thecycle == 'even' %}
-<div class="col4 col-sm-4 col-lg-4">
-{% if topic.image %}<img src="{{ site.url }}{{ site.baseurl }}/images/research/{{ topic.image }}" width="80%" align="right" />{% endif %}
-</div>
-{% endif %}
-
 </div>
 {% endif %}
 {% endfor %}

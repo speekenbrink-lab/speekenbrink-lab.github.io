@@ -8,6 +8,6 @@ This website was programmed with [Jekyll](http://jekyllrb.com) and the bare fram
 
 The fonts used include [Bangers](https://fonts.google.com/specimen/Bangers), [font-awesome](http://fontawesome.io/), and [academicons](http://jpswalsh.github.io/academicons/).
 
-The logo was made with [StructureSynth](http://structuresynth.sourceforge.net/), based on the "Binary Kite".
+The logo was made with [StructureSynth](http://structuresynth.sourceforge.net/), based on the "Binary Kite" code.
 
 The full source code of the website is available at the [GitHub repository](https://github.com/speekenbrink-lab/speekenbrink-lab.github.io).

@@ -13,7 +13,7 @@ permalink: /publications/
 <h2>{{ year.name }}</h2>
 {% assign sorted_pubs = year.items | sort: 'apa_reference' %}
 {% for pub in sorted_pubs %}
-{{ pub.apa_reference }} {% if pub.doi %}<a href="https://doi.org/{{ pub.doi }}"><i class="ai ai-doi ai-1x"></i></a>{% endif %}{% if pub.arxiv %}<a href="{{ pub.arxiv }}"><i class="ai ai-arxiv ai-1x"></i></a>{% endif %}{% if pub[1].osf %}<a href="https://osf.io/{{ pub.osf }}"><i class="ai ai-osf ai-1x"></i></a>{% endif %}
+<a name="{{pub.tag}}"></a>{{ pub.apa_reference }} {% include publicationlinks.html %}
 {% endfor %}
 </div>
 </div>

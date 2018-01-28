@@ -11,13 +11,18 @@ title: Speekenbrink-lab
 description: > # this means to ignore newlines until "baseurl:"
   Website of the Speekenbrink Lab at UCL Experimental Psychology.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://speekenbrink-lab.github.io/" # the base hostname & protocol for your site
+# url: "https://speekenbrink-lab.github.io" # the base hostname & protocol for your site
 twitter_username: speekenbrinklab
 github_username:  speekenbrink-lab
 
 include:
   - .htaccess
   - _pages
+
+collections:
+    researchtopics:
+      output: true
+      permalink: /research/:path/
 
 sass:
   sass_dir: _sass

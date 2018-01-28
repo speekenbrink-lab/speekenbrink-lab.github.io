@@ -1,0 +1,1 @@
+{% for pub in site.data.publications %}{% if pub.tag == include.tag %}<a href="{{ site.url }}{{ site.baseurl }}/publications/index.html#{{pub.tag}}" title="{{pub.apa_reference}}">{{include.cite}}</a>{% endif %}{% endfor %}
