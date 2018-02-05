@@ -237,6 +237,7 @@
   lab_authors:
     - maarten
     - eric_schulz
+  github: "https://github.com/ericschulz/control"
 
 - tag: schulz2015learningtasks
   year: 2015
@@ -246,6 +247,7 @@
   lab_authors:
     - maarten
     - eric_schulz
+  github: "https://github.com/ericschulz/contextualbandits"
 
 - tag: Schulz2016simple
   year: 2016
@@ -255,6 +257,7 @@
   lab_authors:
     - maarten
     - eric_schulz
+  github: "https://github.com/ericschulz/TTBABC"
 
 - tag: schulz2014predictmodels
   year: 2014
