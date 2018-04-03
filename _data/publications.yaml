@@ -1,3 +1,12 @@
+- tag:
+  type: journal
+  year: 2018
+  apa_reference:  "Harris, A.J.L., Sildmae, O., Speekenbrink, M., & Hahn, U. (2018) The potential power of experience in communications of expert consensus levels. _Journal of Risk Research_."
+  lab_authors:
+    - maarten
+  ucl_discovery: 10042296
+  doi: 10.1080/13669877.2018.1440416
+
 - tag: schulz2017compositional
   type: journal
   year: 2017
