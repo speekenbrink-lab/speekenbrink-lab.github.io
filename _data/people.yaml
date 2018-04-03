@@ -158,14 +158,13 @@
          promote pro-environmental behaviour.
   email: l.vihar.17@ucl.ac.uk
 
-- tag: felix_schmirler
-  name: Felix Schmil
 
 - tag: akhat_rakishev
   name: Akhat Rakishev
   position: BSc student
   current: 1
   start_year: 2017
+  end_year: 2018
   blurb: My research project focuses on whether people can track how changeable
          the environment is (the level of volatility), and how this influences
          their rate of learning. To test this, I have developed an online game
@@ -177,14 +176,33 @@
   github: akhatre
   email: akhat.rakishev.14@ucl.ac.uk
 
+- tag: adrian_walker
+  name: Adrian Walker
+  position: Visiting PhD student
+  current: 0
+  start_year: 2018
+  end_year: 2018
+  blurb: I'm a PhD student from the University of New South Wales, visiting
+         the Speekenbrink lab to work on a project modelling reaction times in
+         reinforcement learning tasks.
+  movingon_blurb: Adrian is a PhD student from the University of New South Wales.
+                  He visited the Speekenbrink lab in early 2018 to work on a
+                  project modelling reaction times in reinforcement learning
+                  tasks.
+  email: adrian.walker@unsw.edu.au
+  github: walkerthon2
+
 - tag: minho_shin
   name: Minho Shin
   position: Visiting BSc student
-  current: 1
+  current: 0
   start_year: 2018
   blurb: I'm an undergraduate student from South Korea, visiting the
          Speekenbrink lab as an intern to learn more about decision making
          and computational modeling.
+  movingon_blurb: Minho is an undergraduate student from South Korea, visiting
+         the Speekenbrink lab at the start of 2018 as an intern to learn more
+         about decision making and computational modeling.
   email: mhshin@dgist.ac.kr
 
 - tag: moritz_krusche
