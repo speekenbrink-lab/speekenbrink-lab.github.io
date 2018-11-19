@@ -20,6 +20,42 @@
   osf: utm5y
   publons: 1380603
 
+- tag: ismail_guennouni
+  name: Ismail Guennouni
+  position: MSc student
+  current: 1
+  start_year: 2017
+  photo: ismail_guennouni.jpg
+  blurb: Ismail joined the lab to work on research investigating learning in
+         interpersonal games. He is currently completing an MSci in Computer
+         Science and will return to the lab to work on his PhD afterwards.
+  email: i.gennouni.17@ucl.ac.uk
+  github: ismailg
+  twitter: GuennouniIsmail
+
+- tag: sabine_topf
+  name: Sabine Topf
+  position: PhD student
+  current: 1
+  start_year: 2017
+  photo: sabine_topf.jpg
+  email: sabine.topf.14@ucl.ac.uk
+  url: www.topf.com
+  github: stopf
+  twitter: NeneTopf
+  researchgate: Sabine_Topf
+  blurb: In my research, I focus on how learning from others informs individual
+          behaviour and decision making. That is, if we have evidence of other people’s
+          behaviour without being able to query the reasoning behind the behaviour
+          (e.g., observing recycling bins ready for collection outside someone’s
+          house), how does that influence our own behaviour? - Do we recycle more,
+          maybe because it appears to be a social norm? Recycle less because someone
+          else is taking care of environmental problems, giving us the chance to
+          free-ride? Infer the goal and apply it to a different area (reduce water
+          consumption, for instance)? I am going to mainly use behavioural experiments
+          and agent based modelling to answer these questions.
+
+
 - tag: hannah_tickle
   name: Hannah Tickle
   position: PhD student
@@ -44,28 +80,6 @@
                  modelling, and EEG analysis. After completing her PhD, she took
                  a job at Memrise and a part-time position as a post-doc in the
                  Summerfield lab.
-
-- tag: sabine_topf
-  name: Sabine Topf
-  position: PhD student
-  current: 1
-  start_year: 2017
-  photo: sabine_topf.jpg
-  email: sabine.topf.14@ucl.ac.uk
-  url: www.topf.com
-  github: stopf
-  twitter: NeneTopf
-  researchgate: Sabine_Topf
-  blurb: In my research, I focus on how learning from others informs individual
-          behaviour and decision making. That is, if we have evidence of other people’s
-          behaviour without being able to query the reasoning behind the behaviour
-          (e.g., observing recycling bins ready for collection outside someone’s
-          house), how does that influence our own behaviour? - Do we recycle more,
-          maybe because it appears to be a social norm? Recycle less because someone
-          else is taking care of environmental problems, giving us the chance to
-          free-ride? Infer the goal and apply it to a different area (reduce water
-          consumption, for instance)? I am going to mainly use behavioural experiments
-          and agent based modelling to answer these questions.
 
 - tag: eric_schulz
   name: Eric Schulz
@@ -149,16 +163,6 @@
   movingon_blurb: Alzbeta worked on an project investigating social learning in
                   interpersonal games (the "beauty contest" game).
   email: alzbeta.gabalova.17@ucl.ac.uk
-
-- tag: ismail_guennouni
-  name: Ismail Guennouni
-  position: MSc student
-  current: 1
-  start_year: 2017
-  blurb: Ismail joined the lab to work on research investigating learning in
-         interpersonal games. He is currently completing an MSci in Computer
-         Science and will return to the lab to work on his PhD afterwards.
-  email: i.gennouni.17@ucl.ac.uk
 
 - tag: karolin_salmen
   name: Karolin Salmen
