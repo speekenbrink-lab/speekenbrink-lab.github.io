@@ -1,6 +1,6 @@
 - tag: maarten
   name: Maarten Speekenbrink
-  position: Senior Lecturer in Mathematical Psychology
+  position: Associate Professor in Mathematical Psychology
   current: 1
   photo: maarten_speekenbrink.jpg
   blurb: My research focuses on learning and decision making. I approach these
@@ -24,8 +24,9 @@
 - tag: hannah_tickle
   name: Hannah Tickle
   position: PhD student
-  current: 1
+  current: 0
   start_year: 2013
+  end_year: 2018
   photo: hannah_tickle.jpg
   email: h.tickle@ucl.ac.uk
   twitter: hTickle88
@@ -38,6 +39,12 @@
          to the larger sample as it is more reliable. This seems to be what people do.
          I'm also comparing various models that can account for this decision process,
          as well as starting to collect EEG data as people perform the task.
+ movingon_blurb: Hannah joined the lab as a PhD student in 2013, and was jointly supervised
+		 by Chris Summerfield in Oxford. She worked on various projects in 
+		 perceptual decision making, using behavioural studies, computational
+		 modelling, and EEG analysis. After completing her PhD, she took
+                 a job at Memrise and a part-time position as a post-doc in the 
+		 Summerfield lab.
 
 - tag: sabine_topf
   name: Sabine Topf
@@ -136,9 +143,12 @@
 - tag: alzbeta_gabalova
   name: Alzbeta Gabalova
   position: MSc student
-  current: 1
+  current: 0
   start_year: 2017
+  end_year: 2018
   blurb: My MSc research project will focus on learning in interpersonal games.
+  movingon_blurb: Alzbeta worked on an project investigating social learning in
+                  interpersonal games (the "beauty contest" game).
   email: alzbeta.gabalova.17@ucl.ac.uk
 
 - tag: ismail_guennouni
@@ -146,23 +156,60 @@
   position: MSc student
   current: 1
   start_year: 2017
-  blurb: My MSc research project will focus on learning in interpersonal games.
+  blurb: Ismail joined the lab to work on research investigating learning in 
+         interpersonal games. He is currently completing an MSci in Computer
+         Science and will return to the lab to work on his PhD afterwards.
   email: i.gennouni.17@ucl.ac.uk
+
+- tag: karolin_salmen
+  name: Karolin Salmen
+  position: MSc student
+  current: 0
+  start_year: 2017
+  end_year: 2018
+  movingon_blurb: Karolin joined the lab from the MSc Social Cognition 
+		  to work on research investigating the effect of others'
+		  judgments and their social group on updating beliefs by individuals.
+  email: k.salmen.17@ucl.ac.uk
+
+- tag: felix_schmirler
+  name: Felix Schmirler
+  position: MSc student
+  current: 0
+  start_year: 2017
+  end_year: 2018
+  movingon_blurb: Felix joined the lab from the MSc Industrial/Organizational 
+		  and Business Psychology programme to work on research 
+		  investigating voice modulation and voice perception in 
+		  a sales context.
+  email: felix.schmirler.16@ucl.ac.uk
 
 - tag: lucija_vihar
   name: Lucija Vihar
   position: MSc student
-  current: 1
+  current: 0
   start_year: 2017
-  blurb: My MSc research project will focus on the use of stigmergy theory to
-         promote pro-environmental behaviour.
+  end_year: 2018
+  movingon_blurb: Lucija joined the lab from the MSc Behaviour Change programme
+                  to work on research investigating the effect of behavioural
+                  traces on recycling behaviour.
   email: l.vihar.17@ucl.ac.uk
 
+- tag: aline_seitz
+  name: Aline Seitz
+  position: MSc student
+  current: 0
+  start_year: 2017
+  end_year: 2018
+  movingon_blurb: Aline joined the lab from the MSc Behaviour Change programme
+                  to work on research investigating the effect of behavioural
+                  traces on donations to an environmental charity.
+  email: aline.seitz.17@ucl.ac.uk
 
 - tag: akhat_rakishev
   name: Akhat Rakishev
   position: BSc student
-  current: 1
+  current: 0
   start_year: 2017
   end_year: 2018
   blurb: My research project focuses on whether people can track how changeable
@@ -173,6 +220,9 @@
          and we have developed particle filter algorithms which solve this
          task in order to have a benchmark against which to compare human
          behavior.
+  movingon_blurb: Akhat conducted his BSc Psychology research on how people
+                  learn about the volatility in the environment and how this
+                  affects their rate of learning.
   github: akhatre
   email: akhat.rakishev.14@ucl.ac.uk
 
