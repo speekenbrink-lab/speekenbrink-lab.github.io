@@ -40,11 +40,11 @@
          I'm also comparing various models that can account for this decision process,
          as well as starting to collect EEG data as people perform the task.
  movingon_blurb: Hannah joined the lab as a PhD student in 2013, and was jointly supervised
-		 by Chris Summerfield in Oxford. She worked on various projects in 
-		 perceptual decision making, using behavioural studies, computational
-		 modelling, and EEG analysis. After completing her PhD, she took
-                 a job at Memrise and a part-time position as a post-doc in the 
-		 Summerfield lab.
+                 by Chris Summerfield in Oxford. She worked on various projects in
+                 perceptual decision making, using behavioural studies, computational
+                 modelling, and EEG analysis. After completing her PhD, she took
+                 a job at Memrise and a part-time position as a post-doc in the
+                 Summerfield lab.
 
 - tag: sabine_topf
   name: Sabine Topf
@@ -156,7 +156,7 @@
   position: MSc student
   current: 1
   start_year: 2017
-  blurb: Ismail joined the lab to work on research investigating learning in 
+  blurb: Ismail joined the lab to work on research investigating learning in
          interpersonal games. He is currently completing an MSci in Computer
          Science and will return to the lab to work on his PhD afterwards.
   email: i.gennouni.17@ucl.ac.uk
@@ -167,9 +167,9 @@
   current: 0
   start_year: 2017
   end_year: 2018
-  movingon_blurb: Karolin joined the lab from the MSc Social Cognition 
-		  to work on research investigating the effect of others'
-		  judgments and their social group on updating beliefs by individuals.
+  movingon_blurb: Karolin joined the lab from the MSc Social Cognition
+                  to work on research investigating the effect of others'
+                  judgments and their social group on updating beliefs by individuals.
   email: k.salmen.17@ucl.ac.uk
 
 - tag: felix_schmirler
@@ -178,10 +178,10 @@
   current: 0
   start_year: 2017
   end_year: 2018
-  movingon_blurb: Felix joined the lab from the MSc Industrial/Organizational 
-		  and Business Psychology programme to work on research 
-		  investigating voice modulation and voice perception in 
-		  a sales context.
+  movingon_blurb: Felix joined the lab from the MSc Industrial/Organizational
+                  and Business Psychology programme to work on research
+                  investigating voice modulation and voice perception in
+                  a sales context.
   email: felix.schmirler.16@ucl.ac.uk
 
 - tag: lucija_vihar
