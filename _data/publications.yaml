@@ -1,4 +1,46 @@
-- tag:
+- tag: wu2018generalization
+  type: journal
+  year: 2018
+  apa_reference: "Wu, C.M., Schulz, E., Speekenbrink, M., Nelson, J.D., & Meder, B. (2018) Generalization guides human exploration in vast decision spaces. _Nature Human Behavior_ "
+  lab_authors:
+    - maarten
+    - eric
+  doi: "10.1038/s41562-018-0467-4"
+  arxiv: "https://www.biorxiv.org/content/early/2018/09/25/171371"
+  abstract: 'From foraging for food to learning complex games, many aspects of human behaviour can be framed as a search problem with a vast space of possible actions. Under finite search horizons, optimal solutions are generally unobtainable. Yet, how do humans navigate vast problem spaces, which require intelligent exploration of unobserved actions? Using various bandit tasks with up to 121 arms, we study how humans search for rewards under limited search horizons, in which the spatial correlation of rewards (in both generated and natural environments) provides traction for generalization. Across various different probabilistic and heuristic models, we find evidence that Gaussian process function learning—combined with an optimistic upper confidence bound sampling strategy—provides a robust account of how people use generalization to guide search. Our modelling results and parameter estimates are recoverable and can be used to simulate human-like performance, providing insights about human behaviour in complex environments.'
+
+- tag: schulz2018generalization
+  type: journal
+  year: 2018
+  apa_reference: "Schulz, E., Wu, C.M., Huys, Q.J.M., Krause, A., & Speekenbrink, M. (2018) Generalization and search in risky environments. _Cognitive Science_
+  lab_authors:
+    - maarten
+    - eric
+  ucl_discovery: 227322
+  arxiv: "https://www.biorxiv.org/content/early/2018/05/14/227322"
+  doi: "10.1111/cogs.12695"
+
+- tag: cai2018crossdimensional
+  type: journal
+  year: 2018
+  apa_reference: "Cai, Z.G., Wang, R., Shen, M., & Speekenbrink, M. (2018) Cross-dimensional magnitude interactions arise from memory interference. _Cognitive Psychology_, _106_, 21-42."
+  lab_authors:
+    - maarten
+  ucl_discovery: 10056105
+  doi: "10.1016/j.cogpsych.2018.08.001"
+
+- tag: schulz2018tutorial
+  type: journal
+  year: 2018
+  apa_reference:  "Schulz, E., Speekenbrink, M., & Krause, A (2018) A tutorial on Gaussian process regression: Modelling, exploring, and exploiting functions. _Journal of Mathematical Psychology_, _85_, 1-16."
+  lab_authors:
+    - maarten
+    - eric
+  ucl_discovery: 10050029
+  doi: "10.1016/j.jmp.2018.03.001"
+  arxiv: "https://www.biorxiv.org/content/early/2017/10/10/095190"
+
+- tag: harris2018potential
   type: journal
   year: 2018
   apa_reference:  "Harris, A.J.L., Sildmae, O., Speekenbrink, M., & Hahn, U. (2018) The potential power of experience in communications of expert consensus levels. _Journal of Risk Research_."
@@ -19,8 +61,8 @@
 
 - tag: schulz2017putting
   type: journal
-  year: 2017
-  apa_reference: "Schulz, E., Konstantinidis, E., & Speekenbrink, M. (in press). Putting bandits into context: How function learning supports decision making. _Journal of Experimental Psychology: Learning, Memory, and Cognition_."
+  year: 2018
+  apa_reference: "Schulz, E., Konstantinidis, E., & Speekenbrink, M. (in press). Putting bandits into context: How function learning supports decision making. _Journal of Experimental Psychology: Learning, Memory, and Cognition_, _44_, 927-943."
   lab_authors:
     - maarten
       eric_schulz
