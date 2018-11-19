@@ -20,19 +20,6 @@
   osf: utm5y
   publons: 1380603
 
-- tag: ismail_guennouni
-  name: Ismail Guennouni
-  position: MSc student
-  current: 1
-  start_year: 2017
-  photo: ismail_guennouni.jpg
-  blurb: Ismail joined the lab to work on research investigating learning in
-         interpersonal games. He is currently completing an MSci in Computer
-         Science and will return to the lab to work on his PhD afterwards.
-  email: i.gennouni.17@ucl.ac.uk
-  github: ismailg
-  twitter: GuennouniIsmail
-
 - tag: sabine_topf
   name: Sabine Topf
   position: PhD student
@@ -55,6 +42,18 @@
           consumption, for instance)? I am going to mainly use behavioural experiments
           and agent based modelling to answer these questions.
 
+- tag: ismail_guennouni
+  name: Ismail Guennouni
+  position: MSc student
+  current: 1
+  start_year: 2017
+  photo: ismail_guennouni.jpg
+  blurb: Ismail joined the lab to work on research investigating learning in
+         interpersonal games. He is currently completing an MSci in Computer
+         Science and will return to the lab to work on his PhD afterwards.
+  email: i.gennouni.17@ucl.ac.uk
+  github: ismailg
+  twitter: GuennouniIsmail
 
 - tag: hannah_tickle
   name: Hannah Tickle
