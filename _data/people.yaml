@@ -228,12 +228,27 @@
   github: akhatre
   email: akhat.rakishev.14@ucl.ac.uk
 
+- tag: charley_wu
+  name: Charley Wu
+  position: Visiting PhD student
+  current: 0
+  start_year: 2016
+  end_year: 2016
+  photo: charley_wu.jpg
+  movingon_blurb: Charley is a PhD student at the Center for Adaptive
+                  Rationality at the Max Planck Institute for Human Development
+                  in Berlin. He visited the Speekenbrink lab in 2016 to develop
+                  the spatially correlated bandit paradigm.
+  email: cwu@mpib-berlin.mpg.de
+  github: charleywu
+
 - tag: adrian_walker
   name: Adrian Walker
   position: Visiting PhD student
   current: 0
   start_year: 2018
   end_year: 2018
+  photo: adrian_walker.png
   blurb: I'm a PhD student from the University of New South Wales, visiting
          the Speekenbrink lab to work on a project modelling reaction times in
          reinforcement learning tasks.
