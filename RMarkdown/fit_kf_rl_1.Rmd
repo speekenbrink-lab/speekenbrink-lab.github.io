@@ -6,6 +6,7 @@ date: '`r Sys.Date()`'
 categories: modelling
 tags: modelling reinforcement-learning
 commentIssueId: 4
+usemathjax: true
 bibliography: refs.bib
 output:
   md_document:
