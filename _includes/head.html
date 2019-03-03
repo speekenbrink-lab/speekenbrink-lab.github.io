@@ -19,4 +19,14 @@
 
   <!-- Bootstrap Core JavaScript -->
   <script src="{{ "/assets/js/bootstrap.min.js" | prepend: site.baseurl | prepend: site.url }}"></script>
+
+  <!-- MathJax support when needed -->
+  {% if page.usemathjax %}
+
+
+  <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
+  </script>
+  <!-- TeX-AMS-MML_HTMLorMML"> -->
+  {% endif %}
 </head>

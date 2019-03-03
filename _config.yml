@@ -19,6 +19,9 @@ include:
   - .htaccess
   - _pages
 
+exclude:
+  - RMarkdown
+
 collections:
     researchtopics:
       output: true
@@ -49,4 +52,4 @@ kramdown:
 
 
 # Build settings
-#markdown: kramdown
+markdown: kramdown

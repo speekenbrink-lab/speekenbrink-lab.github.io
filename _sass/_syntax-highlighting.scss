@@ -5,8 +5,12 @@
     background: #fff;
     @extend %vertical-rhythm;
 
+    .language-r.highlighter-rouge & {
+      background: $ucl-stone;
+    }
+
     .highlighter-rouge & {
-      background: #eef;
+      background: #eee;
     }
 
     .c     { color: #998; font-style: italic } // Comment
