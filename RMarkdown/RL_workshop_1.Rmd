@@ -1,0 +1,541 @@
+---
+title: "Reinforcement learning and multi-armed bandits"
+subtitle: "Part I"
+author: "Maarten Speekenbrink"
+institute: "University College London"
+date: "2016/12/12 (updated: `r Sys.Date()`)"
+output:
+  xaringan::moon_reader:
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+```
+
+# Objectives and outline
+
+Theory
+* Introduction to general principles of reinforcement learning
+* Introduction to multi-armed bandit tasks
+* A deeper look at some Bayesian heuristic strategies for solving MAB tasks
+
+Fitting RL models to human behaviour in a bandit task
+* Formulating Bayesian RL models 
+* Maximum likelihood parameter estimation
+* Practical tips and tricks for numerical optimization
+* Parameter identifiability
+
+---
+
+# Reinforcement learning
+
+
+```{r,echo=FALSE,out.width="50%",fig.align='center'}
+knitr::include_graphics('https://res.mdpi.com/energies/energies-09-00755/article_deploy/html/images/energies-09-00755-g003.png')
+#![](https://res.mdpi.com/energies/energies-09-00755/article_deploy/html/images/energies-09-00755-g003.png)
+```
+
+<div style="font-size: 50%; text-align: center">(Image source: https://www.mdpi.com/1996-1073/9/9/755/htm)</div>
+
+At time $t$, the environment is in state $s_t$. The agent takes action $a_t$, the environment transitions to state $s_{t+1}$ and delivers reward $r_{t+1}$. The dynamics are described by the joint distribution $p(s_{t+1},r_{t+1}|s_t,a_t)$.
+
+Key concepts:
+* State-action-state transitions $p(s_{t+1}|s_t,a_t) = \sum_{r+1} p(s_{t+1},r_{t+1}|s_t,a_t)$
+* Reward distribution $p(r_{t+1}|s_t,a_t) = \sum_{s_{t+1}} p(s_{t+1},r_{t+1}|s_t,a_t)$ 
+* Reward function $r(s,a) = \mathbb{E}[r_t|s_{t-1}=s,a_{t-1}=a] = \sum_{r_{t}} r_{t}  \sum_{s_{t}} p(s_{t},r_{t}|s_{t-1} = s,a_{t-1} = a)$
+
+---
+
+# Reinforcement learning
+
+
+```{r,echo=FALSE,out.width="50%",fig.align='center'}
+knitr::include_graphics('https://res.mdpi.com/energies/energies-09-00755/article_deploy/html/images/energies-09-00755-g003.png')
+#![](https://res.mdpi.com/energies/energies-09-00755/article_deploy/html/images/energies-09-00755-g003.png)
+```
+
+<div style="font-size: 50%; text-align: center">(Image source: https://www.mdpi.com/1996-1073/9/9/755/htm)</div>
+
+The agent's goal is to maximise the total accumulated (discounted) reward
+
+$$\begin{align} G_t &= r_{t+1} + \gamma r_{t+2} + \gamma^2 r_{t+3} + \ldots \\
+&= \sum_{k=0}^\infty \gamma^k r_{t+k+1}\end{align}$$
+
+where $0 \leq \gamma \leq 1$ is the discount factor. Note the recursion
+
+$$G_t = r_{t+1} + \gamma G_{t+1}$$
+---
+
+# Reinforcement learning
+
+
+```{r,echo=FALSE,out.width="50%",fig.align='center'}
+knitr::include_graphics('https://res.mdpi.com/energies/energies-09-00755/article_deploy/html/images/energies-09-00755-g003.png')
+#![](https://res.mdpi.com/energies/energies-09-00755/article_deploy/html/images/energies-09-00755-g003.png)
+```
+
+<div style="font-size: 50%; text-align: center">(Image source: https://www.mdpi.com/1996-1073/9/9/755/htm)</div>
+
+A _policy_ $\pi$ is a probabilistic mapping of states to actions: 
+
+$$\pi(a_t|s_t) = p(a_t|s_t)$$
+
+For a given policy, the _value function_ is
+
+$$v_\pi(s) = \mathbb{E}_\pi[G_t|s_t = s] = \mathbb{E}_\pi\left[\sum_{k=0}^\infty \gamma^k r_{t+k+1}|s_t = s\right]$$
+
+---
+
+# Reinforcement learning
+
+
+```{r,echo=FALSE,out.width="50%",fig.align='center'}
+knitr::include_graphics('https://res.mdpi.com/energies/energies-09-00755/article_deploy/html/images/energies-09-00755-g003.png')
+#![](https://res.mdpi.com/energies/energies-09-00755/article_deploy/html/images/energies-09-00755-g003.png)
+```
+
+<div style="font-size: 50%; text-align: center">(Image source: https://www.mdpi.com/1996-1073/9/9/755/htm)</div>
+
+A policy $\pi$ is a probabilistic mapping of states to actions: 
+
+$$\pi(a_t|s_t) = p(a_t|s_t)$$
+
+and _action value function_ is
+
+$$q_\pi(s,a) = \mathbb{E}_\pi[G_t|s_t = s, a_t = a] = \mathbb{E}_\pi\left[\sum_{k=0}^\infty \gamma^k r_{t+k+1}|s_t = s, a_t=a\right]$$ 
+
+---
+
+# Bellman equation
+
+When $p(s_{t+1},r_{t+1}|s_t,a_t)$ is known, the optimal policy $$\pi_\star = \arg \max_\pi v_\pi(s)$$ can be determined in principle. The value function can be stated recursively:
+
+$$\begin{align}
+v_\pi(s) &= \mathbb{E}_\pi[G_t|s_t = s] \\
+&= \mathbb{E}_\pi[r_{t+1} + \gamma G_{t+1}|s_t = s] \\
+&= \sum_{a_t} \pi(a_t|s_t = s) \sum_{s_{t+1}} \sum_{r+1} p(r_{t+1},s_{t+1}|a_t,s_t = s) \left( r_{t+1} + \mathbb{E}_\pi[\gamma G_{t+1}|s_{t+1}]\right) \\
+&= \sum_{a_t} \pi(a_t|s_t = s) \sum_{s_{t+1}} \sum_{r+1} p(r_{t+1},s_{t+1}|a_t,s_t = s) \left( r_{t+1} + \gamma v_\pi(s_{t+1})\right)
+\end{align}$$
+
+The optimal value function is $v_\star(s) = \max_\pi v_\pi(s)$
+
+The optimal action-value function is $q_\star(a,s) = \max_\pi q_\pi(a,s) = \mathbb{E}[r_{t+1} + \gamma v_\star(s_{t+1}) | s_t = s, a_t = a]$
+
+$v_\star(s) = \max_a q_\star(a,s)$
+
+---
+
+# Multi-armed bandits
+
+```{r,echo=FALSE,out.width="40%",fig.align='center'}
+knitr::include_graphics('https://blogs.mathworks.com/images/loren/2016/multiarmedbandit.jpg')
+```
+
+<div style="font-size: 50%; text-align: center">(Image source: https://blogs.mathworks.com/loren/2016/10/10/multi-armed-bandit-problem-and-exploration-vs-exploitation-trade-off/)</div>
+
+In a multi-armed bandit, an agent is faced with $K$ bandits, each characterised by an unknown reward distribution $p_j(r_t|s_{j,t})$. At each time $t$, the agent can decide which bandit to play. 
+
+In the classic MAB, the state of unplayed arms remains the same. 
+
+But determining the optimal policy is non-trivial!
+
+---
+
+# Multi-armed bandits
+
+The distribution $p(r_{t+1},s_{t+1}|s_t,a_t) = p(r_{t+1}|a_t)$ is unknown. A Bayesian solution suggests to determine the policy from the subjective distributions $$p(r_{t+1}|a_t,\mathcal{D}_t) = \int_\theta p(r_{t+1}|a_t,\theta)p(\theta|\mathcal{D}_t)$$
+
+Planning for a horizon $T > 1$ involves determining the probable rewards $r_t$ for all possible actions $a_t$, and for each possible outcome $r_t$, the effect on the distributions $p(r_{t+1}|a_t,\mathcal{D}_t)$. Even when the possible rewards are limited, the number of possible action-outcome sequences grows very quickly!
+
+For certain MAB problems, the optimal solution can be computed more efficiently, through so-called Gittins indices. This requires that the bandits are independent and that unplayed bandits are "frozen" (their state remains the same).
+
+---
+
+# Gittins index
+
+Consider each bandit in isolation and solve the following problem:
+
+If playing this bandit occurs a cost of $\lambda$, for which value of $\lambda$ would I be indifferent between playing and not playing the bandit at time $t$?
+
+$$q_\star(s_t,a_t = 1|\lambda) = q_\star(s_t,a_t = 0|\lambda)$$
+with
+
+$q_\star(s_{t},a_t|\lambda) = \mathbb{E}[a_t r_{t+1} - \lambda a_t + \gamma v_\star(s_{t+1})]$
+
+Gittins index for a bandit $j$ is its value $\lambda_j$. Playing at each time $t$ the bandit with the highest index $\lambda$ is the optimal solution to the standard MAB problem.  
+
+---
+
+# Restless bandits
+
+In a restless bandit, the reward distributions vary over time, such that $p_j(r_t) \neq p_j(r_{t+1})$. For example, $$\begin{align} R_{t,j} &= \mu_{t,j} + \epsilon_{t,j} & & \epsilon_{t,j} \sim \mathcal{N}(0,\sigma^2_\epsilon) \\ \mu_{t,j} &= \mu_{t-1,j} + \xi_{t,j} && \xi_{t,j} \sim \mathcal{N}(0,\sigma_\xi^2) \end{align}$$
+
+
+```{r,message=FALSE,echo=FALSE}
+set.seed(3) # set the random seed to replicate these results exactly
+mu <- matrix(0.0,nrow=200,ncol=4) # to store the time-varying means
+mu[1,] <- c(-60, -20, 20, 60) # initialize the means for t=1
+for(t in 2:200) {
+  mu[t,] <- mu[t-1,] + rnorm(4,mean=0,sd=4) # compute mean at t based on mean at t-1
+}
+rewards <- mu + rnorm(length(mu),mean=0,sd=4) # generate the stochastic rewards
+mu <- as.data.frame(cbind(1:200,mu))
+rewards <- as.data.frame(cbind(1:200,rewards))
+colnames(rewards) <- colnames(mu) <- c("trial",paste0("A",1:4))
+```
+
+```{r,message=FALSE,warning=FALSE,echo=FALSE,fig.width=6,fig.height=4.5,fig.align='center'}
+library(dplyr)
+library(tidyr)
+library(ggplot2)
+mu %>%
+  gather(key=option,value=mu,-trial) %>%
+    ggplot(aes(x=trial,y=mu,colour=option)) + geom_line()
+```
+
+---
+
+# Restless bandits
+
+Optimal solution intractible. Need to find a good heuristic strategy!
+
+Solving the exploration-exploitation dilemma: Choosing the option with the current subjectively highest expected reward (exploitation), or another one to learn about, which may have an objectively higher expected reward (exploration)?
+
+We need a learning component which tracks expected rewards, and a decision component which chooses bandits on the basis of these.
+
+---
+
+# Kalman filter
+
+A Bayesian method which, for each bandit $j$, computes the posterior distribution of the true average reward $\mu_{t,j}$ at time $t$. Assuming $p(\mu_{0,j}) = \mathcal{N}(m_{0,j},v_{0,j})$ these posterior distributions are all Normal: 
+$$p(\mu_{t,j} | \mathcal{D}_{t}) = \mathcal{N}(m_{t,j},v_{t,j})$$
+
+where $\mathcal{D}_t = (R_1,C_1,\ldots,R_t,C_t)$ denotes all the relevant information up to time $t$
+
+$$m_{t,j} = m_{t-1,j} + k_{t,j} (R_t - m_{t-1,j})$$
+
+$$k_{t,j} = \begin{cases} \frac{v_{t-1,j} + \sigma_\xi^2}{v_{t-1,j} + \sigma_\xi^2 + \sigma_\epsilon^2} && \text{ if } C_t = j \\ 0 && \text{ otherwise } \end{cases}$$
+
+$$v_{t,j} = (1 - k_{t,j}) (v_{t-1,j} + \sigma^2_\xi)$$
+---
+
+# Kalman gain
+
+```{r,echo=FALSE,fig.width=8,fig.height=5,fig.align='center'}
+kalman_gain <- function(v0,sigma_xi_sq,sigma_epsilon_sq,nt=30) {
+  kt <- rep(0,nt)
+  v <- v0
+  for(t in 1:nt) {
+    kt[t] <- (v + sigma_xi_sq)/(v + sigma_xi_sq + sigma_epsilon_sq)
+    v <- (1-kt[t])*(v + sigma_xi_sq)
+  }
+  return(kt)
+}
+rbind(
+  data.frame(time=1:30,parameters=1,kf=kalman_gain(1000,16,16)),
+  data.frame(time=1:30,parameters=2,kf=kalman_gain(1000,8,320)),
+  data.frame(time=1:30,parameters=3,kf=kalman_gain(1000,320,8)),
+  data.frame(time=1:30,parameters=4,kf=kalman_gain(1,8,1600))
+  ) %>%
+    mutate(parameters=factor(parameters)) %>%
+    ggplot(aes(x=time,y=kf,colour=parameters)) + geom_line() + scale_color_discrete(labels=c(
+      expression(v[0] == 1000 ~ sigma[xi]^2 == 16 ~ sigma[epsilon]^2 == 16),
+      expression(v[0] == 1000 ~ sigma[xi]^2 == 8 ~ sigma[epsilon]^2 == 320),
+      expression(v[0] == 1000 ~ sigma[xi]^2 == 320 ~ sigma[epsilon]^2 == 8),
+      expression(v[0] == 1 ~ sigma[xi]^2 == 8 ~ sigma[epsilon]^2 == 1600)
+    ))  + ylab(expression(k[t]))
+```
+
+Steady-state gain: $$k_* = \frac{1}{2} \left(\sqrt{\frac{\sigma^4_\xi}{\sigma^4_\epsilon} + 4 \frac{\sigma^2_\xi}{\sigma^2_\epsilon}} - \frac{\sigma^2_\xi}{\sigma^2_\epsilon} \right)$$
+
+---
+
+# Kalman gain in a bandit task
+
+Gain increases if a bandit hasn't been played for some time
+
+```{r,echo=FALSE,warning=FALSE,fig.width=8,fig.height=5,fig.align='center'}
+kalman_gain <- function(chosen,v0,sigma_xi_sq,sigma_epsilon_sq,nt=20) {
+  kt <- rep(0,nt)
+  v <- v0
+  for(t in 1:nt) {
+    kt[t] <- ifelse(chosen[t],(v + sigma_xi_sq)/(v + sigma_xi_sq + sigma_epsilon_sq),0)
+    v <- (1-kt[t])*(v + sigma_xi_sq)
+  }
+  return(kt)
+}
+chosen <- rep(FALSE,20)
+chosen[c(1,2,3,10,11,15,16)] <- TRUE
+data.frame(time=1:20,parameters=1,kf=kalman_gain(chosen,1000,16,16)) %>%
+    mutate(parameters=factor(parameters),kf=replace(kf,kf==0,NA)) %>%
+    ggplot(aes(x=time,y=kf,colour=parameters)) + geom_line() + scale_color_discrete(labels=c(
+      expression(v[0] == 1000 ~ sigma[xi]^2 == 16 ~ sigma[epsilon]^2 == 16)
+    ))  + ylab(expression(k[t])) + ylim(0,1)
+```
+
+---
+
+# Choice rules: softmax
+
+$$P(C_t = j) = \frac{\exp(\gamma m_{t-1,j})}{\sum_{k=1}^K \exp(\gamma m_{t-1,k})}$$
+
+* A simple way to promote exploration, which does not take uncertainty into account. 
+* Smaller values of $\gamma$ will result in more random choices. 
+* You can view $1/\gamma$ as something like the variance of normally distributed noise around the expected rewards $m_{t-1,k}$. Crucially, this variance is the same for all options (i.e., not related to uncertainty).
+
+---
+
+```{css, echo=FALSE}
+pre {
+  background: #FFBB33;
+  max-width: 100%;
+  max-height: 100%;
+  overflow-x: scroll;
+  overflow-y: scroll;
+}
+```
+
+```{r}
+rl_softmax_sim <- function(rewards,m0,v0,sigma_xi_sq,sigma_epsilon_sq,gamma) {
+  nt <- nrow(rewards) # number of time points
+  no <- ncol(rewards) # number of options
+  m <- matrix(m0,ncol=no,nrow=nt+1) # to hold the posterior means
+  v <- matrix(v0,ncol=no,nrow=nt+1) # to hold the posterior variances
+  choice <- rep(0,nt) # to hold the choices of the RL agent
+  reward <- rep(0.0,nt) # to hold the obtained rewards by the RL agent
+  # loop over all timepoints
+  for(t in 1:nt) {
+    # use the prior means and compute the probability of choosing each option
+    p <- exp(gamma*m[t,])
+    p <- p/sum(p)
+    # choose an option according to these probabilities
+    choice[t] <- sample(1:4,size=1,prob=p)
+    # get the reward of the choice
+    reward[t] <- rewards[t,choice[t]]
+    # set the Kalman gain for unchosen options
+    kt <- rep(0,4)
+    # set the Kalman gain for the chosen option
+    kt[choice[t]] <- (v[t,choice[t]] + sigma_xi_sq)/(v[t,choice[t]] + sigma_xi_sq + sigma_epsilon_sq)
+    # compute the posterior means
+    m[t+1,] <- m[t,] + kt*(reward[t] - m[t,])
+    # compute the posterior variances
+    v[t+1,] <- (1-kt)*(v[t,] + sigma_xi_sq) 
+  }
+  # return everything of interest
+  return(list(m=m,v=v,choice=choice,reward=reward))
+}
+```
+
+---
+
+Softmax $(\gamma = 1)$
+
+```{r,echo=FALSE}
+plot_sim <- function(sim) { 
+  data.frame(trial=1:200,option=factor(rep(1:4,each=200)),m=as.numeric(sim$m[-201,]),mmax=as.numeric(sim$m[-201,]) + 1.96*sqrt(as.numeric(sim$v[-201,])),mmin=as.numeric(sim$m[-201,]) - 1.96*sqrt(as.numeric(sim$v[-201,]))) %>%
+    ggplot(aes(x=trial,y=m,colour=option,fill=option)) + geom_ribbon(aes(ymin=mmin,ymax=mmax),alpha=.1) + 
+  geom_line(size=1.2) + geom_point(aes(x=trial,y=min(sim$m - 1.96*sqrt(sim$v)),colour=choice,fill=choice),data=data.frame(trial=1:200,choice=factor(sim$choice))) + xlab("time") + ylab(expression(m[t]))
+}
+```
+
+```{r,echo=FALSE,message=FALSE,fig.width=8,fig.height=4,fig.align='center',out.width='100%'}
+library(gridExtra)
+
+#plot1 <- qplot(iris$Sepal.Length)
+#plot2 <- qplot(iris$Sepal.Width)
+
+
+ 
+rewards_mat <- as.matrix(rewards[,-1]) # extract rewards from the rewards data.frame
+set.seed(123) # set seed to replicate results exactly
+# run the RL agent with 
+sim_softmax_100 <- rl_softmax_sim(rewards_mat,m0=0.0,v0=1000,sigma_xi_sq=16,sigma_epsilon_sq=16,gamma=1)
+plot1 <- plot_sim(sim_softmax_100) + theme(legend.position="bottom")
+plot2 <- mu %>%
+  gather(key=option,value=mu,-trial) %>%
+    ggplot(aes(x=trial,y=mu,colour=option)) + geom_line() + theme(legend.position="bottom") + ylim(ggplot_build(plot1)$layout$panel_scales_y[[1]]$range$range)
+grid.arrange(plot1, plot2, ncol=2)
+
+```
+
+---
+
+Softmax $(\gamma = .2)$
+
+```{r,echo=FALSE,fig.width=8,fig.height=4,fig.align='center',out.width='100%'}
+set.seed(123)
+sim_softmax_020 <- rl_softmax_sim(rewards_mat,m0=0.0,v0=1000,sigma_xi_sq=16,sigma_epsilon_sq=16,gamma=.2)
+plot1 <- plot_sim(sim_softmax_020) + theme(legend.position="bottom")
+plot2 <- mu %>%
+  gather(key=option,value=mu,-trial) %>%
+    ggplot(aes(x=trial,y=mu,colour=option)) + geom_line() + theme(legend.position="bottom") + ylim(ggplot_build(plot1)$layout$panel_scales_y[[1]]$range$range)
+grid.arrange(plot1, plot2, ncol=2)
+```
+
+
+---
+
+
+# Upper-confidence bound (UCB) rule
+
+$$P(C_t = j) = \begin{cases} 1 && \text{if } j = \arg \max m_{t-1,k} + \beta (\sqrt{v_{t-1,k} + \sigma^2_\xi}) \\
+0 && \text{otherwise} \end{cases}$$
+
+* Balances exploration and exploitation according to uncertainty ( $v_{t-1,k} + \sigma^2_\xi$ is the prior predictive variance)
+* Can be viewed as an optimistic bonus for uncertain options
+* Setting e.g. $\beta = 1.96$ computes for each option the upper-bound of the 95\% confidence interval.
+
+
+
+
+---
+
+
+```{r}
+library(nnet)
+rl_ucb_sim <- function(rewards,m0,v0,sigma_xi_sq,sigma_epsilon_sq,beta) {
+  nt <- nrow(rewards)
+  no <- ncol(rewards)
+  m <- matrix(m0,ncol=no,nrow=nt+1)
+  v <- matrix(v0,ncol=no,nrow=nt+1)
+  choice <- rep(0,nt)
+  reward <- rep(0.0,nt)
+  for(t in 1:nt) {
+    # choose the option with the highest UCB, breaking ties at random
+    choice[t] <- which.is.max(m[t,] + beta*sqrt(v[t,]) + sigma_xi_sq)
+    reward[t] <- rewards[t,choice[t]]
+    # Kalman updates:
+    kt <- rep(0,4)
+    kt[choice[t]] <- (v[t,choice[t]] + sigma_xi_sq)/(v[t,choice[t]] + sigma_xi_sq + sigma_epsilon_sq)
+    m[t+1,] <- m[t,] + kt*(reward[t] - m[t,])
+    v[t+1,] <- (1-kt)*(v[t,] + sigma_xi_sq) 
+  }
+  return(list(m=m,v=v,choice=choice,reward=reward))
+}
+```
+
+
+---
+
+UCB $(\beta = 1.96)$
+
+
+```{r,echo=FALSE,message=FALSE,fig.width=8,fig.height=4,fig.align='center',out.width='100%'}
+
+set.seed(123) # set seed to replicate results exactly
+# run the RL agent with 
+sim_ucb_196 <- rl_ucb_sim(rewards_mat,m0=0.0,v0=1000,sigma_xi_sq=16,sigma_epsilon_sq=16,beta=1.96)
+plot1 <- plot_sim(sim_ucb_196) + theme(legend.position="bottom")
+plot2 <- mu %>%
+  gather(key=option,value=mu,-trial) %>%
+    ggplot(aes(x=trial,y=mu,colour=option)) + geom_line() + theme(legend.position="bottom") + ylim(ggplot_build(plot1)$layout$panel_scales_y[[1]]$range$range)
+grid.arrange(plot1, plot2, ncol=2)
+
+```
+
+---
+
+UCB $(\beta = 1)$
+
+
+```{r,echo=FALSE,message=FALSE,fig.width=8,fig.height=4,fig.align='center',out.width='100%'}
+
+set.seed(123) # set seed to replicate results exactly
+# run the RL agent with 
+sim_ucb_100 <- rl_ucb_sim(rewards_mat,m0=0.0,v0=1000,sigma_xi_sq=16,sigma_epsilon_sq=16,beta=1)
+plot1 <- plot_sim(sim_ucb_100) + theme(legend.position="bottom")
+plot2 <- mu %>%
+  gather(key=option,value=mu,-trial) %>%
+    ggplot(aes(x=trial,y=mu,colour=option)) + geom_line() + theme(legend.position="bottom") + ylim(ggplot_build(plot1)$layout$panel_scales_y[[1]]$range$range)
+grid.arrange(plot1, plot2, ncol=2)
+
+```
+
+---
+
+# Thompson sampling
+
+$$P(C_t = j) = P(\forall k \neq j: \mu_{t,j} > \mu_{t,k} \mid \mathcal{D}_{t-1})$$
+
+* Draw a sample from the prior predictive distribution for each option
+* Pick the option with the largest sample
+* In stable environments ( $\sigma_\xi = 0$) this will converge to always picking the best option in the long run
+
+---
+
+```{r}
+rl_thompson_sim <- function(rewards,m0,v0,sigma_xi_sq,sigma_epsilon_sq) {
+  nt <- nrow(rewards)
+  no <- ncol(rewards)
+  m <- matrix(m0,ncol=no,nrow=nt+1)
+  v <- matrix(v0,ncol=no,nrow=nt+1)
+  choice <- rep(0,nt)
+  reward <- rep(0.0,nt)
+  for(t in 1:nt) {
+    # draw values from the prior distributions of the mean reward
+    sim_r <- rnorm(4,mean=m[t,],sd=sqrt(v[t,] + sigma_xi_sq)) 
+    # choose the option with the highest sampled value
+    choice[t] <- which.is.max(sim_r)
+    reward[t] <- rewards[t,choice[t]]
+    # Kalman updates:
+    kt <- rep(0,4)
+    kt[choice[t]] <- (v[t,choice[t]] + sigma_xi_sq)/(v[t,choice[t]] + sigma_xi_sq + sigma_epsilon_sq)
+    m[t+1,] <- m[t,] + kt*(reward[t] - m[t,])
+    v[t+1,] <- (1-kt)*(v[t,] + sigma_xi_sq) 
+  }
+  return(list(m=m,v=v,choice=choice,reward=reward))
+}
+```
+
+---
+
+Thompson sampling
+
+```{r,echo=FALSE,fig.width=8,fig.height=4,fig.align='center',out.width='100%'}
+set.seed(123)
+sim_thompson <- rl_thompson_sim(rewards_mat,m0=0.0,v0=1000,sigma_xi_sq=16,sigma_epsilon_sq=16)
+plot1 <- plot_sim(sim_thompson) + theme(legend.position="bottom")
+plot2 <- mu %>%
+  gather(key=option,value=mu,-trial) %>%
+    ggplot(aes(x=trial,y=mu,colour=option)) + geom_line() + theme(legend.position="bottom") + ylim(ggplot_build(plot1)$layout$panel_scales_y[[1]]$range$range)
+grid.arrange(plot1, plot2, ncol=2)
+
+```
+
+
+---
+
+# Which is better?
+
+```{r,cache=TRUE,echo=FALSE,fig.width=8,fig.height=5,fig.align='center',out.width='100%'}
+set.seed(12345)
+nsim <- 2000
+ntrial <- 400
+softmax100 <- softmax020 <- ucb196 <- ucb100 <- thompson <- matrix(0.0,ncol=ntrial,nrow=nsim)
+for(i in 1:nsim) {
+  mu <- matrix(0.0,nrow=ntrial,ncol=4) # to store the time-varying means
+  mu[1,] <- runif(4,-60,60) # initialize the means for t=1
+  for(t in 2:ntrial) {
+    mu[t,] <- mu[t-1,] + rnorm(4,mean=0,sd=4) # compute mean at t based on mean at t-1
+  }
+  rewards_mat <- mu + rnorm(length(mu),mean=0,sd=4) # generate the stochastic rewards
+  max_reward <- mu[cbind(1:ntrial,apply(mu[,1:4],1,which.max))]
+  softmax100[i,] <- max_reward - mu[cbind(1:ntrial,rl_softmax_sim(rewards_mat,m0=0.0,v0=1000,sigma_xi_sq=16,sigma_epsilon_sq=16,gamma=1)$choice)]
+  softmax020[i,] <- max_reward - mu[cbind(1:ntrial,rl_softmax_sim(rewards_mat,m0=0.0,v0=1000,sigma_xi_sq=16,sigma_epsilon_sq=16,gamma=.2)$choice)]
+  ucb196[i,] <- max_reward - mu[cbind(1:ntrial,rl_ucb_sim(rewards_mat,m0=0.0,v0=1000,sigma_xi_sq=16,sigma_epsilon_sq=16,beta=1.96)$choice)]
+  ucb100[i,] <- max_reward - mu[cbind(1:ntrial,rl_ucb_sim(rewards_mat,m0=0.0,v0=1000,sigma_xi_sq=16,sigma_epsilon_sq=16,beta=1.00)$choice)]
+  thompson[i,] <- max_reward - mu[cbind(1:ntrial,rl_thompson_sim(rewards_mat,m0=0.0,v0=1000,sigma_xi_sq=16,sigma_epsilon_sq=16)$choice)]
+}
+rbind(
+  data.frame(method="softmax 1.0",trial=1:ntrial,loss=colMeans(softmax100)),
+  data.frame(method="softmax 0.2",trial=1:ntrial,loss=colMeans(softmax020)),
+  data.frame(method="ucb 1.96",trial=1:ntrial,loss=colMeans(ucb196)),
+  data.frame(method="ucb 1.0",trial=1:ntrial,loss=colMeans(ucb100)),
+  data.frame(method="thompson",trial=1:ntrial,loss=colMeans(thompson))
+) %>% ggplot(aes(x=trial,y=loss,colour=method)) + geom_line() + scale_y_continuous(trans='log2') + ylab("Expected loss")
+```
