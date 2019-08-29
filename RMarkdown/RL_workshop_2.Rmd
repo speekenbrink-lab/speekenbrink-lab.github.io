@@ -1,0 +1,669 @@
+---
+title: "Reinforcement learning and multi-armed bandits"
+subtitle: "Part 2"
+author: "Maarten Speekenbrink"
+institute: "University College London"
+date: "29/5/2019 (updated: `r Sys.Date()`)"
+output:
+  xaringan::moon_reader:
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+```
+
+```{css, echo=FALSE}
+# pre {
+#   background: #FFBB33;
+#   max-width: 100%;
+#   #max-height: 100%;
+#   overflow-x: scroll;
+#   #overflow-y: scroll;
+# }
+# 
+# remark-code {
+#   background: #FFBB33;
+# }
+.remark-code, .remark-inline-code {
+   font-size: 80%;
+}
+```
+
+# Objectives and outline
+
+Theory
+* Introduction to general principles of reinforcement learning
+* Introduction to multi-armed bandit tasks
+* A deeper look at some Bayesian heuristic strategies for solving MAB tasks
+
+Fitting RL models to human behaviour in a bandit task
+* Formulating Bayesian RL models 
+* Maximum likelihood parameter estimation
+* Practical tips and tricks for numerical optimization
+* Parameter identifiability
+
+---
+
+## The data
+
+Data from Speekenbrink & Konstantinidis (2015) is available on GitHub: 
+
+```{r}
+dat <- read.csv("https://github.com/speekenbrink-lab/data/raw/master/Speekenbrink_Konstantinidis_2015.csv")
+head(dat)
+```
+
+* `cond`: condition (ntn = no trend, non-stable volatility, nts = no trend, stable volatility, tn = trend, non-stable volatility, ts = trend, stable volatility)
+* `id2`: unique participant ID (more useful than `id`)
+* `deck`: id of chosen bandit (the term "deck" is a reference to the Iowa gambling task)
+* `payoff` reward obtained by choosing `deck` on `trial`
+
+---
+
+```{r}
+with(dat,ftable(id2,deck))
+```
+
+---
+
+## Modelling behaviour
+
+A statistical model defines a probability distribution over observable variables. 
+
+Here we are interested in modelling people's choices $C_t$ in a restless bandit task. People's choices will generally depends on their history in the task (previous choices $C_{1:(t-1)} = (C_1,\ldots,C_{t-1})$ and rewards $R_{1:(t-1)}$)
+
+Our models need to define $P(C_t|C_{1:(t-1)},R_{1:(t-1)},\theta)$, where $\theta$ are the model parameters.
+
+---
+
+## Maximum likelihood estimation
+
+$P(C_t|C_{1:(t-1)},R_{1:(t-1)},\theta)$
+
+Basic idea: Find those parameter values $\hat{\theta}$ which maximise the probability of the observed data:
+
+$\hat{\theta} = \arg \max_\theta \prod_{t=1}^T P(C_t|C_{0:(t-1)},R_{0:(t-1)},\theta)$
+
+Some useful properties of maximum likelihood estimates:
+
+* The distribution of $\hat{\theta}$ is aymptotically multivariate Normal (mean equal to true parameters)
+* Can be used for nested model comparison with $\chi^2$-difference test
+* Model comparison measures such as AIC and BIC apply to ML estimates
+
+---
+
+## Kalman filter
+
+```{r}
+kalman_filter <- function(choice, reward, noption, mu0, sigma0_sq, sigma_xi_sq, sigma_epsilon_sq) {
+  nt <- length(choice)
+  no <- noption
+  m <- matrix(mu0,ncol=no,nrow=nt+1)
+  v <- matrix(sigma0_sq,ncol=no,nrow=nt+1)
+  for(t in 1:nt) {
+    kt <- rep(0,no)
+    kt[choice[t]] <- (v[t,choice[t]] + sigma_xi_sq)/(v[t,choice[t]] + sigma_xi_sq + sigma_epsilon_sq)
+    m[t+1,] <- m[t,] + kt*(reward[t] - m[t,])
+    v[t+1,] <- (1-kt)*(v[t,] + sigma_xi_sq)
+  }
+  return(list(m=m,v=v))
+}
+```
+
+---
+
+## Softmax
+
+$$P(C_t = i|C_{0:{t-1}},R_{0:(t-1)}) = \frac{\exp(\gamma m_{t,i})}{\sum_{j=1}^4 \exp(\gamma m_{t,j})}$$
+
+```{r}
+softmax_choice_prob <- function(m,gamma) {
+  prob <- exp(gamma*m)
+  prob <- prob/rowSums(prob)
+  return(prob)
+}
+```
+
+---
+
+## Example: Assuming only $\gamma$ is unknown
+
+```{r}
+kf_sm_lik_gamma <- function(par,data) {
+  gamma <- par[1]
+  choice <- data$deck
+  reward <- data$payoff
+  m <- kalman_filter(choice,reward,4,0,1000,16,16)$m
+  p <- softmax_choice_prob(m,gamma)
+  pchoice <- p[cbind(1:nrow(data),choice)]
+  lik <- prod(pchoice)
+  return(lik)
+}
+```
+
+---
+
+## Example: Assuming only $\gamma$ is unknown
+
+```{r,fig.width=7,fig.height=5,fig.align='center'}
+tdat <- subset(dat,id2==4)
+gamma <- seq(0,2,length=200)
+out <- rep(NA,length=length(gamma))
+for(i in 1:length(gamma)) out[i] <- kf_sm_lik_gamma(gamma[i],tdat)
+plot(gamma,out,ylab="likelihood",xlab=expression(gamma))
+```
+
+---
+
+## Example: Assuming only $\gamma$ is unknown
+
+```{r}
+gamma[which.max(out)]
+```
+
+* Likelihood values become very small
+* Taking logarithm of likelihood fixes this and makes computation easier:
+
+$$\begin{align}
+l(\theta|C_{1:T},R_{1:T}) &= \log \prod_{t=1}^T P(C_t|C_{0:(t-1)},R_{0:(t-1)},\theta) \\
+&= \sum_{t=1}^T \log P(C_t|C_{0:(t-1)},R_{0:(t-1)},\theta)
+\end{align}$$
+
+* Using the _negative_ log likelihood to turn maximisation into minimization
+
+---
+
+## Example: Assuming only $\gamma$ is unknown
+
+```{r}
+kf_sm_negLogLik_gamma <- function(par,data) {
+  gamma <- par[1]
+  choice <- data$deck
+  reward <- data$payoff
+  m <- kalman_filter(choice,reward,4,0,1000,16,16)$m
+  p <- softmax_choice_prob(m,gamma)
+  lik <- p[cbind(1:nrow(data),choice)]
+  negLogLik <- -sum(log(lik))
+  return(negLogLik)
+}
+```
+
+---
+
+## Example: Assuming only $\gamma$ is unknown
+
+```{r,fig.width=7,fig.height=5,fig.align='center'}
+out <- rep(NA,length=length(gamma))
+for(i in 1:length(gamma)) out[i] <- kf_sm_negLogLik_gamma(gamma[i],tdat)
+plot(gamma,out,ylab="negative log likelihood",xlab=expression(gamma))
+```
+
+---
+
+## Example: Assuming only $\gamma$ is unknown
+
+```{r}
+gamma[which.min(out)]
+```
+
+
+---
+
+## Numerical optimization routines
+
+```{r}
+optim(par=.35,fn=kf_sm_negLogLik_gamma,data=tdat)
+```
+
+---
+
+## Numerical optimization routines
+
+```{r}
+optim(par=.35,fn=kf_sm_negLogLik_gamma,method="Brent",lower=0,upper=4,data=tdat)
+```
+
+---
+
+## Assuming all parameters are unknown
+
+```{r}
+kf_sm_negLogLik <- function(par,data) {
+  gamma <- par[1]
+  mu0 <- par[2]
+  sigma0_sq <- par[3]
+  sigma_xi_sq <- par[4]
+  sigma_epsilon_sq <- par[5]
+  choice <- data$deck
+  reward <- data$payoff
+  m <- kalman_filter(choice,reward,4,mu0,sigma0_sq,sigma_xi_sq,sigma_epsilon_sq)$m
+  p <- softmax_choice_prob(m,gamma)
+  lik <- p[cbind(1:nrow(data),choice)]
+  negLogLik <- -sum(log(lik))
+  return(negLogLik)
+}
+```
+
+---
+
+## Assuming all parameters are unknown
+
+```{r}
+optim(c(1,0,1000,16,16),kf_sm_negLogLik,data=tdat)
+```
+
+---
+
+## Constraining parameters
+
+```{r}
+optim(par=c(1,0,1000,16,16),fn=kf_sm_negLogLik,lower=c(0,-Inf,0,0,0),data=tdat)
+```
+
+---
+
+## Transforming parameters
+
+Use a transformation $\theta' = f(\theta)$ such that $-\infty < \theta' < \infty$
+
+Type         |  Formulation | Transformation                | Inverse                  
+-------------|--------------|-------------------------------|--------------------------
+Lower bound  | $\theta > a$ | $\theta' = \log (\theta - a)$ | $\theta = a + \exp(\theta')$ 
+Upper bound  | $\theta < b$ | $\theta' = \log (b - \theta)$ | $\theta = b - \exp(\theta')$ 
+Both         | $a < \theta < b$ | $\theta' = \log \frac{(\theta-a)/(b-a)}{1 - (\theta-a)/(b-a)}$ | $\theta = a + \frac{b-a}{1 + \exp(-\theta')}$
+
+---
+
+## Transforming parameters
+
+```{r}
+kf_sm_negLogLik_trans <- function(par,data) {
+  # note inverse transform on gamma and variance parameters
+  gamma <- exp(par[1])
+  mu0 <- par[2]
+  sigma0_sq <- exp(par[3])
+  sigma_xi_sq <- exp(par[4])
+  sigma_epsilon_sq <- exp(par[5])
+  choice <- data$deck
+  reward <- data$payoff
+  m <- kalman_filter(choice,reward,4,mu0,sigma0_sq,sigma_xi_sq,sigma_epsilon_sq)$m
+  p <- softmax_choice_prob(m,gamma)
+  lik <- p[cbind(1:nrow(data),choice)]
+  negLogLik <- -sum(log(lik))
+  return(negLogLik)
+}
+```
+
+---
+
+## Transforming parameters
+
+```{r}
+est <- optim(c(1,0,log(1000),log(16),log(16)),kf_sm_negLogLik_trans,data=tdat)
+est
+c(exp(est$par[1]),est$par[2],exp(est$par[3:5]))
+```
+
+---
+
+## Local minima
+
+Optimization routines are only guaranteed to return a _local_ minimum!
+
+To see this in action, let's define a function with a lot of local minima:
+
+```{r,message=FALSE,fig.width=7,fig.height=5,fig.align='center'}
+loc_min <- function(x) {
+  1e+5*(x[1]/20)*sin(x[1]/20)*(x[2]/20)*sin(x[2]/20)*dnorm(x[1],10,100)*dnorm(x[2],10,50)
+}
+tmp <- expand.grid(seq(-300,300,length=100),seq(-300,300,length=100))
+tmp[,3] <- apply(tmp,1,loc_min)
+loc_min_dat <- data.frame(x=tmp[,1],y=tmp[,2],z=tmp[,3])
+```
+
+---
+
+## Local minima
+
+```{r,message=FALSE,fig.width=7,fig.height=6,fig.align='center'}
+library(ggplot2)
+ggplot(loc_min_dat,aes(x=x,y=y,fill=z)) + geom_raster()
+```
+
+---
+
+## Local minima
+
+```{r}
+optim(c(0,0),loc_min)
+```
+
+---
+
+## Local minima
+
+```{r}
+optim(c(50,50),loc_min)
+```
+
+---
+
+## Local minima
+
+```{r}
+optim(c(100,50),loc_min)
+```
+
+---
+
+## Starting values
+
+Increase the chance of finding the global minimum by running optimization with many starting values
+
+```{r}
+starting_values <- expand.grid(seq(-300,300,length=50),seq(-300,300,length=50))
+opt <- apply(starting_values,1,function(x) optim(x,fn=loc_min))
+opt[[which.min(unlist(lapply(opt,function(x) x$value)))]]
+```
+
+---
+
+## Starting values
+
+Reduce computation time by running optimization initially with few iterations
+
+```{r}
+startIter <- 20
+opt <- apply(starting_values,1,function(x) optim(x,fn=loc_min,control=list(maxit=startIter)))
+starting_values_2 <- lapply(opt[order(unlist(lapply(opt,function(x) x$value)))[1:5]],function(x) x$par)
+opt <- lapply(starting_values_2,optim,fn=loc_min)
+opt[[which.min(unlist(lapply(opt,function(x) x$value)))]]
+```
+
+---
+
+## Generating starting values with good coverage
+
+```{r,message=FALSE}
+library(randtoolbox)
+generate_starting_values <- function(n,min,max) {
+  if(length(min) != length(max)) stop("min and max should have the same length")
+  dim <- length(min)
+  # generate Sobol values
+  start <- sobol(n,dim=dim)
+  # transform these to lie between min and max on each dimension
+  for(i in 1:ncol(start)) {
+    start[,i] <- min[i] + (max[i]-min[i])*start[,i]
+  }
+  return(start)
+}
+```
+
+---
+
+## Generating starting values with good coverage
+
+```{r,fig.width=7,fig.height=6,fig.align='center'}
+set.seed(123)
+starting_values <- generate_starting_values(200,min=rep(-300,2),max=rep(300,2))
+plot(starting_values)
+```
+
+
+---
+
+## Stochastic optimization
+
+Stochastic optimization routines _may_ overcome issues with starting values and local minima
+
+```{r,message=FALSE}
+library(DEoptim)
+set.seed(234)
+opt <- DEoptim(loc_min,lower=c(-300,-300),upper=c(300,300))
+```
+
+---
+
+## Stochastic optimization
+
+```{r}
+opt$optim$bestmem
+```
+
+---
+
+## Stochastic optimization of the Kalman filter softmax model
+
+```{r}
+kf_sm_negLogLik_DE <- function(par,data) {
+  negLL <- kf_sm_negLogLik(par,data)
+  if(is.na(negLL)) negLL <- Inf
+  return(negLL)
+}
+est_DE <- DEoptim(kf_sm_negLogLik_DE,lower=c(0,-100,0.00001,0.00001,.00001),upper=c(10,100,2000,100,100),data=tdat,control=DEoptim.control(trace=FALSE))
+est_DE$optim$bestmem
+```
+
+---
+
+## Parameter identifiability
+
+What is not immediately obvious is that the parameters are not all identifiable
+
+Parameter identifiability means that $p(Y|\theta_1) = p(Y|\theta_2)$ (for almost all $Y$) implies that $\theta_1 = \theta_2$
+
+It turns out that we can multiply each of the variance parameters $\sigma^2_0$, $\sigma^2_\xi$, and $\sigma^2_\epsilon$, by a common scaling factor $b$ and obtain exactly the same likelihood:
+
+```{r}
+kf_sm_negLogLik(c(.3,0,1000,16,16),tdat)
+kf_sm_negLogLik(c(.3,0,20*1000,20*16,20*16),tdat)
+kf_sm_negLogLik(c(.3,0,.002*1000,.002*16,.002*16),tdat)
+```
+
+---
+
+## Back to the Kalman filter equations
+
+$$m_{t,j} = m_{t-1,j} + k_{t,j} (R_t - m_{t-1,j})$$
+$$v_{t,j} = (1 - k_{t,j}) (v_{t-1,j} + \sigma^2_\xi)$$
+
+$$k_{t,j} = \begin{cases} \frac{v_{t-1,j} + \sigma_\xi^2}{v_{t-1,j} + \sigma_\xi^2 + \sigma_\epsilon^2} && \text{ if } C_t = j \\ 0 && \text{ otherwise } \end{cases}$$
+
+The problem:
+
+$$\frac{b v_{0,j} + b \sigma_\xi^2}{b v_{0,j} + b \sigma_\xi^2 + b \sigma_\epsilon^2} = \frac{v_{0,j} + \sigma_\xi^2}{v_{0,j} + \sigma_\xi^2 + \sigma_\epsilon^2}$$
+
+---
+
+## Solution: fix $\sigma^2_\epsilon$
+
+```{r}
+kf_sm_negLogLik_trans2 <- function(par,data) {
+  gamma <- exp(par[1])
+  mu0 <- par[2]
+  sigma0_sq <- exp(par[3])
+  sigma_xi_sq <- exp(par[4])
+  sigma_epsilon_sq <- 16
+  choice <- data$deck
+  reward <- data$payoff
+  m <- kalman_filter(choice,reward,4,mu0,sigma0_sq,sigma_xi_sq,sigma_epsilon_sq)$m
+  p <- softmax_choice_prob(m,gamma)
+  lik <- p[cbind(1:nrow(data),choice)]
+  negLogLik <- -sum(log(lik))
+  if(is.na(negLogLik) | negLogLik == Inf) negLogLik <- 1e+300
+  return(negLogLik)
+}
+```
+
+---
+
+## Solution: fix $\sigma^2_\epsilon$
+
+```{r}
+starting_values <- generate_starting_values(200,min=c(log(.001),-100,log(.0001),log(.0001)),max=c(log(10),100,log(10000),log(100)))
+opt <- apply(starting_values,1,function(x) optim(x,fn=kf_sm_negLogLik_trans2,data=tdat,control=list(maxit=startIter)))
+starting_values_2 <- lapply(opt[order(unlist(lapply(opt,function(x) x$value)))[1:5]],function(x) x$par)
+opt <- lapply(starting_values_2,optim,fn=kf_sm_negLogLik_trans2,data=tdat)
+bestopt <- opt[[which.min(unlist(lapply(opt,function(x) x$value)))]]
+bestopt
+```
+
+---
+
+## Solution: fix $\sigma^2_\epsilon$
+
+```{r}
+c(exp(bestopt$par[1]),bestopt$par[2],exp(bestopt$par[3:4]))
+```
+
+---
+
+## Kalman filter + UCB
+
+Upper confidence bound is deterministic. 
+
+Turn into a probabilistic choice rule:
+
+$$P(C_{t} = j|C_{0:(t-1)},R_{0:(t-1)}) = \frac{\exp \gamma (m_{t-1,j} + \beta \sqrt{v_{t-1,j} + \sigma^2_\xi})}{\sum_{k=1}^4 \exp \gamma (m_{t-1,k} + \beta \sqrt{v_{t-1,k} + \sigma^2_\xi})}$$
+
+Are all these parameters identifiable? No:
+
+$\beta$ can account for increase in variance!
+
+---
+
+## Kalman filter + sUCB
+
+```{r}
+ucb_choice_prob <- function(m,ppsd,gamma,beta) {
+  prob <- exp(gamma*(m + beta*ppsd))
+  prob <- prob/rowSums(prob)
+  return(prob)
+}
+```
+
+---
+
+## Kalman filter + sUCB
+
+```{r}
+kf_ucb_negLogLik_trans2 <- function(par,data) {
+  gamma <- exp(par[1])
+  beta <- exp(par[2])
+  mu0 <- par[3]
+  sigma0_sq <- exp(par[4])
+  sigma_xi_sq <- exp(par[5])
+  sigma_epsilon_sq <- 16
+  choice <- data$deck
+  reward <- data$payoff
+  kf <- kalman_filter(choice,reward,4,mu0,sigma0_sq,sigma_xi_sq,sigma_epsilon_sq)
+  m <- kf$m
+  ppsd <- sqrt(kf$v + sigma_xi_sq)
+  p <- ucb_choice_prob(m,ppsd,gamma,beta)
+  lik <- p[cbind(1:nrow(data),choice)]
+  negLogLik <- -sum(log(lik))
+  if(is.na(negLogLik) | negLogLik == Inf) negLogLik <- 1e+300
+  return(negLogLik)
+}
+```
+
+
+---
+
+```{r}
+starting_values <- generate_starting_values(600,min=c(log(.001),log(.001),-10,log(.0001),log(.0001)),max=c(log(10),log(10),10,log(10000),log(100)))
+opt <- apply(starting_values,1,function(x) optim(x,fn=kf_ucb_negLogLik_trans2,data=tdat,control=list(maxit=startIter)))
+starting_values_2 <- lapply(opt[order(unlist(lapply(opt,function(x) x$value)))[1:5]],function(x) x$par)
+opt <- lapply(starting_values_2,optim,fn=kf_ucb_negLogLik_trans2,data=tdat)
+bestopt <- opt[[which.min(unlist(lapply(opt,function(x) x$value)))]]
+bestopt
+c(exp(bestopt$par[1:2]),bestopt$par[3],exp(bestopt$par[4:5]))
+```
+
+---
+
+## Kalman filter + Thompson sampling
+
+$$P(C_t = j|C_{0:(t-1)},R_{1:(t-1)}) = P(\forall k \neq j: \tilde{m}_{t,j} > \tilde{m}_{t,k} | \tilde{m}_{t,j} \sim \mathcal{N}(m_{t,j},v_{t,j}))$$
+
+Are all parameters of this model identifiable? Yes
+
+To work out relevant probabilities, can use sampling (i.e. sample $\tilde{m}_{t,k}$ repeatedly and count number of times each bandit wins). But this will be imprecise when probability is small. 
+
+Better (but slower!) to work out probabilities by working out the joint distribution (multivariate Normal) of pairwise differences $\tilde{m}_{t,j} - \tilde{m}_{t,k}$ and probability that all these are $> 0$ by integration.
+---
+
+## Kalman filter + Thompson sampling
+
+```{r}
+library(mvtnorm)
+thompson_choice_prob <- function(m,v) {
+  A1 <- matrix(c(1,-1,0,0, 1,0,-1,0, 1,0,0,-1), nrow = 3, byrow = TRUE)
+  A <- array(0,dim=c(3,4,4))
+  A[,,1] <- A1
+  A[,,2] <- A1[,c(2,1,3,4)]
+  A[,,3] <- A1[,c(2,3,1,4)]
+  A[,,4] <- A1[,c(2,3,4,1)]
+  prob <- matrix(0.0,ncol=ncol(m),nrow=nrow(m))
+  for(t in 1:nrow(m)) {
+    for(i in 1:4) {
+      newM <- as.vector(A[,,i] %*% m[t,])
+      newV <- A[,,i] %*% diag(v[t,]) %*% t(A[,,i])
+      # This is very slow!
+      prob[t,i] <- pmvnorm(lower=c(0,0,0), mean = newM, sigma = newV, algorithm=Miwa(steps=128))
+      prob[prob<0] <- 0
+    }
+  }
+  return(prob)
+}
+```
+
+---
+
+## Kalman filter + Thompson sampling
+
+```{r}
+kf_thompson_negLogLik_trans <- function(par,data) {
+  mu0 <- par[1]
+  sigma0_sq <- exp(par[2])
+  sigma_xi_sq <- exp(par[3])
+  sigma_epsilon_sq <- exp(par[4])
+  choice <- data$deck
+  reward <- data$payoff
+  kf <- kalman_filter(choice,reward,4,mu0,sigma0_sq,sigma_xi_sq,sigma_epsilon_sq)
+  m <- kf$m
+  v <- kf$v
+  p <- thompson_choice_prob(m,v)
+  lik <- p[cbind(1:nrow(data),choice)]
+  negLogLik <- -sum(log(lik))
+  if(is.na(negLogLik) | negLogLik == Inf) negLogLik <- 1e+300
+  return(negLogLik)
+}
+```
+
+---
+
+## Kalman filter + Thompson sampling
+
+```{r}
+kf_thompson_negLogLik_trans(c(0,log(1000),log(16),log(16)),tdat)
+kf_thompson_negLogLik_trans(c(0,log(20*1000),log(20*16),log(20*16)),tdat)
+kf_thompson_negLogLik_trans(c(0,log(.002*1000),log(.002*16),log(.002*16)),tdat)
+```
+
+---
+
+## Kalman filter + Thompson sampling
+
+```{r,cache=TRUE}
+est <- optim(c(0,log(1000),log(16),log(16)),kf_thompson_negLogLik_trans,data=tdat)
+est
+c(est$par[1],exp(est$par[2:4]))
+```
+
+---
