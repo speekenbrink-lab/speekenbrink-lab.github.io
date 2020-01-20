@@ -1,7 +1,54 @@
+- tag: stojic2020uncertainty
+  type: journal
+  year: 2020
+  apa_reference: "Stojic, H., Orquin, J.L., Dayan, P., Dolan, R., & Speekenbrink, M. (in press).  Uncertainty in learning, choice and visual fixation. _Proceedings of the National Academy of the Sciences of the USA_."
+  ucl_discovery: 10089179
+  osf: 539ps
+  arxiv: "https://psyarxiv.com/p6zev/"
+
+
+
+- tag: fuhrman2019social
+  type: journal
+  year: 2019
+  apa_reference: "Fuhrmann, D., Casey, C.S., Speekenbrink, M., & Blakemore, S.J., 2019. Social exclusion affects working memory performance in young adolescent girls. _Developmental Cognitive Neuroscience_, _40_, 100718."
+  lab_authors:
+    - maarten
+  ucl_discovery: 10086570
+  doi: "10.1016/j.dcn.2019.100718"
+
+- tag: schweizer2019protocol
+  type: journal
+  year: 2019
+  apa_reference: "Schweizer S, Leung J.T., Kievit, R., Speekenbrink, M., Trender, W., Hampshire, A., Blakemore, S.J. (2019) Protocol for an app-based affective control training for adolescents: proof-of-principle double-blind randomized controlled trial [version 1; peer review: 3 approved, 1 approved with reservations]. _Wellcome Open Research_, _4:91)"
+  doi: 10.12688/wellcomeopenres.15229.1
+  ucl_discovery: 10077907
+
+- tag: harris2019failures
+  type: journal
+  year: 2019
+  lab_authors:
+    - maarten
+  apa_reference: "Harris, A. J. L., Blower, F. B. N., Rodgers, S. A., Lagator, S., Page, E., Burton, A., Urlichich, D., & Speekenbrink, M. (2019). Failures to replicate a key result of the selective accessibility theory of anchoring. _Journal of Experimental Psychology: General_, _148_, e30–e50."
+  ucl_discovery: 10074759
+  doi: "10.1037/xge0000644"
+  osf: jtx34
+
+- tag: grech2019fitness
+  type: journal
+  year: 2019
+  apa_reference: "Grech, L., Jeffares, D., Sadée, C.Y., Rodriguez-Lopez, M., Bitton, D.A., Hoti, M., Biagosch, C., Aravani, D., Speekenbrink, M., Illingworth, C.J. and Schiffer, P.H. (2019). Fitness Landscape of the Fission Yeast Genome. _Molecular biology and evolution_, _36_, 1612–1623."
+  lab_authors:
+    - maarten
+  doi: "10.1093/molbev/msz113"
+  ucl_discovery: 10074336
+  arxiv: "https://www.biorxiv.org/content/10.1101/398024v1"
+  abstract: 'The relationship between DNA sequence, biochemical function, and molecular evolution is relatively well-described for protein-coding regions of genomes, but far less clear in noncoding regions, particularly, in eukaryote genomes. In part, this is because we lack a complete description of the essential noncoding elements in a eukaryote genome. To contribute to this challenge, we used saturating transposon mutagenesis to interrogate the Schizosaccharomyces pombe genome. We generated 31 million transposon insertions, a theoretical coverage of 2.4 insertions per genomic site. We applied a five-state hidden Markov model (HMM) to distinguish insertion-depleted regions from insertion biases. Both raw insertion-density and HMM-defined fitness estimates showed significant quantitative relationships to gene knockout fitness, genetic diversity, divergence, and expected functional regions based on transcription and gene annotations. Through several analyses, we conclude that transposon insertions produced fitness effects in 66–90% of the genome, including substantial portions of the noncoding regions. Based on the HMM, we estimate that 10% of the insertion depleted sites in the genome showed no signal of conservation between species and were weakly transcribed, demonstrating limitations of comparative genomics and transcriptomics to detect functional units. In this species, 3′- and 5′-untranslated regions were the most prominent insertion-depleted regions that were not represented in measures of constraint from comparative genomics. We conclude that the combination of transposon mutagenesis, evolutionary, and biochemical data can provide new insights into the relationship between genome function and molecular evolution.'
+
 - tag: wu2018generalization
   type: journal
   year: 2018
-  apa_reference: "Wu, C.M., Schulz, E., Speekenbrink, M., Nelson, J.D., & Meder, B. (2018) Generalization guides human exploration in vast decision spaces. _Nature Human Behavior_"
+  apa_reference: "Wu, C.M., Schulz, E., Speekenbrink, M., Nelson, J.D., & Meder, B. (2018) Generalization guides human exploration in vast decision spaces. _Nature Human Behavior_, _2_, 915–924"
   lab_authors:
     - maarten
     - eric
@@ -42,8 +89,8 @@
 
 - tag: harris2018potential
   type: journal
-  year: 2018
-  apa_reference:  "Harris, A.J.L., Sildmae, O., Speekenbrink, M., & Hahn, U. (2018) The potential power of experience in communications of expert consensus levels. _Journal of Risk Research_."
+  year: 2019
+  apa_reference:  "Harris, A.J.L., Sildmae, O., Speekenbrink, M., & Hahn, U. (2018) The potential power of experience in communications of expert consensus levels. _Journal of Risk Research_, _22_, 593-609."
   lab_authors:
     - maarten
   ucl_discovery: 10042296
@@ -302,7 +349,7 @@
 
 - tag: Schulz2016simple
   year: 2016
-  apa_referemce: "Schulz, E., Speekenbrink, M., & Meder, B. (2016) Simple trees in complex forests: Growing Take The Best by Approximate Bayesian Computation. In: Papafragou, A., Grodner, D., Mirman, D., & Trueswell, J.C. (Eds.) _Proceedings of the 38th Annual Meeting of the Cognitive Science Society_, Austin, TX: Cognitive Science Society. pp. 1140-1145."
+  apa_reference: "Schulz, E., Speekenbrink, M., & Meder, B. (2016) Simple trees in complex forests: Growing Take The Best by Approximate Bayesian Computation. In: Papafragou, A., Grodner, D., Mirman, D., & Trueswell, J.C. (Eds.) _Proceedings of the 38th Annual Meeting of the Cognitive Science Society_, Austin, TX: Cognitive Science Society. pp. 1140-1145."
   ucl_discovery: 1512470
   url: "https://mindmodeling.org/cogsci2016/papers/0437/index.html"
   lab_authors:

@@ -44,13 +44,15 @@
 
 - tag: ismail_guennouni
   name: Ismail Guennouni
-  position: MSc student
+  position: PhD student
   current: 1
   start_year: 2017
   photo: ismail_guennouni.jpg
-  blurb: Ismail joined the lab to work on research investigating learning in
-         interpersonal games. He is currently completing an MSci in Computer
-         Science and will return to the lab to work on his PhD afterwards.
+  blurb: Ismail joined the lab when he did his MSc in Cognitive and Decision Sciences
+         to work on research investigating learning in
+         interpersonal games. After another MSci in Computer
+         Science, he has started his PhD in 2019, aiming to investigate social learning
+         and links with mental health issues.
   email: i.gennouni.17@ucl.ac.uk
   github: ismailg
   twitter: GuennouniIsmail
@@ -116,6 +118,19 @@
   github: ericschulz
   url: https://ericschulz.github.io/
 
+- tag: yonatan_vanunu
+  name: Yonatan Vanunu
+  position: Visiting PhD student
+  current: 0
+  start_year: 2019
+  end_year: 2019
+  photo: yonatan_vanunu.jpg
+  blurb: Too late to write a blurb now, I've left!
+  movingon_blurb: Yonatan joined the lab in 2019 for a research visit, sponsored
+                  by the Experimental Psychology Society. During his stay, he has been working on
+                  computational modeling of experience-based decision making.
+  email: y.vanunu@unsw.edu.au
+
 - tag: hrvoje_stojic
   name: Hrvoje Stojic
   position: Visiting PhD student
@@ -151,6 +166,14 @@
   github: hstojic
   url: http://hstojic.re/
   publons: 1175768
+
+- tag: tankred_saanum
+  name: Tankred Saanum
+  position: MSc student
+  current: 1
+  start_year: 2019
+  blurb: My MSc project will be very interesting!
+  email: tankred.saanum.19@ucl.ac.uk
 
 - tag: alzbeta_gabalova
   name: Alzbeta Gabalova
@@ -551,7 +574,7 @@
 - tag: sarah_blakemore
   name: Sarah-Jayne Blakemore
   position: collaborator
-  organization: UCL
+  organization: University of Cambridge
   url: "https://sites.google.com/site/blakemorelab/"
   current: 1
 
@@ -567,7 +590,7 @@
   position: collaborator
   organization: UCL
   url: "http://www.ucl.ac.uk/slms/people/show.php?UPI=NJWHA27"
-  current: 1
+  current: 0
 
 - tag: marjan_jahanshahi
   name: Marjan Jahanshahi
@@ -616,4 +639,11 @@
   position: collaborator
   organization: University of East Anglia
   url: "https://www.uea.ac.uk/psychology/people/profile/zhenguang-cai"
+  current: 1
+
+- tag: brad_love
+  name: Brad Love
+  position: collaborator
+  organization: UCL
+  url: "https://bradlove.org/"
   current: 1
