@@ -53,7 +53,7 @@
 
 - name: Perceptual decision making
   tag: perceptual_dm
-  current: 1
+  current: 0
   people:
     - maarten
     - hannah_tickle
@@ -131,3 +131,35 @@
     models, we can determine relevant characteristics of a participant from their earlier behaviour, and
     tailor the design to the participant. This can have substantial benefits when conducting studies to
     e.g. compare different theories.
+
+- name: Mental disorders as atypical social learning processes.
+  tag: social_comp_psy
+  current: 1
+  people:
+    - ismail_guennouni
+    - maarten
+  blurb: Relation between social learning and mental health disorders
+  description: >
+    Many psychiatric disorders are chiefly characterised by deficits in social
+    functioning, such as Borderline Personality Disorder, Psychopathy, Social
+    Anxiety and Autism Spectrum Disorder. Others exhibit social interaction
+    impairments as a debilitating consequence of the disorder, such as higher
+    distress from interpersonal relationships in Depression and interpersonal
+    aggression as a barrier to effective treatment in PTSD. While there is
+    little disagreement on the importance of understanding social interaction
+    impairment in many of these disorders, there remains multiple unanswered
+    questions as to what exactly in the social cognitive process is impaired
+    or dysfunctional compared to healthy individuals. There are likely multiple
+    dimensions that can interact to yield the observed atypical behavior in
+    social interaction such as such as how sensitive is the person to specific
+    social gestures, how good they are at inferring others intentions from their
+    behavior and their ability to accurately infer social uncertainty from the
+    history of interactions.
+
+    The objective of the research project is to
+    explore and hopefully learn to disentangle these dimensions through
+    computationally modelling behavior in repeated economic games with
+    social components. Along the way, we hope to develop behavioral markers
+    of social dysfunction in mental disorders that can be used to diagnose,
+    monitor and better understand the determinants of social learning
+    impairment inherent to many conditions.

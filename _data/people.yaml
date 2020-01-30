@@ -48,11 +48,16 @@
   current: 1
   start_year: 2017
   photo: ismail_guennouni.jpg
-  blurb: Ismail joined the lab when he did his MSc in Cognitive and Decision Sciences
-         to work on research investigating learning in
-         interpersonal games. After another MSci in Computer
-         Science, he has started his PhD in 2019, aiming to investigate social learning
-         and links with mental health issues.
+  blurb: Ismail joined the lab when he did his MSc in Cognitive and Decision
+         Sciences to work on research investigating learning transfer in the
+         context of strategic interaction. After another MRes in Computer
+         Science with a focus on Machine Learning, he has started his PhD in
+         2019, aiming to investigate the differential aspects of social
+         learning in mental health disorders. He is interested in exploring
+         whether behavioral markers developed through computational modelling
+         of observed actions in online experiments can be used in diagnosing,
+         monitoring and better understanding the determinants of social
+         learning dysfunctions inherent to many disorders.
   email: i.gennouni.17@ucl.ac.uk
   github: ismailg
   twitter: GuennouniIsmail
@@ -170,12 +175,37 @@
   url: http://hstojic.re/
   publons: 1175768
 
+- tag: alexandra_voica
+  name: Alexandra Voica
+  position: MSc student
+  current: 1
+  start_year: 2019
+  blurb: I’m working on a project investigating the influence of behavioural
+         traces on plant-based food choices.
+  email: alexandra.voica.19@ucl.ac.uk
+  photo: alexandra_voica.jpg
+
+- tag: tal_arkushin
+  name: Tal Arkushin
+  position: MSc student
+  current: 1
+  start_year: 2019
+  blurb: "My MSc project investigates the impact of behavioural traces on green
+         behaviour. More specifically, the project explores the following
+         question: can people’s choice of elevator or stairs be influenced by
+         showing them the choices made by others? This question will be
+         examined by making otherwise invisible behavioural traces (i.e.
+         choice of elevator or stairs) visible and testing their impact on
+         behaviour."
+  email: tal.arkushin.19@ucl.ac.uk
+  photo: tal_arkushin.jpg
+
 - tag: tankred_saanum
   name: Tankred Saanum
   position: MSc student
   current: 1
   start_year: 2019
-  blurb: My MSc project will be very interesting!
+  blurb: I'm working on a project.
   email: tankred.saanum.19@ucl.ac.uk
 
 - tag: alzbeta_gabalova

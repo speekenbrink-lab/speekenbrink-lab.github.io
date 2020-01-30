@@ -6,6 +6,8 @@ current: 1
 people:
   - maarten
 blurb: Optimize experiments whilst you run them
+image: lucas-benjamin-ey17a6v8KWA-unsplash.jpg
+image_credit: Photo by Lucas Benjamin on Unsplash
 ---
 
 Experiments are usually designed "statically", before they
