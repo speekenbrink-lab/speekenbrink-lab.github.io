@@ -175,6 +175,15 @@
   url: http://hstojic.re/
   publons: 1175768
 
+- tag: samuel_dupret
+  name: Samuel Dupret
+  position: MSc student
+  current: 1
+  start_year: 2019
+  blurb: I'm working with Maarten and Dave Lagnado on a project relating
+         game theory and causal inference.
+  email: samuel.dupret.19@ucl.ac.uk
+
 - tag: alexandra_voica
   name: Alexandra Voica
   position: MSc student
@@ -205,7 +214,7 @@
   position: MSc student
   current: 1
   start_year: 2019
-  blurb: I'm working on a project.
+  blurb: I'm working on a cool project.
   email: tankred.saanum.19@ucl.ac.uk
 
 - tag: alzbeta_gabalova
