@@ -1,12 +1,25 @@
+- tag: stojic2020novelty
+  type: journal
+  year: 2020
+  apa_reference: Stojic, H., Schulz, E., Analytis, P. P., & Speekenbrink, M. (in press). It’s new, but is it good? How generalization and uncertainty guide the exploration of novel options. _Journal of Experimental Psychology: General._"
+  lab_authors:
+    - maarten
+    - hrvoje_stojic
+    - eric_schulz
+  arxiv: "https://psyarxiv.com/p6zev/"
+  osf: c8u9t
+
 - tag: stojic2020uncertainty
   type: journal
   year: 2020
-  apa_reference: "Stojic, H., Orquin, J.L., Dayan, P., Dolan, R., & Speekenbrink, M. (in press).  Uncertainty in learning, choice and visual fixation. _Proceedings of the National Academy of the Sciences of the USA_."
+  apa_reference: "Stojic, H., Orquin, J.L., Dayan, P., Dolan, R., & Speekenbrink, M. (2020).  Uncertainty in learning, choice and visual fixation. _Proceedings of the National Academy of the Sciences of the USA_, _117_, 3291-3300."
+  lab_authors:
+    - maarten
+    - hrvoje_stojic
+  doi: "10.1073/pnas.1911348117"
   ucl_discovery: 10089179
   osf: 539ps
   arxiv: "https://psyarxiv.com/p6zev/"
-
-
 
 - tag: fuhrman2019social
   type: journal
@@ -21,6 +34,8 @@
   type: journal
   year: 2019
   apa_reference: "Schweizer S, Leung J.T., Kievit, R., Speekenbrink, M., Trender, W., Hampshire, A., Blakemore, S.J. (2019) Protocol for an app-based affective control training for adolescents: proof-of-principle double-blind randomized controlled trial [version 1; peer review: 3 approved, 1 approved with reservations]. _Wellcome Open Research_, _4:91)"
+  lab_authors:
+    - maarten
   doi: 10.12688/wellcomeopenres.15229.1
   ucl_discovery: 10077907
 
@@ -62,7 +77,7 @@
   apa_reference: "Schulz, E., Wu, C.M., Huys, Q.J.M., Krause, A., & Speekenbrink, M. (2018) Generalization and search in risky environments. _Cognitive Science_"
   lab_authors:
     - maarten
-    - eric
+    - eric_schulz
   ucl_discovery: 227322
   arxiv: "https://www.biorxiv.org/content/early/2018/05/14/227322"
   doi: "10.1111/cogs.12695"
@@ -82,7 +97,7 @@
   apa_reference:  "Schulz, E., Speekenbrink, M., & Krause, A (2018) A tutorial on Gaussian process regression: Modelling, exploring, and exploiting functions. _Journal of Mathematical Psychology_, _85_, 1-16."
   lab_authors:
     - maarten
-    - eric
+    - eric_schulz
   ucl_discovery: 10050029
   doi: "10.1016/j.jmp.2018.03.001"
   arxiv: "https://www.biorxiv.org/content/early/2017/10/10/095190"
