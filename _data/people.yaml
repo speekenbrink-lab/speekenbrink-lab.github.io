@@ -215,8 +215,15 @@
   position: MSc student
   current: 1
   start_year: 2019
-  blurb: I'm working on a cool project.
+  blurb: "My project investigates the role of transfer learning and
+         generalization in human reinforcement learning. To what
+        extent do humans employ knowledge of past, related environments to
+        generalize and make inferences in novel environments?
+        This is tested in a compositional multi-armed bandit task where the
+        reward function is composed of previously learned functions. I also
+        investigate how well kernel-based models describe human generalization."
   email: tankred.saanum.19@ucl.ac.uk
+  photo: tankred_saanum.jpg
 
 - tag: alzbeta_gabalova
   name: Alzbeta Gabalova
