@@ -1,11 +1,13 @@
 - tag: stojic2020novelty
   type: journal
   year: 2020
-  apa_reference: "Stojic, H., Schulz, E., Analytis, P. P., & Speekenbrink, M. (in press). It’s new, but is it good? How generalization and uncertainty guide the exploration of novel options. _Journal of Experimental Psychology: General._"
+  apa_reference: "Stojic, H., Schulz, E., Analytis, P. P., & Speekenbrink, M. (2020). It’s new, but is it good? How generalization and uncertainty guide the exploration of novel options. _Journal of Experimental Psychology: General_, _149_, 1878-1907."
   lab_authors:
     - maarten
     - hrvoje_stojic
     - eric_schulz
+  doi: "10.1037/xge0000749"
+  ucl_discovery: 10090576
   arxiv: "https://psyarxiv.com/p6zev/"
   osf: c8u9t
 
