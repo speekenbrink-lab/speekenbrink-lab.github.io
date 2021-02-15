@@ -187,15 +187,16 @@
   twitter: MahbodME
   photo: mahbod_mehrvarz.jpg
 
-- tag: alexander_jamieson
-  name: Alexander Jamieson
+- tag: alex_jamieson
+  name: Alex Jamieson
   position: MSc student
   current: 1
   start_year: 2020
   blurb: I'm a student in the MSc Psychological Sciences programme and
          working with Maarten on a project involving regret in decision making.
   email: alexander.jamieson.20@ucl.ac.uk
-  photo: alexander_jamieson.jpg
+  twitter: alexsjamieson
+  photo: alex_jamieson.jpg
 
 - tag: luke_lau
   name: Luke Lau
