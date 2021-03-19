@@ -23,10 +23,18 @@
   osf: 539ps
   arxiv: "https://psyarxiv.com/p6zev/"
 
+- tag: speekenbrink2019identifiability
+  type: conference
+  tear: 2019
+  apa_reference: "Speekenbrink, M. (2019). Indentifiability of Gaussian Bayesian bandit models. Proceedings of the 2019 Conference on Cognitive Computational Neuroscience. 686-688."
+  lab_authors:
+    - maarten
+  doi: "10.32470/CCN.2019.1335-0"
+
 - tag: fuhrman2019social
   type: journal
   year: 2019
-  apa_reference: "Fuhrmann, D., Casey, C.S., Speekenbrink, M., & Blakemore, S.J., 2019. Social exclusion affects working memory performance in young adolescent girls. _Developmental Cognitive Neuroscience_, _40_, 100718."
+  apa_reference: "Fuhrmann, D., Casey, C.S., Speekenbrink, M., & Blakemore, S.J. (2019). Social exclusion affects working memory performance in young adolescent girls. _Developmental Cognitive Neuroscience_, _40_, 100718."
   lab_authors:
     - maarten
   ucl_discovery: 10086570
@@ -35,7 +43,7 @@
 - tag: schweizer2019protocol
   type: journal
   year: 2019
-  apa_reference: "Schweizer S, Leung J.T., Kievit, R., Speekenbrink, M., Trender, W., Hampshire, A., Blakemore, S.J. (2019) Protocol for an app-based affective control training for adolescents: proof-of-principle double-blind randomized controlled trial [version 1; peer review: 3 approved, 1 approved with reservations]. _Wellcome Open Research_, _4:91)"
+  apa_reference: "Schweizer S, Leung J.T., Kievit, R., Speekenbrink, M., Trender, W., Hampshire, A., Blakemore, S.J. (2019). Protocol for an app-based affective control training for adolescents: proof-of-principle double-blind randomized controlled trial [version 1; peer review: 3 approved, 1 approved with reservations]. _Wellcome Open Research_, _4:91)"
   lab_authors:
     - maarten
   doi: 10.12688/wellcomeopenres.15229.1
@@ -126,7 +134,7 @@
 - tag: schulz2017putting
   type: journal
   year: 2018
-  apa_reference: "Schulz, E., Konstantinidis, E., & Speekenbrink, M. (in press). Putting bandits into context: How function learning supports decision making. _Journal of Experimental Psychology: Learning, Memory, and Cognition_, _44_, 927-943."
+  apa_reference: "Schulz, E., Konstantinidis, E., & Speekenbrink, M. (2018). Putting bandits into context: How function learning supports decision making. _Journal of Experimental Psychology: Learning, Memory, and Cognition_, _44_, 927-943."
   lab_authors:
     - maarten
       eric_schulz
