@@ -85,7 +85,7 @@
                  perceptual decision making, using behavioural studies, computational
                  modelling, and EEG analysis. After completing her PhD, she took
                  a job at Memrise and a part-time position as a post-doc in the
-                 Summerfield lab.
+                 Summerfield lab. She is now senior data scientist at TheTrainline.
 
 - tag: eric_schulz
   name: Eric Schulz
@@ -167,14 +167,14 @@
                   Barcelona. He later returned for other visits in 2016 and
                   2017. We worked on various projects related to reinforcement
                   learning, contextual bandits, and strategy selection.
-                  After receiving his PhD, he became a postdoc at UCL, working
-                  with Ray Dolan.
+                  After receiving his PhD, he was a postdoc at UCL, working
+                  with Ray Dolan. He now works as a research scientist
+                  at SecondMind
   email: hrvoje.stojic@protonmail.com
   twitter: HrvojeStojic
   github: hstojic
   url: http://hstojic.re/
   publons: 1175768
-
 
 - tag: mahbod_mehrvarz
   name: Mahbod Mehrvarz
@@ -208,25 +208,52 @@
   email: lut.lau.20@ucl.ac.uk
   photo: luke_lau.jpg
 
+- tag: kaitlyn_ng
+  name: Kaitlyn Ng
+  position: BSc student
+  current: 1
+  start_year: 2021
+  blurb: I'm a BSc student in psychology, working with Maarten on a project
+         involving the role of emotions in opponent modelling.
+  email: kaitlyn.ng.19@ucl.ac.uk
+  photo: kaitlyn_ng.jpg
+
+- tag: neil_hegde
+  name: Neil Hegde
+  position: BSc student
+  current: 1
+  start_year: 2021
+  blurb: I'm a BSc student in psychology, working with Maarten on a project
+         investigating opponent modelling in games.
+  email: neil.hegde.18@ucl.ac.uk
+  photo: neil_hegde.jpg
+
 - tag: qingyuan_yan
   name: Qingyuan Yan
   position: BSc student
-  current: 1
+  current: 0
   start_year: 2020
+  end_year: 2021
   blurb: I'm a BSc student in psychology and working with Maarten on a project
          involving the role of anticipated regret in decision making from
          experience.
+  movingon_blurb: Qingyuan conducted a project on anticipated regret in
+                  decisions from experience.
   email: qingyuan.yan.18@ucl.ac.uk
   photo: qingyuan_yan.jpg
 
 - tag: alif_low
   name: Alif Bin Muhd Adam Low
   position: BSc student
-  current: 1
+  current: 0
   start_year: 2020
+  end_year: 2021
   blurb: I'm a BSc student in psychology and working with Maarten on a project
          involving differences in reinforcement learning in environments with
          only gains, only losses, or mixed gains and losses.
+  movingon_blurb: Alif conducted a project on reinforcement learning in
+                  environments with only gains, only losses, or mixed gains and
+                  losses.
   email: alif.low.18@ucl.ac.uk
   photo: alif_low.jpg
 

@@ -1,3 +1,74 @@
+- tag: wu2021time
+  type: preprint
+  year: 2021
+  apa_reference: "Wu, C.M., Schulz, E., Pleskac, T.J. & Speekenbrink, M. (submitted). Time to explore: Adaptation of exploration under time pressure."
+  arxiv: "https://psyarxiv.com/dsw7q/"
+
+- tag: topf2021have
+  type: preprint
+  year: 2021
+  apa_reference: "Topf, S., & Speekenbrink, M. (submitted). I’ll have what she’s had! Popularity beliefs moderate the preference for scarce options in the choice of food items."
+  lab_authors:
+    - sabine_topf
+    - maarten
+  arxiv: "https://psyarxiv.com/kuatz/"
+  osf: d6t9g
+
+- tag: topf2021follow
+  type: preprint
+  year: 2021
+  apa_reference: "Topf, S., & Speekenbrink, M. (submitted). Follow my example, for better and for worse: The influence of behavioural traces on recycling decisions."
+  lab_authors:
+    - sabine_topf
+    - maarten
+  arxiv: "https://psyarxiv.com/496v7/"
+  osf: 2gxhk
+
+- tag: topf2021agent
+  type: preprint
+  year: 2021
+  apa_reference: "Topf, S., & Speekenbrink, M. (submitted). Agent, behaviour, trace, repeat: Understanding the cognitive processes involved in human stigmergic coordination."
+  lab_authors:
+    - sabine_topf
+    - maarten
+  arxiv: "https://psyarxiv.com/pfkyv/"
+
+- tag: topf2021evidence
+  type: preprint
+  year: 2021
+  apa_reference: "Topf, S., & Speekenbrink, M. (submitted). Evidence of 'green' behaviours: Exploring behavioural traces of pro- and anti-environmental behaviours."
+  lab_authors:
+    - sabine_topf
+    - maarten
+  arxiv: "https://psyarxiv.com/6yf8b/"
+
+- tag: saanum2021compositional
+  type: conference
+  year: 2021
+  apa_reference: "Saanum, T., Eric, S., Speekenbrink, M. (2021). Compositional generalization in multi-armed bandits. _Proceedings of the 43rd Annual Meeting of the Cognitive Science Society_"
+  lab_authors:
+    - maarten
+    - eric_schulz
+    - tankred_saanum
+  url: "https://escholarship.org/uc/item/5nn9q6zc"
+  arxiv: "https://psyarxiv.com/v6mzb/"
+
+- tag: guennouni2021transfer
+  type: conference
+  year: 2021
+  apa_reference: "Guennouni, I., Speekenbrink, M. (2021). Transfer of learned opponent models in repeated games. _Proceedings of the 43rd Annual Meeting of the Cognitive Science Society_"
+  lab_authors:
+    - ismail_guennouni
+    - maarten
+  url: "https://escholarship.org/uc/item/23b2h05g"
+
+- tag: tickle2021human
+  type: journal
+  year: 2021
+  apa_reference: "Tickle, H., Tsetsos, K., Speekenbrink, M., Summerfield, C. (2021). Human optional stopping in a heteroscedastic world. _Psychological Review_"
+  arxiv: "https://psyarxiv.com/t7dn2"
+  doi: 10.1037/rev0000315
+
 - tag: stojic2020novelty
   type: journal
   year: 2020
