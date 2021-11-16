@@ -1,3 +1,9 @@
+- tag: speekenbrink2021ignorable
+  type: preprint
+  year: 2021
+  apa_reference: "Speekenbrink, M., & Visser, I. (submitted). Ignorable and non-ignorable missing data in hidden Markov models."
+  arxiv: "https://arxiv.org/abs/2109.02770"
+
 - tag: wu2021time
   type: preprint
   year: 2021
