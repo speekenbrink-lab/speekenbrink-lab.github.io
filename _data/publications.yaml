@@ -1,3 +1,10 @@
+- tag: speekenbrinkk2022chasing
+  type: journal
+  year: 2022
+  apa_reference: "Speekenbrink, M. (2022). Chasing unknown bandits: Uncertainty guidance in learning and decision making. _Current Directions in Psychological Science_"
+  doi: "10.1177/09637214221105051"
+  ucl_discovery: 10155229
+
 - tag: speekenbrink2021ignorable
   type: preprint
   year: 2021
@@ -5,10 +12,14 @@
   arxiv: "https://arxiv.org/abs/2109.02770"
 
 - tag: wu2021time
-  type: preprint
-  year: 2021
-  apa_reference: "Wu, C.M., Schulz, E., Pleskac, T.J. & Speekenbrink, M. (submitted). Time to explore: Adaptation of exploration under time pressure."
+  type: journal
+  year: 2022
+  apa_reference: "Wu, C.M., Schulz, E., Pleskac, T.J. & Speekenbrink, M. (2022). Time pressure changes how people explore and respond to uncertainty. _Scientific Reports_, _12_, 4122"
   arxiv: "https://psyarxiv.com/dsw7q/"
+  doi: "10.1038/s41598-022-07901-1"
+  ucl_discovery: 10145639
+  osf: v4dua
+
 
 - tag: topf2021have
   type: preprint

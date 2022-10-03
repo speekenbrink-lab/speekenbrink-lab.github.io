@@ -1,6 +1,6 @@
 - tag: maarten
   name: Maarten Speekenbrink
-  position: Associate Professor in Mathematical Psychology
+  position: Professor of Mathematical Psychology
   current: 1
   photo: maarten_speekenbrink.jpg
   blurb: My research focuses on learning and decision making. I approach these
@@ -19,28 +19,6 @@
   impactstory: 0000-0003-3221-1091
   osf: utm5y
   publons: 1380603
-
-- tag: sabine_topf
-  name: Sabine Topf
-  position: PhD student
-  current: 1
-  start_year: 2017
-  photo: sabine_topf.jpg
-  email: sabine.topf.14@ucl.ac.uk
-  url: http://www.topf.com
-  github: stopf
-  twitter: NeneTopf
-  researchgate: Sabine_Topf
-  blurb: In my research, I focus on how learning from others informs individual
-          behaviour and decision making. That is, if we have evidence of other people’s
-          behaviour without being able to query the reasoning behind the behaviour
-          (e.g., observing recycling bins ready for collection outside someone’s
-          house), how does that influence our own behaviour? - Do we recycle more,
-          maybe because it appears to be a social norm? Recycle less because someone
-          else is taking care of environmental problems, giving us the chance to
-          free-ride? Infer the goal and apply it to a different area (reduce water
-          consumption, for instance)? I am going to mainly use behavioural experiments
-          and agent based modelling to answer these questions.
 
 - tag: ismail_guennouni
   name: Ismail Guennouni
@@ -61,6 +39,35 @@
   email: i.gennouni.17@ucl.ac.uk
   github: ismailg
   twitter: GuennouniIsmail
+
+- tag: sabine_topf
+  name: Sabine Topf
+  position: PhD student
+  current: 0
+  start_year: 2017
+  end_year: 2022
+  photo: sabine_topf.jpg
+  email: sabine.topf.14@ucl.ac.uk
+  url: http://www.topf.com
+  github: stopf
+  twitter: NeneTopf
+  researchgate: Sabine_Topf
+  blurb: In my research, I focus on how learning from others informs individual
+          behaviour and decision making. That is, if we have evidence of other people’s
+          behaviour without being able to query the reasoning behind the behaviour
+          (e.g., observing recycling bins ready for collection outside someone’s
+          house), how does that influence our own behaviour? - Do we recycle more,
+          maybe because it appears to be a social norm? Recycle less because someone
+          else is taking care of environmental problems, giving us the chance to
+          free-ride? Infer the goal and apply it to a different area (reduce water
+          consumption, for instance)? I am going to mainly use behavioural experiments
+          and agent based modelling to answer these questions.
+  movingon_blurb: Sabine joined the lab as a PhD student in 2017. She worked on
+                  various topics related to human stigmery, behavioural traces,
+                  and their role in pro-environmental behaviour. After
+                  completing her PhD, she moved to Germany and now works as
+                  deputy head of the Center for Psychosocial Medicine at
+                  Medical Center Hamburg-Eppendorf (UKE).
 
 - tag: hannah_tickle
   name: Hannah Tickle
@@ -176,13 +183,34 @@
   url: http://hstojic.re/
   publons: 1175768
 
+- tag: chang_wei_chen
+  name: Changwei Chen
+  position: MSc student
+  current: 0
+  start_year: 2021
+  end_year: 2022
+  movingon_blurb: Changwei conducted a project on opponent modelling
+                  algorithms for multi-agent reinforcement learning.
+
+- tag: yang_yang_wu
+  name: Yang-Yang Wu
+  position: MSc student
+  current: 0
+  start_year: 2021
+  end_year: 2022
+  movingon_blurb: Yang-Yang conducted a project on multiple systems in category
+                  learning.
+
 - tag: mahbod_mehrvarz
   name: Mahbod Mehrvarz
   position: MSc student
-  current: 1
+  current: 0
   start_year: 2020
+  end_year: 2021
   blurb: I'm a student in the MSc Cognitive and Decision Sciences programme and
          working with Maarten on a project involving reinforcement learning.
+  movingon_blurb: Mahbod conducted a project on asymmetric learning rates in a
+                  variety of multi-armed bandit tasks/
   email: mahbod.mehrvarz.20@ucl.ac.uk
   twitter: MahbodME
   photo: mahbod_mehrvarz.jpg
@@ -190,10 +218,13 @@
 - tag: alex_jamieson
   name: Alex Jamieson
   position: MSc student
-  current: 1
+  current: 0
   start_year: 2020
+  end_year: 2021
   blurb: I'm a student in the MSc Psychological Sciences programme and
          working with Maarten on a project involving regret in decision making.
+  movingon_blurb: Alex conducted a project on the role of experienced regret in
+                  exploration and exploitation of options in multi-armed bandits.
   email: alexander.jamieson.20@ucl.ac.uk
   twitter: alexsjamieson
   photo: alex_jamieson.jpg
@@ -201,30 +232,39 @@
 - tag: luke_lau
   name: Luke Lau
   position: MSc student
-  current: 1
+  current: 0
   start_year: 2020
+  end_year: 2021
   blurb: I'm a student in the MSc Cognitive Neuroscience programme and
          working with Maarten on a project involving reinforcement learning.
+  movingon_blurb: Luke conducted a project on the exploration of novel options
+                  in contextual multi-armed bandit tasks.
   email: lut.lau.20@ucl.ac.uk
   photo: luke_lau.jpg
 
 - tag: kaitlyn_ng
   name: Kaitlyn Ng
   position: BSc student
-  current: 1
+  current: 0
   start_year: 2021
+  end_year: 2022
   blurb: I'm a BSc student in psychology, working with Maarten on a project
          involving the role of emotions in opponent modelling.
+  movingon_blurb: Kaitlyn conducted a project on the role of emotions in
+                  learing opponent models in multi-player games.
   email: kaitlyn.ng.19@ucl.ac.uk
   photo: kaitlyn_ng.jpg
 
 - tag: neil_hegde
   name: Neil Hegde
   position: BSc student
-  current: 1
+  current: 0
   start_year: 2021
+  end_year: 2022
   blurb: I'm a BSc student in psychology, working with Maarten on a project
          investigating opponent modelling in games.
+  movingon_blurb: Neil conducted a project on opponent learning in multi-player
+                  games.
   email: neil.hegde.18@ucl.ac.uk
   photo: neil_hegde.jpg
 
