@@ -20,6 +20,18 @@
   osf: utm5y
   publons: 1380603
 
+- tag: yuyang_ding
+  name: Yuyang Ding
+  position: PhD student
+  current: 1
+  start_year: 2022
+  photo: yuyang_ding.jpg
+  blurb: Yuyang joined the lab in 2022 when he started his PhD research under
+         supervision of Maarten and Duarte Goncalves Dias Da Silva (UCL Economics).
+         In his PhD research, Yuyang focuses on financial decision making from
+         the perspective of evidence accumulation.
+  email: ucjuydi@ucl.ac.uk
+
 - tag: ismail_guennouni
   name: Ismail Guennouni
   position: PhD student
@@ -39,6 +51,67 @@
   email: i.gennouni.17@ucl.ac.uk
   github: ismailg
   twitter: GuennouniIsmail
+
+- tag: matei_deleanu
+  name: Matei Deleanu
+  position: BSc student
+  current: 1
+  start_year: 2022
+  blurb: I'm a BSc student in psychology and working with Maarten on a project
+         involving reinforcement learning.
+  email: matei.deleanu.20@ucl.ac.uk
+  photo: mateu_deleanu.jpg
+
+- tag: yucheng_zhu
+  name: Yucheng Zhu
+  position: BSc student
+  current: 1
+  start_year: 2022
+  blurb: I'm a BSc student in psychology and working with Maarten on a project
+         involving reinforcement learning.
+  email: yucheng.zhu.19@ucl.ac.uk
+  photo: yucheng_zhu.jpg
+
+- tag: toby_lau
+  name: Toby Lau
+  position: BSc student
+  current: 1
+  start_year: 2022
+  blurb: I'm a BSc student in psychology and working with Maarten on a project
+         involving opponent learning in mutiplayer games.
+  email: toby.lau.20@ucl.ac.uk
+  photo: toby_lau.jpg
+
+- tag: ed_lu
+  name: Ed Lu
+  position: BSc student
+  current: 1
+  start_year: 2022
+  blurb: I'm a BSc student in psychology and working with Maarten on a project
+         involving opponent learning in mutiplayer games.
+  email: yuan.lu.20@ucl.ac.uk
+  photo: ed_lu.jpg
+
+- tag: xenia_schwarzkopf
+  name: Xenia Schwarzkopf
+  position: BSc student
+  current: 1
+  start_year: 2022
+  blurb: I'm a BSc student in psychology and working with Maarten on a project
+         involving opponent learning in mutiplayer games.
+  email: xenia.schwarzkopf.20@ucl.ac.uk
+  photo: xenia_schwarzkopf.jpg
+
+- tag: wiktoria_luczak
+  name: Wiktoria Luczak
+  position: BSc student
+  current: 1
+  start_year: 2022
+  blurb: I'm a BSc student in psychology and working with Maarten and Steve
+         Flemming on a project involving confidence bias.
+  email: wiktoria.luczak.20@ucl.ac.uk
+  photo: wiktoria_luczak.jpg
+  
 
 - tag: sabine_topf
   name: Sabine Topf
@@ -76,7 +149,7 @@
   start_year: 2013
   end_year: 2018
   photo: hannah_tickle.jpg
-  email: h.tickle@ucl.ac.uk
+  email: h.tickle@alumni.ucl.ac.uk
   twitter: hTickle88
   blurb: My research mainly focusses on perceptual decision making. I'm
          currently investigating how people use information about reliability. For
@@ -241,61 +314,6 @@
                   in contextual multi-armed bandit tasks.
   email: lut.lau.20@ucl.ac.uk
   photo: luke_lau.jpg
-
-- tag: kaitlyn_ng
-  name: Kaitlyn Ng
-  position: BSc student
-  current: 0
-  start_year: 2021
-  end_year: 2022
-  blurb: I'm a BSc student in psychology, working with Maarten on a project
-         involving the role of emotions in opponent modelling.
-  movingon_blurb: Kaitlyn conducted a project on the role of emotions in
-                  learing opponent models in multi-player games.
-  email: kaitlyn.ng.19@ucl.ac.uk
-  photo: kaitlyn_ng.jpg
-
-- tag: neil_hegde
-  name: Neil Hegde
-  position: BSc student
-  current: 0
-  start_year: 2021
-  end_year: 2022
-  blurb: I'm a BSc student in psychology, working with Maarten on a project
-         investigating opponent modelling in games.
-  movingon_blurb: Neil conducted a project on opponent learning in multi-player
-                  games.
-  email: neil.hegde.18@ucl.ac.uk
-  photo: neil_hegde.jpg
-
-- tag: qingyuan_yan
-  name: Qingyuan Yan
-  position: BSc student
-  current: 0
-  start_year: 2020
-  end_year: 2021
-  blurb: I'm a BSc student in psychology and working with Maarten on a project
-         involving the role of anticipated regret in decision making from
-         experience.
-  movingon_blurb: Qingyuan conducted a project on anticipated regret in
-                  decisions from experience.
-  email: qingyuan.yan.18@ucl.ac.uk
-  photo: qingyuan_yan.jpg
-
-- tag: alif_low
-  name: Alif Bin Muhd Adam Low
-  position: BSc student
-  current: 0
-  start_year: 2020
-  end_year: 2021
-  blurb: I'm a BSc student in psychology and working with Maarten on a project
-         involving differences in reinforcement learning in environments with
-         only gains, only losses, or mixed gains and losses.
-  movingon_blurb: Alif conducted a project on reinforcement learning in
-                  environments with only gains, only losses, or mixed gains and
-                  losses.
-  email: alif.low.18@ucl.ac.uk
-  photo: alif_low.jpg
 
 - tag: samuel_dupret
   name: Samuel Dupret
@@ -617,6 +635,62 @@
   movingon_blurb: Ryan worked on a project investigating framing effects in
                   a multi-armed bandit task.
   current: 0
+
+
+- tag: kaitlyn_ng
+  name: Kaitlyn Ng
+  position: BSc student
+  current: 0
+  start_year: 2021
+  end_year: 2022
+  blurb: I'm a BSc student in psychology, working with Maarten on a project
+         involving the role of emotions in opponent modelling.
+  movingon_blurb: Kaitlyn conducted a project on the role of emotions in
+                  learing opponent models in multi-player games.
+  email: kaitlyn.ng.19@ucl.ac.uk
+  photo: kaitlyn_ng.jpg
+
+- tag: neil_hegde
+  name: Neil Hegde
+  position: BSc student
+  current: 0
+  start_year: 2021
+  end_year: 2022
+  blurb: I'm a BSc student in psychology, working with Maarten on a project
+         investigating opponent modelling in games.
+  movingon_blurb: Neil conducted a project on opponent learning in multi-player
+                  games.
+  email: neil.hegde.18@ucl.ac.uk
+  photo: neil_hegde.jpg
+
+- tag: qingyuan_yan
+  name: Qingyuan Yan
+  position: BSc student
+  current: 0
+  start_year: 2020
+  end_year: 2021
+  blurb: I'm a BSc student in psychology and working with Maarten on a project
+         involving the role of anticipated regret in decision making from
+         experience.
+  movingon_blurb: Qingyuan conducted a project on anticipated regret in
+                  decisions from experience.
+  email: qingyuan.yan.18@ucl.ac.uk
+  photo: qingyuan_yan.jpg
+
+- tag: alif_low
+  name: Alif Bin Muhd Adam Low
+  position: BSc student
+  current: 0
+  start_year: 2020
+  end_year: 2021
+  blurb: I'm a BSc student in psychology and working with Maarten on a project
+         involving differences in reinforcement learning in environments with
+         only gains, only losses, or mixed gains and losses.
+  movingon_blurb: Alif conducted a project on reinforcement learning in
+                  environments with only gains, only losses, or mixed gains and
+                  losses.
+  email: alif.low.18@ucl.ac.uk
+  photo: alif_low.jpg
 
 - tag: n_alam
   name: Nadia Alam

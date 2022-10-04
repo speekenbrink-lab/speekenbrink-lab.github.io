@@ -4,12 +4,25 @@
   apa_reference: "Speekenbrink, M. (2022). Chasing unknown bandits: Uncertainty guidance in learning and decision making. _Current Directions in Psychological Science_"
   doi: "10.1177/09637214221105051"
   ucl_discovery: 10155229
+  lab_authors:
+    - maarten
+
+- tag: visser2022mixture
+  type: book
+  year: 2022
+  apa_reference: "Visser, I., & Speekenbrink, M. (2022). _Mixture and hidden Markov models with R_. Springer."
+  doi: "10.1007/978-3-031-01440-6"
+  lab_authors:
+    - maarten
 
 - tag: speekenbrink2021ignorable
   type: preprint
   year: 2021
   apa_reference: "Speekenbrink, M., & Visser, I. (submitted). Ignorable and non-ignorable missing data in hidden Markov models."
   arxiv: "https://arxiv.org/abs/2109.02770"
+  lab_authors:
+    - maarten
+
 
 - tag: wu2021time
   type: journal
@@ -19,7 +32,17 @@
   doi: "10.1038/s41598-022-07901-1"
   ucl_discovery: 10145639
   osf: v4dua
+  lab_authors:
+    - maarten
 
+- tag: guennouni2022transfer
+  type: journal
+  year: 2021
+  apa_reference: "Guennouni, I., Speekenbrink, M. (2022). Transfer of learned opponent models in repeated games. _Computational Brain and Behaviour_, _5_, 326–342"
+  doi: "10.1007/s42113-022-00133-6"
+  lab_authors:
+    - ismail_guennouni
+    - maarten
 
 - tag: topf2021have
   type: preprint
