@@ -62,16 +62,6 @@
   email: matei.deleanu.20@ucl.ac.uk
   photo: mateu_deleanu.jpg
 
-- tag: yucheng_zhu
-  name: Yucheng Zhu
-  position: BSc student
-  current: 1
-  start_year: 2022
-  blurb: I'm a BSc student in psychology and working with Maarten on a project
-         involving reinforcement learning.
-  email: yucheng.zhu.19@ucl.ac.uk
-  photo: yucheng_zhu.jpg
-
 - tag: toby_lau
   name: Toby Lau
   position: BSc student
@@ -92,6 +82,16 @@
   email: yuan.lu.20@ucl.ac.uk
   photo: ed_lu.jpg
 
+- tag: wiktoria_luczak
+  name: Wiktoria Luczak
+  position: BSc student
+  current: 1
+  start_year: 2022
+  blurb: I'm a BSc student in psychology and working with Maarten and Steve
+         Flemming on a project involving confidence bias.
+  email: wiktoria.luczak.20@ucl.ac.uk
+  photo: wiktoria_luczak.jpg
+
 - tag: xenia_schwarzkopf
   name: Xenia Schwarzkopf
   position: BSc student
@@ -102,17 +102,16 @@
   email: xenia.schwarzkopf.20@ucl.ac.uk
   photo: xenia_schwarzkopf.jpg
 
-- tag: wiktoria_luczak
-  name: Wiktoria Luczak
+- tag: yucheng_zhu
+  name: Yucheng Zhu
   position: BSc student
   current: 1
   start_year: 2022
-  blurb: I'm a BSc student in psychology and working with Maarten and Steve
-         Flemming on a project involving confidence bias.
-  email: wiktoria.luczak.20@ucl.ac.uk
-  photo: wiktoria_luczak.jpg
+  blurb: I'm a BSc student in psychology and working with Maarten on a project
+         involving reinforcement learning.
+  email: yucheng.zhu.19@ucl.ac.uk
+  photo: yucheng_zhu.jpg
   
-
 - tag: sabine_topf
   name: Sabine Topf
   position: PhD student
