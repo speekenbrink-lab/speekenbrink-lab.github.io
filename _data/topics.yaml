@@ -72,7 +72,7 @@
 
 - name: Learning pro-environmental behaviours from traces
   tag: PEB
-  current: 1
+  current: 0
   people:
     - maarten
     - sabine_topf
@@ -142,7 +142,7 @@
   description: >
     Many psychiatric disorders are chiefly characterised by deficits in social
     functioning, such as Borderline Personality Disorder, Psychopathy, Social
-    Anxiety and Autism Spectrum Disorder. Others exhibit social interaction
+    Anxiety, and Autism Spectrum Disorder. Others exhibit social interaction
     impairments as a debilitating consequence of the disorder, such as higher
     distress from interpersonal relationships in Depression and interpersonal
     aggression as a barrier to effective treatment in PTSD. While there is

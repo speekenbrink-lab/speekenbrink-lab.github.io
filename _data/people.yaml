@@ -20,6 +20,22 @@
   osf: utm5y
   publons: 1380603
 
+- tag: danny_ball
+  name: Danny Ball
+  position: PhD student
+  current: 1
+  start_year: 2021
+  photo: danny_ball.jpg
+  blurb: Danny joined the lab in 2021 to work on using hidden Markov
+         models and other state-space models in applications related to
+         circadian rhythms and other topics related to internal clocks. He is
+         co-supervised by Vincent Walsh (UCL Institute of Cognitive Neuroscience)
+         and is particularly interested in comparing timing mechanisms between
+         fully and partially sighted people.
+  email: danny.ball.17@ucl.ac.uk
+  github: dballICN
+  twitter: DannyMBall1
+
 - tag: yuyang_ding
   name: Yuyang Ding
   position: PhD student
@@ -30,6 +46,7 @@
          supervision of Maarten and Duarte Goncalves Dias Da Silva (UCL Economics).
          In his PhD research, Yuyang focuses on financial decision making from
          the perspective of evidence accumulation.
+  github: ding9889
   email: ucjuydi@ucl.ac.uk
 
 - tag: ismail_guennouni
@@ -109,9 +126,12 @@
   start_year: 2022
   blurb: I'm a BSc student in psychology and working with Maarten on a project
          involving reinforcement learning.
+  twitter: lavamooncake816
+  linkedin: yucheng-zhu-1608b0106
   email: yucheng.zhu.19@ucl.ac.uk
   photo: yucheng_zhu.jpg
-  
+
+
 - tag: sabine_topf
   name: Sabine Topf
   position: PhD student
