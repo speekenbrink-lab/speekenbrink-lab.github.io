@@ -47,7 +47,7 @@
          in continuous time. His research combines acttive learning and Bayesian
          inference.
   email: victor.btesh.19@ucl.ac.uk
-  twitter:  @BteshV
+  twitter: BteshV
   github: vbtCogSci
 
 - tag: yuyang_ding
@@ -236,10 +236,10 @@
                   Tenenbaum. In 2020, he moved to Tuebingen to lead the
                   Computational Principles of Intelligence Lab at the
                   Max Planck Institute for Biological Cybernetics.
-  email: hanshalbe@googlemail.com
+  email: eric.schulz@tue.mpg.de
   twitter: hanshalbe
   github: ericschulz
-  url: https://ericschulz.github.io/
+  url: https://cpilab.org/
 
 - tag: yonatan_vanunu
   name: Yonatan Vanunu
@@ -519,12 +519,14 @@
   start_year: 2016
   end_year: 2016
   photo: charley_wu.jpg
-  movingon_blurb: Charley is a PhD student at the Center for Adaptive
+  movingon_blurb: Charley was a PhD student at the Center for Adaptive
                   Rationality at the Max Planck Institute for Human Development
                   in Berlin. He visited the Speekenbrink lab in 2016 to develop
-                  the spatially correlated bandit paradigm.
-  email: cwu@mpib-berlin.mpg.de
+                  the spatially correlated bandit paradigm. He is now PI of the
+                  Human and Machine Cognition Lab at the Univerity of Tuebingen.
+  email: charley.wu@uni-tuebingen.de
   github: charleywu
+  url: https://charleywu.github.io/
 
 - tag: minho_shin
   name: Minho Shin
@@ -537,7 +539,7 @@
   movingon_blurb: Minho is an undergraduate student from South Korea, visiting
          the Speekenbrink lab at the start of 2018 as an intern to learn more
          about decision making and computational modeling.
-  email: mhshin@dgist.ac.kr
+  email: mhshin@dgist.ac.kru
 
 - tag: moritz_krusche
   name: Moritz Krusche
