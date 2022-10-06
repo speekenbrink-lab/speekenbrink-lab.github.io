@@ -36,6 +36,20 @@
   github: dballICN
   twitter: DannyMBall1
 
+- tag: victor_btesh
+  name: Victor Btesh
+  position: PhD student
+  current: 1
+  start_year: 2021
+  photo: victor_btesh.jpg
+  blurb: Victor joined the lab in 2021. He is jointly supervised by Dave Lagnado
+         (UCL Experimental Psychology) and works on issues in causal inference
+         in continuous time. His research combines acttive learning and Bayesian
+         inference.
+  email: victor.btesh.19@ucl.ac.uk
+  twitter:  @BteshV
+  github: vbtCogSci
+
 - tag: yuyang_ding
   name: Yuyang Ding
   position: PhD student
