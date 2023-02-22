@@ -59,7 +59,7 @@
   blurb: Yuyang joined the lab in 2022 when he started his PhD research under
          supervision of Maarten and Duarte Goncalves Dias Da Silva (UCL Economics).
          In his PhD research, Yuyang focuses on financial decision making from
-         the perspective of evidence accumulation.
+         the perspective of evidence accumulation processes.
   github: ding9889
   email: ucjuydi@ucl.ac.uk
 
@@ -82,6 +82,37 @@
   email: i.gennouni.17@ucl.ac.uk
   github: ismailg
   twitter: GuennouniIsmail
+
+- tag: jona_leka
+  name: Jona Leka
+  current: 1
+  position: PhD student
+  start_year: 2023
+  photo: jona_leka.jpg
+  blurb: Jona joined the lab in 2023 to continue her PhD research under supervision
+         of Maarten.
+  email: jona.leka.10@ucl.ac.uk
+  twitter: jonaleka1
+
+- tag: xinhui_jiang
+  name: Xinhui Jiang
+  position: MSc student
+  current: 1
+  start_year: 2022
+  blurb: Xinhui joined the lab in 2022 to conduct her MSc research under supervision
+         of Maarten and Yuyang. Her research focuses on time-critical decisions.
+  email: xinhui.jiang.20@ucl.ac.uk
+  photo: xinhui_jiang.jpg
+
+- tag: ryosuke_masai
+  name: Ryosuke Masai
+  position: MSc student
+  current: 1
+  start_year: 2022
+  blurb: Ryosuke joined the lab in 2022 to conduct his MSc research under supervision
+         of Maarten and Yuyang. His research focuses on time-critical decisions.
+  email: ryosuke.masai.21@ucl.ac.uk
+  photo: ryosuke_masai.jpg
 
 - tag: matei_deleanu
   name: Matei Deleanu
@@ -114,7 +145,6 @@
   linkedin: edluyuan
   researchgate: "Yuan_Lu56"
   photo: ed_lu.jpg
-
 
 - tag: wiktoria_luczak
   name: Wiktoria Luczak
