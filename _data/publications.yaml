@@ -1,4 +1,27 @@
-- tag: speekenbrinkk2022chasing
+- tag: topf2023follow
+  type: journal
+  year: 2023
+  apa_reference: "Topf, S., & Speekenbrink, M. (2023). Follow my example, for better and for worse: The influence of behavioral traces on recycling decisions. Journal of Experimental Psychology: Applied. Advance online publication."
+  doi: "10.1037/xap0000452"
+  ucl_discovery: 10163443
+  arxiv: "https://psyarxiv.com/496v7/"
+  osf: 2gxhk
+  lab_authors:
+    - maarten
+    - sabine_topf
+
+- tag: topf2022evidence
+  type: journal
+  year: 2022
+  apa_reference: "Topf, S., & Speekenbrink, M. (2022). Evidence of 'Green' behaviours: Exploring behavioural traces of pro- and anti-environmental behaviors. _Journal of Environmental Psychology_, _84_, 101886."
+  doi: "10.1016/j.jenvp.2022.101886"
+  ucl_discovery: 10159810
+  arxiv: "https://psyarxiv.com/6yf8b/"
+  lab_authors:
+    - maarten
+    - sabine_topf
+
+- tag: speekenbrink2022chasing
   type: journal
   year: 2022
   apa_reference: "Speekenbrink, M. (2022). Chasing unknown bandits: Uncertainty guidance in learning and decision making. _Current Directions in Psychological Science_, _31_, 419-427"
@@ -22,7 +45,6 @@
   arxiv: "https://arxiv.org/abs/2109.02770"
   lab_authors:
     - maarten
-
 
 - tag: wu2021time
   type: journal
@@ -55,7 +77,7 @@
   osf: d6t9g
 
 - tag: topf2021follow
-  type: preprint
+  type: outdated
   year: 2021
   apa_reference: "Topf, S., & Speekenbrink, M. (submitted). Follow my example, for better and for worse: The influence of behavioural traces on recycling decisions."
   lab_authors:
@@ -74,7 +96,7 @@
   arxiv: "https://psyarxiv.com/pfkyv/"
 
 - tag: topf2021evidence
-  type: preprint
+  type: outdated
   year: 2021
   apa_reference: "Topf, S., & Speekenbrink, M. (submitted). Evidence of 'green' behaviours: Exploring behavioural traces of pro- and anti-environmental behaviours."
   lab_authors:
