@@ -109,6 +109,8 @@ permalink: /people/
 
 </div>
 
+<!--
+
 # Collaborators
 
 <div class="row">
@@ -151,3 +153,7 @@ permalink: /people/
 </div>
 
 </div>
+
+-->
+
+

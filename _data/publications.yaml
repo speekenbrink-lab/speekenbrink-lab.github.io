@@ -1,7 +1,7 @@
 - tag: topf2023follow
   type: journal
   year: 2023
-  apa_reference: "Topf, S., & Speekenbrink, M. (2023). Follow my example, for better and for worse: The influence of behavioral traces on recycling decisions. Journal of Experimental Psychology: Applied. Advance online publication."
+  apa_reference: "Topf, S., & Speekenbrink, M. (2023). Follow my example, for better and for worse: The influence of behavioral traces on recycling decisions. _Journal of Experimental Psychology: Applied_, _29_, 189-206."
   doi: "10.1037/xap0000452"
   ucl_discovery: 10163443
   arxiv: "https://psyarxiv.com/496v7/"
@@ -76,15 +76,6 @@
   arxiv: "https://psyarxiv.com/kuatz/"
   osf: d6t9g
 
-- tag: topf2021follow
-  type: outdated
-  year: 2021
-  apa_reference: "Topf, S., & Speekenbrink, M. (submitted). Follow my example, for better and for worse: The influence of behavioural traces on recycling decisions."
-  lab_authors:
-    - sabine_topf
-    - maarten
-  arxiv: "https://psyarxiv.com/496v7/"
-  osf: 2gxhk
 
 - tag: topf2021agent
   type: preprint
@@ -94,15 +85,6 @@
     - sabine_topf
     - maarten
   arxiv: "https://psyarxiv.com/pfkyv/"
-
-- tag: topf2021evidence
-  type: outdated
-  year: 2021
-  apa_reference: "Topf, S., & Speekenbrink, M. (submitted). Evidence of 'green' behaviours: Exploring behavioural traces of pro- and anti-environmental behaviours."
-  lab_authors:
-    - sabine_topf
-    - maarten
-  arxiv: "https://psyarxiv.com/6yf8b/"
 
 - tag: saanum2021compositional
   type: conference
