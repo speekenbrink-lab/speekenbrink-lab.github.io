@@ -62,6 +62,18 @@
   twitter: BteshV
   github: vbtCogSci
 
+- tag: andrew_chang
+  name: Andrew Chang
+  position: PhD student
+  current: 1
+  start_year: 2024
+  photo: andrew_chang.jpg
+  blurb: Andrew joined the lab in 2024. His research focuses on applying 
+         computational modelling to study dynamic adaptations in mutual learning.
+  email: ucju929@ucl.ac.uk
+  github: Chang-Yen-Cheng
+  twitter: chardevelop
+
 - tag: yuyang_ding
   name: Yuyang Ding
   position: PhD student
@@ -91,31 +103,116 @@
   github: JonaLeka
   researchgate: "Jona-Leka"
   orcid: 0000-0003-3763-8844
-  
-- tag: shanqi_yu
-  name: Shanqi Yu
+
+- tag: auni_amran
+  name: Auni Amran
+  start_year: 2024
   current: 1
   position: BSc student
+  blurb: Auni joined the lab in 2023 to conduct her BSc research under supervision
+         of Maarten and Yuyang. Her research focuses on time-critical decisions.
+
+- tag: may_shan_loh
+  name: May Shan Loh
+  start_year: 2024
+  current: 1
+  position: BSc student
+  blurb: May joined the lab in 2023 to conduct her BSc research under supervision
+         of Maarten and Yuyang. Her research focuses on time-critical decisions.
+
+- tag: aisha_bouanik
+  name: Aisha Bouanik
+  start_year: 2024
+  current: 1
+  position: BSc student
+  blurb: Aisha joined the lab in 2023 to conduct her BSc research under supervision
+         of Maarten and Noam. Her research focuses on decisions to leave ambivalent 
+         situations.
+
+- tag: ruiying_zhong
+  name: Ruiying Zhong
+  start_year: 2024
+  current: 1
+  position: BSc student
+  blurb: Ruiying joined the lab in 2023 to conduct his BSc research under supervision
+         of Maarten and Noam. His research focuses on decisions to leave ambivalent 
+         situations.
+
+- tag: naomi_curnow
+  name: Noami Curnow
   start_year: 2023
+  end_year: 2024
+  current: 0
+  position: MSc student
+  blurb: Naomi joined the lab in 2023 to conduct her MSc research under supervision
+         of Maarten and Yuyang. Her research focuses on time-critical decisions.
+  movingon_blurb: Naomi joined the lab in 2023 to conduct her MSc research under supervision
+         of Maarten and Yuyang. Her research focused on time-critical decisions.
+
+- tag: zhaonan_fang
+  name: Zhaonan Fang
+  start_year: 2023
+  end_year: 2024
+  blurb: Zhaonan joined the lab in 2023 to conduct his MSc research under supervision
+         of Maarten and Yuyang. His research focuses on time-critical decisions.
+  movingon_blurb: Zhaonan joined the lab in 2023 to conduct his MSc research under supervision
+         of Maarten and Yuyang. His research focused on time-critical decisions.
+
+- tag: jill_zheng
+  name: Jill Zheng
+  start_year: 2023
+  end_year: 2024
+  current: 0
+  position: MSc student
+  blurb: Jill joined the lab in 2023 to conduct her MSc research under supervision
+         of Maarten and Yuyang. Her research focuses on time-critical decisions.
+  movingon_blurb: Jill joined the lab in 2023 to conduct her MSc research under supervision
+         of Maarten and Yuyang. Her research focused on time-critical decisions.
+
+- tag: peiyao_shen
+  name: Peiyao Shen
+  current: 0
+  position: MSc student
+  start_year: 2023
+  end_year: 2024
+  blurb: Peiyao joined the lab in 2023 to conduct her MSc research under supervision 
+         of Maarten. Her research focused on opponent modelling in multiperson games.
+  movingon_blurb: Peiyao joined the lab in 2023 to conduct her MSc research under supervision 
+         of Maarten. Her research focused on opponent modelling in multiperson games.
+
+- tag: shanqi_yu
+  name: Shanqi Yu
+  current: 0
+  position: BSc student
+  start_year: 2023
+  end_year: 2024
   blurb: Shanqi joined the lab in 2023 to conduct her BSc research under supervision
          of Maarten and Yuyang. Her research focuses on time-critical decisions.
+  movingon_blurb: Shanqi joined the lab in 2023 to conduct her BSc research under supervision
+         of Maarten and Yuyang. Her research focused on time-critical decisions.
   email: shanqi.yu.20@ucl.ac.uk
   
 - tag: margo_spirydonava
   name: Margo Spirydonava
-  current: 1
+  current: 0
   position: BSc student
   start_year: 2023
+  end_year: 2024
   blurb: Margo joined the lab in 2023 to conduct her BSc research on models of
+         other players in repeated games.
+  movingon_blurb: Margo joined the lab in 2023 to conduct her BSc research on models of
          other players in repeated games.
   email: margo.spirydonava.21@ucl.ac.uk
   
 - tag: jessica_poon
   name: Jessica Poon
-  current: 1
+  current: 0
   position: BSc student
   start_year: 2023
+  end_year: 2024
   blurb: Jessica joined the lab in 2023 to conduct her BSc research on models of
+         other players in repeated games.
+  movingon_blurb: Jessica joined the lab in 2023 to conduct her BSc research on models of
          other players in repeated games.
   email: jessica.poon.21@ucl.ac.uk
 
