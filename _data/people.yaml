@@ -120,15 +120,6 @@
   blurb: May joined the lab in 2024 to conduct her BSc research under supervision
          of Maarten and Yuyang. Her research focuses on time-critical decisions.
 
-- tag: aisha_bouanik
-  name: Aisha Bouanik
-  start_year: 2024
-  current: 1
-  position: BSc student
-  blurb: Aisha joined the lab in 2024 to conduct her BSc research under supervision
-         of Maarten and Noam. Her research focuses on decisions to leave ambivalent 
-         situations.
-
 - tag: ruiying_zhong
   name: Ruiying Zhong
   start_year: 2024
@@ -153,6 +144,7 @@
   name: Zhaonan Fang
   start_year: 2023
   end_year: 2024
+  current: 1
   blurb: Zhaonan joined the lab in 2023 to conduct his MSc research under supervision
          of Maarten and Yuyang. His research focuses on time-critical decisions.
   movingon_blurb: Zhaonan joined the lab in 2023 to conduct his MSc research under supervision
