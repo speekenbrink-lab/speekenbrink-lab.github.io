@@ -14,7 +14,8 @@ The goal of our research is to understand the learning and decision processes wh
 
 <p></p>
 
-{% for topic in site.researchtopics %}
+{% assign filtered_topics = site.researchtopics | where: 'current', 1 %}
+{% for topic in filtered_topics %}
 {% assign mod = forloop.index | modulo: 3 %}
 {% if mod == 0 %}
 <!-- last column -->

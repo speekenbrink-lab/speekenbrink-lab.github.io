@@ -1,3 +1,61 @@
+- tag: speekenbrink2025state
+  type: journal
+  year: 2025
+  apa_reference: "Speekenbrink, M., & Visser, I. (2025). State-dependent missingness in hidden Markov models, with an application to drop-out in a clinical trial. _Psychometrika_, _90_(2), 476-507."
+  doi: "10.1017/psy.2024.3"
+  lab_authors:
+    - maarten
+
+- tag: krefeld-schwalb2025search
+  type: journal
+  year: 2025
+  apa_reference: "Krefeld-Schwalb, A., Martinovici, A., Orquin, J.L., Aribarg, A., Erdem, T., Johnson, E.J., Reeck, C., Schley, D.R., Smith, S.M., Speekenbrink, M. and Stewart, N., (in press). Search in service of choice: An agenda for comparing, extending, and integrating consumer search models. _International Journal of Research in Marketing_."
+  doi: "10.1016/j.ijresmar.2025.09.001"
+  osf: "https://osf.io/xw5bv_v2/"
+
+- tag: yuyang2025watch
+  type: conference
+  year: 2025
+  apa_reference: "Ding, Y., Goncalves, D., & Speekenbrink, M. (2025). Watch out for Bears: Do People Behave Differently in Perceptual and Financial Decisions? _Proceedings of the Annual Meeting of the Cognitive Science Society_, _47_."
+  url: "https://escholarship.org/uc/item/62s614f7"
+  lab_authors:
+    - maarten
+    - yuyang
+
+- tag: rasanan2024beyond
+  type: journal
+  year: 2024
+  apa_reference: "Rasanan, A. H. H., Evans, N. J., Fontanesi, L., Manning, C., Huang-Pollock, C., Matzke, D., ... & Rad, J. A. (2024). Beyond discrete-choice options. _Trends in Cognitive Sciences_, _28_(9), 857-870."
+  doi: "10.1016/j.tics.2024.07.004"
+
+- tag: roeseler2024correction
+  type: journal
+  year: 2024
+  apa_reference: "Röseler, L., Weber, L., Helgerth, K., Stich, E., Günther, M., Tegethoff, P., ... & Schütz, A. (2024). Correction: The open anchoring quest dataset: Anchored estimates from 96 studies on anchoring effects. _Journal of Open Psychology Data_, _12_(1)."
+  doi: "10.5334/jopd.92"
+
+- tag: guennouni2024impact
+  type: conference
+  year: 2024
+  apa_reference: "Guennouni, I., Ng, K., & Speekenbrink, M. (2024). Impact of Latent State Cues on Behavior in Repeated Games. Proceedings of the Annual Meeting of the Cognitive Science Society, 46. "
+  url: "https://escholarship.org/uc/item/0065d3hc"
+
+- tag: btesh2023variational
+  type: conference
+  year: 2023
+  apa_reference: "Btesh, V., Bramley, N. R., Fränken, J. P., Speekenbrink, M., & Lagnado, D. A. (2023). Variational inference for continuous time causal learning. Conference on Cognitive Computational Neuroscience 2023."
+  doi: "10.32470/CCN.2023.1526-0"
+  url: "https://2023.ccneuro.org/view_paper3664.html?PaperNum=1526"
+
+- tag: btesh2023swipe
+  type: conference
+  year: 2023
+  apa_reference: "Btesh, V., Lagnado, D., Speekenbrink, M., & Bramley, N. R. (2023). Swipe and hold: composing interventions in continuous time causal learning. In M. Goldwater, F. K. Anggoro, B. K. Hayes, & D. C. Ong (Eds.), Proceedings of the 45th Annual Conference of the Cognitive Science Society, 45."
+  url: https://escholarship.org/uc/item/3sv1d2c6
+  lab_authors:
+    - maarten
+    - victor
+
 - tag: topf2023follow
   type: journal
   year: 2023
@@ -9,6 +67,13 @@
   lab_authors:
     - maarten
     - sabine_topf
+
+- tag: tickle2023human
+  type: journal
+  year: 2023
+  apa_reference: "Tickle, H., Tsetsos, K., Speekenbrink, M., Summerfield, C. (2021). Human optional stopping in a heteroscedastic world. _Psychological Review_, _130_(1), 1-22"
+  arxiv: "https://psyarxiv.com/t7dn2"
+  doi: 10.1037/rev0000315
 
 - tag: topf2022evidence
   type: journal
@@ -41,7 +106,7 @@
 - tag: speekenbrink2021ignorable
   type: preprint
   year: 2021
-  apa_reference: "Speekenbrink, M., & Visser, I. (submitted). Ignorable and non-ignorable missing data in hidden Markov models."
+  apa_reference: "Speekenbrink, M., & Visser, I. (preprint). Ignorable and non-ignorable missing data in hidden Markov models."
   arxiv: "https://arxiv.org/abs/2109.02770"
   lab_authors:
     - maarten
@@ -69,7 +134,7 @@
 - tag: topf2021have
   type: preprint
   year: 2021
-  apa_reference: "Topf, S., & Speekenbrink, M. (submitted). I’ll have what she’s had! Popularity beliefs moderate the preference for scarce options in the choice of food items."
+  apa_reference: "Topf, S., & Speekenbrink, M. (preprint). I’ll have what she’s had! Popularity beliefs moderate the preference for scarce options in the choice of food items."
   lab_authors:
     - sabine_topf
     - maarten
@@ -80,7 +145,7 @@
 - tag: topf2021agent
   type: preprint
   year: 2021
-  apa_reference: "Topf, S., & Speekenbrink, M. (submitted). Agent, behaviour, trace, repeat: Understanding the cognitive processes involved in human stigmergic coordination."
+  apa_reference: "Topf, S., & Speekenbrink, M. (preprint). Agent, behaviour, trace, repeat: Understanding the cognitive processes involved in human stigmergic coordination."
   lab_authors:
     - sabine_topf
     - maarten
@@ -105,13 +170,6 @@
     - ismail_guennouni
     - maarten
   url: "https://escholarship.org/uc/item/23b2h05g"
-
-- tag: tickle2021human
-  type: journal
-  year: 2021
-  apa_reference: "Tickle, H., Tsetsos, K., Speekenbrink, M., Summerfield, C. (2021). Human optional stopping in a heteroscedastic world. _Psychological Review_"
-  arxiv: "https://psyarxiv.com/t7dn2"
-  doi: 10.1037/rev0000315
 
 - tag: stojic2020novelty
   type: journal

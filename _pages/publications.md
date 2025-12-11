@@ -9,7 +9,7 @@ permalink: /publications/
 {% assign years_pubs = site.data.publications | group_by: 'year' | sort: 'name' | reverse %}
 <div class="row">
 <div class="col12 col-sm-12 col-lg-12">
-<h2>Working papers</h2>
+<h2>Preprints</h2>
 {% for year in years_pubs %}
 {% assign sorted_pubs = year.items | sort: 'apa_reference' %}
 {% for pub in sorted_pubs %}

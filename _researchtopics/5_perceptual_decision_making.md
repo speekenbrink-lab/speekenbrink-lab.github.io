@@ -2,7 +2,7 @@
 title: Perceptual decision making
 tag: perceptual_dm
 layout: research_topic
-current: 1
+current: 0
 people:
   - maarten
   - hannah_tickle

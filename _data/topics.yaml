@@ -114,7 +114,7 @@
 
 - name: Adaptive design
   tag: adaptive_design
-  current: 1
+  current: 0
   people:
     - maarten
   blurb: Optimize experiments whilst you run them

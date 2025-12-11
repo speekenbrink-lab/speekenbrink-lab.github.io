@@ -2,7 +2,7 @@
 title: Adaptive design
 tag: adaptive_design
 layout: research_topic
-current: 1
+current: 0
 people:
   - maarten
 blurb: Optimize experiments whilst you run them

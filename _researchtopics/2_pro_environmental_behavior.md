@@ -2,7 +2,7 @@
 title: Learning pro-environmental behaviours from traces
 tag: PEB
 layout: research_topic
-current: 1
+current: 0
 people:
   - maarten
   - sabine_topf
