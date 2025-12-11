@@ -72,7 +72,7 @@ permalink: /people/
 {% if current_item.name == '0' %}
 {% assign position_members = current_item.items | group_by: 'position' %}
 {% for position in position_members %}
-{% if position.name == 'MSc student' or position.name == 'Visiting MSc student' %}
+{% if position.name == 'MSc student' or position.name == 'MRes student' or position.name == 'Visiting MSc student' %}
 {% assign year_members = position.items | sort: 'end_year' | reverse | group_by: 'end_year' %}
 {% for year in year_members %}
 {% assign members = year.items | sort: 'name' %}
